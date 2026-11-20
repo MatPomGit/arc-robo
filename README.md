@@ -10,6 +10,10 @@
 
 Zastąp ten akapit zwięzłym opisem pytań naukowych, kryterium przypisania manuskryptu i odrębności od innych ARC. Dostępne programy nadrzędne: **ARC Neuro, ARC AI, ARC XR, ARC Robo**. NDD to linia w Neuro, a nie osobny program. Okulometria jest metodą, nie piątym programem.
 
+## Propozycje kierunków badawczych
+
+[ROBO-IDEA-01: wiarygodność dowodów ukończenia misji inspekcyjnej w ocenie operatora](docs/research-proposals-2026.md) to propozycja naukowa oparta na planowanym wtórnym użyciu symulacji robotycznej, **bez zatwierdzonego manuskryptu i bez badania na robocie fizycznym**.
+
 ## Katalog badań
 
 Rejestr kanonicznych projektów jest w [`portfolio/projects.json`](portfolio/projects.json), artykułów w [`portfolio/papers.json`](portfolio/papers.json), zależności w [`portfolio/dependencies.json`](portfolio/dependencies.json). Projekt `msc-*` ma własny protokół, manuskrypt, dane referencyjne i GitHub Pages; ARC utrzymuje tylko odnośniki oraz metadane zależności. Starsze repozytoria mogą być wskazywane pod obecną nazwą do czasu kontrolowanej migracji.
