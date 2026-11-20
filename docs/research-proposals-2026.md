@@ -1,9 +1,9 @@
 # ARC Robo — propozycje badań nad wiarygodnością raportów inspekcyjnych
 
-**Wersja:** 1.0.0 | **Data:** 2026-11-20 | **Status:** propozycja do oceny, bez zatwierdzenia badań z udziałem ludzi i bez wyników empirycznych.  
-**Program:** ARC Robo. **Identyfikator:** `ROBO-IDEA-01`.
+**Wersja:** 1.1.0 | **Data:** 2026-11-20 | **Status:** propozycja do oceny, bez zatwierdzenia badań z udziałem ludzi i bez wyników empirycznych.  
+**Program:** ARC Robo. **Identyfikator:** `ARC-ROBO-RVI-P09`.
 
-## ROBO-IDEA-01 — Błędna akceptacja ukończenia misji przez operatora robota
+## ARC-ROBO-RVI-P09 — Błędna akceptacja ukończenia misji przez operatora robota
 
 **Tytuł roboczy (EN):** *Detecting False Mission Completion from Robot Inspection Evidence: An Operator-Centered Study*.
 
@@ -23,4 +23,4 @@
 
 ## Status portfolio
 
-`ROBO-IDEA-01` jest **IDEA_HOLD**. Nie przenosi protokołu RVI ani jego danych do ARC Robo, nie stanowi wpisu o zakończonej pracy i nie zatwierdza nowego manuskryptu. Publiczny katalog projektów/programu wymaga osobnej decyzji, zgodnie z zasadami repozytorium.
+`ARC-ROBO-RVI-P09` jest **IDEA_HOLD**. Nie przenosi protokołu RVI ani jego danych do ARC Robo, nie stanowi wpisu o zakończonej pracy i nie zatwierdza nowego manuskryptu. Publiczny katalog projektów/programu wymaga osobnej decyzji, zgodnie z zasadami repozytorium.
