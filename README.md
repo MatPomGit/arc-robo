@@ -12,7 +12,7 @@ Zastąp ten akapit zwięzłym opisem pytań naukowych, kryterium przypisania man
 
 ## Propozycje kierunków badawczych
 
-[ROBO-IDEA-01: wiarygodność dowodów ukończenia misji inspekcyjnej w ocenie operatora](docs/research-proposals-2026.md) to propozycja naukowa oparta na planowanym wtórnym użyciu symulacji robotycznej, **bez zatwierdzonego manuskryptu i bez badania na robocie fizycznym**.
+[ARC-ROBO-RVI-P09: wiarygodność dowodów ukończenia misji inspekcyjnej w ocenie operatora](docs/research-proposals-2026.md) to propozycja naukowa oparta na planowanym wtórnym użyciu symulacji robotycznej, **bez zatwierdzonego manuskryptu i bez badania na robocie fizycznym**.
 
 ## Katalog badań
 
