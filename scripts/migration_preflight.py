@@ -44,6 +44,8 @@ def audit(root: Path = ROOT) -> dict:
             problems.append("invalid_role:" + ident)
         if not isinstance(row.get("source_commit_sha"), str) or not SHA.fullmatch(row["source_commit_sha"]):
             problems.append("invalid_source_sha:" + ident)
+        if not isinstance(row.get("source_blob_sha"), str) or not SHA.fullmatch(row["source_blob_sha"]):
+            problems.append("missing_or_invalid_source_blob_sha:" + ident)
         path = row.get("local_plan_path")
         if path is not None:
             expected = "manuscripts/" + ident + "/main.tex"
