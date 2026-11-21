@@ -8,7 +8,7 @@
 \usepackage[hidelinks]{hyperref}
 \title{Detecting False Mission Completion from Robot Inspection Evidence: An Operator-Centered Study}
 \author{Mateusz Pomianek}
-\date{Version 0.1.0 -- 21 November 2026}
+\date{Version 0.2.0 -- 21 November 2026}
 \begin{document}
 \maketitle
 
@@ -19,23 +19,46 @@ Operator decisions about mission completion can be tested using inspection repor
 \section{Introduction}
 Operator decisions about mission completion can be tested using inspection reports that either conceal or explicitly expose missing and mismatched visual evidence. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
 
-\section{Research question and hypothesis}
-Does a structured evidence-and-omissions report reduce false acceptance of incomplete inspection missions compared with a success notification or binary status? The working hypothesis is that the proposed approach improves the primary endpoint under an explicitly matched evidence and resource budget. This hypothesis is subject to prior-art review and prospective specification; non-superiority and negative findings must remain reportable.
+\section{Detailed scientific scope and novelty boundary}
+The human endpoint is erroneous acceptance of an objectively unfinished robot inspection mission. The visual report can provide an unqualified completion message, binary status, or a provenance-linked inventory of required photographs and omissions. Mission truth is computed independently of what the interface shows. The study does not estimate objective robot inspection success or camera quality.
 
-\section{Materials and methods}
-Generate independently labelled complete, incomplete and wrong-object cases from versioned offline RVI fixtures. Randomize report presentation across declarative, binary and evidence-explicit formats with balanced information volume. The experimental unit, independent ground truth, data inclusion criteria, version of software and sensors, and provenance of each dataset or scenario will be fixed in the protocol. Training, calibration and evaluation partitions will be isolated at the appropriate physical scene, sequence, participant or device level.
+\section{Falsifiable hypotheses}
+\paragraph{H1.} An explicit evidence-and-omissions report reduces false acceptance among incomplete missions compared with the strongest volume-matched declarative or binary-status control.
 
-\subsection{Comparators and experimental controls}
-Contrast the three display formats using the same mission ground truth, image sets and documented exclusion criteria. Model or policy hyperparameters must not be selected from final held-out results. The implementation will record relevant software versions, seeds, sensor configuration, timestamps and data rights.
+\paragraph{H2.} Explicit image-to-object provenance particularly reduces wrong-object and misassociated-photo errors beyond a missing-shot list of comparable length.
 
-\subsection{Primary endpoint}
-False-acceptance proportion among objectively incomplete missions, measured at the mission-decision level. Denominators, operational thresholds, missing observations and failure cases will be defined before inferential analysis. Secondary metrics will not be substituted post hoc for the primary endpoint.
+\paragraph{H3.} The evidence-rich report does not reduce correct acceptance of complete missions by more than a preregistered non-inferiority margin and improves decision-confidence calibration.
 
-\section{Statistical and computational analysis plan}
-Estimate a report-format contrast with mission- and participant-level clustering; distinguish omission types and test whether text length explains effects. Any confirmatory statistical contrast will report uncertainty intervals, effective independent sample size and relevant failure strata. Where a physical validation or participant-based experiment is necessary, approval and feasibility assessment must precede data collection.
+\section{Operationalization and study population}
+\subsection{Independent unit of analysis}
+One participant-by-mission decision; participant and case are crossed clustering factors. A mission cannot serve as its own displayed ground truth.
 
-\section{Anticipated interpretation and limitations}
-Any human-participant experiment requires prior ethics approval and participant consent. The fixtures do not imply a physical Unitree G1 experiment, and the endpoint is operator judgement rather than robot performance. Confounding from software versions, sensor conditions, scene selection and methodological overlap will be assessed explicitly. Claims about simulated behavior will not be generalized to physical safety or human behavior without matching evidence.
+\subsection{Data, sensors and ground-truth requirements}
+Immutable offline RVI manifests, independent required-shot truth, versioned screenshots and report-generation code, randomized case and display assignments, consent-approved decision logs. Data and models will be versioned with checksums, licensing information, instrument parameters, selection rules and clock provenance. The held-out test cohort must be independent at the acquisition-session, scene or participant level rather than at the individual frame level.
+
+\subsection{Primary and secondary endpoints}
+The primary estimand is defined as follows: False-acceptance rate among objectively incomplete mission cases, defined as the count of accepted incomplete cases divided by all evaluated incomplete cases.
+
+The secondary measurements will be: True acceptance of complete cases, wrong-object error identification, decision time, confidence calibration and cognitive workload if justified. The exact numerator, denominator, outcome threshold and permitted exclusions must be fixed in the protocol before inferential analysis.
+
+\section{Planned experiments and research sequence}
+\subsection{A. Inspection fixture ground truth}
+Create independently adjudicated cases with complete evidence, missing required angles, low-quality shots, wrong-object associations and inconsistent identifiers. Version the requirements and truth labels; balance correct and incorrect missions.
+
+\subsection{B. Interface and sample-size pilot}
+Build a browser viewer with response time and confidence capture. Assess comprehension and visual salience, match report verbosity, estimate case/participant variance and select confirmatory sample size by simulated power or required precision.
+
+\subsection{C. Randomized ethics-approved decision experiment}
+Randomize report variant and mission case in a balanced incomplete block. Prevent the same participant from seeing the same mission in more than one display format. Collect accept/reject, confidence and latency after required consent.
+
+\subsection{D. Independent confirmatory analysis}
+Compare false acceptance on incomplete cases while also reporting true acceptance on complete cases and effects by error type. Analyse a text-length-matched control to rule out verbosity as the only explanatory mechanism.
+
+\section{Comparative design and statistical inference}
+Use a mixed-effects logistic model with participant and mission effects, reporting marginal risk differences. Predefine the primary evidence-rich versus strongest report-control contrast, an information-volume control and a non-inferiority margin for complete missions. When human participants or independent trajectories are needed, their number must follow a documented power simulation or precision calculation after a feasible pilot. Report uncertainty, negative results and sensitivity to failure strata. Thresholds, model configurations and exclusion criteria must be frozen before final testing.
+
+\section{Evidence gates, reproducibility and ethical boundary}
+Requires prior ethics/consent approvals for human decisions. Scenarios remain browser-based offline fixtures and do not imply Unitree G1 motion or physical inspection results. Each study phase will preserve source SHA or release, configuration, labels, independent oracle, random seeds, raw event timing, and an auditable trace from inputs to computed figures. Simulated evidence is distinct from measured hardware outcomes. Participant studies require prior ethical review and consent.
 
 \section{Results}
 Empirical results, tables and uncertainty intervals will be incorporated after execution of the documented evaluation protocol and independent verification of the input evidence.

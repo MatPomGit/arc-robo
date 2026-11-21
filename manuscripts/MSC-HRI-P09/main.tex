@@ -8,7 +8,7 @@
 \usepackage[hidelinks]{hyperref}
 \title{Adversarial Falsification of Predictive Safety Fields in Multi-Human Humanoid Interaction}
 \author{Mateusz Pomianek}
-\date{Version 0.1.0 -- 21 November 2026}
+\date{Version 0.2.0 -- 21 November 2026}
 \begin{document}
 \maketitle
 
@@ -19,23 +19,46 @@ Active scenario search could reveal safety-field counterexamples that uniform ra
 \section{Introduction}
 Active scenario search could reveal safety-field counterexamples that uniform random and grid searches miss within the same evaluation budget. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
 
-\section{Research question and hypothesis}
-Does coverage-guided adversarial search discover independently verified severe violations more efficiently than budget-matched random, grid and conventional scenario searches? The working hypothesis is that the proposed approach improves the primary endpoint under an explicitly matched evidence and resource budget. This hypothesis is subject to prior-art review and prospective specification; non-superiority and negative findings must remain reportable.
+\section{Detailed scientific scope and novelty boundary}
+This proposed methods paper evaluates efficiency of finding reproducible safety-field counterexamples, not predictive-field accuracy (MSC-HRI-P01), reachability calibration (P04), benchmark construction (P05) or protective fallback (P07). The evaluated controller and independent hazard oracle remain frozen while the search method changes.
 
-\section{Materials and methods}
-Execute simulation-only perturbations of crossing patterns, occlusion, payload geometry, stale telemetry and sensor dropout with fixed scenario seeds and independent scenario holdouts. The experimental unit, independent ground truth, data inclusion criteria, version of software and sensors, and provenance of each dataset or scenario will be fixed in the protocol. Training, calibration and evaluation partitions will be isolated at the appropriate physical scene, sequence, participant or device level.
+\section{Falsifiable hypotheses}
+\paragraph{H1.} Coverage- and uncertainty-guided adversarial scenario search uncovers more unique independently confirmed severe policy violations per fixed simulator-evaluation budget than random, stratified-grid or library-driven search.
 
-\subsection{Comparators and experimental controls}
-Use equal-budget random search, stratified grid search and predefined scenario sweeps against the same immutable risk-field implementation. Model or policy hyperparameters must not be selected from final held-out results. The implementation will record relevant software versions, seeds, sensor configuration, timestamps and data rights.
+\paragraph{H2.} The search finds its first confirmed severe counterexample in fewer evaluated scenarios than the strongest budget-matched baseline, accounting for runs in which no counterexample is found.
 
-\subsection{Primary endpoint}
-Number of distinct confirmed hazardous counterexamples per fixed simulator budget, together with time to first severe violation. Denominators, operational thresholds, missing observations and failure cases will be defined before inferential analysis. Secondary metrics will not be substituted post hoc for the primary endpoint.
+\paragraph{H3.} Counterexample families remain reproducible under fresh replay seeds and retain search value on held-out scenario families rather than only on the development simulator seed.
 
-\section{Statistical and computational analysis plan}
-Estimate paired discovery-rate differences across seeds and independent scenario families, including negative searches and replay reproducibility. Any confirmatory statistical contrast will report uncertainty intervals, effective independent sample size and relevant failure strata. Where a physical validation or participant-based experiment is necessary, approval and feasibility assessment must precede data collection.
+\section{Operationalization and study population}
+\subsection{Independent unit of analysis}
+One independent policy-scenario execution; framewise violations are collapsed into unique counterexamples using a frozen equivalence definition.
 
-\section{Anticipated interpretation and limitations}
-A synthetic failure predicate must agree with the actual policy semantics. A simple parameter sweep without a novel falsification mechanism is not a separate scientific contribution. Confounding from software versions, sensor conditions, scene selection and methodological overlap will be assessed explicitly. Claims about simulated behavior will not be generalized to physical safety or human behavior without matching evidence.
+\subsection{Data, sensors and ground-truth requirements}
+Pinned policy weights/code, simulator version, independent hazard oracle, bounded scenario generator, seed manifests, candidate rejections and unmodified replay traces. Data and models will be versioned with checksums, licensing information, instrument parameters, selection rules and clock provenance. The held-out test cohort must be independent at the acquisition-session, scene or participant level rather than at the individual frame level.
+
+\subsection{Primary and secondary endpoints}
+The primary estimand is defined as follows: Confirmed unique severe counterexamples per fixed count of simulator-policy evaluations; all invalid proposals and unsuccessful searches count toward the budget.
+
+The secondary measurements will be: Evaluations until first severe violation, discovery coverage, severity distribution, proportion of independently replayable failures and compute time. The exact numerator, denominator, outcome threshold and permitted exclusions must be fixed in the protocol before inferential analysis.
+
+\section{Planned experiments and research sequence}
+\subsection{A. Operational hazard oracle}
+Specify collision, separation and unsafe control as independently computed predicates with explicit geometric tolerance. Freeze feasible scene generation bounds, hazard severity and the equivalence rule for de-duplicating repeated violating frames.
+
+\subsection{B. Equal-budget falsification benchmark}
+Compare random sampling, grid/stratified search, a scenario library, active coverage optimization and the proposed uncertainty-guided falsifier under identical simulator-call budgets. Perturb multi-person crossings, occlusion, payload and delayed perception without changing controller weights.
+
+\subsection{C. Held-out counterexample transfer}
+Reserve scene layouts, trajectories and perturbation families outside search development. Independently replay discovered cases, verify oracle labels and inspect sensitivity to simulator parameters and numerical artefacts.
+
+\subsection{D. Prior-art and ownership audit}
+Review established risk-based test generation and adversarial falsification methods before promoting the candidate to a manuscript. If gains reproduce only ordinary parameter sweeps or duplicate M05/M07 outputs, fold the work into the parent studies.
+
+\section{Comparative design and statistical inference}
+Use paired independent-seed comparisons of discovery rate with confidence intervals. Use censored time-to-first-violation analysis for runs without a detected event. Validate generalization on held-out scenario families and report negative searches. When human participants or independent trajectories are needed, their number must follow a documented power simulation or precision calculation after a feasible pilot. Report uncertainty, negative results and sensitivity to failure strata. Thresholds, model configurations and exclusion criteria must be frozen before final testing.
+
+\section{Evidence gates, reproducibility and ethical boundary}
+Offline simulation and telemetry replay only. An adversarially found simulator failure is not physical humanoid safety evidence; require an independently implemented oracle and prior-art differentiation. Each study phase will preserve source SHA or release, configuration, labels, independent oracle, random seeds, raw event timing, and an auditable trace from inputs to computed figures. Simulated evidence is distinct from measured hardware outcomes. Participant studies require prior ethical review and consent.
 
 \section{Results}
 Empirical results, tables and uncertainty intervals will be incorporated after execution of the documented evaluation protocol and independent verification of the input evidence.

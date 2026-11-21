@@ -8,7 +8,7 @@
 \usepackage[hidelinks]{hyperref}
 \title{Intent-Aware Hand and Gaze Interaction With an Independent Deterministic Robot Safety Governor}
 \author{Mateusz Pomianek}
-\date{Version 0.1.0 -- 21 November 2026}
+\date{Version 0.2.0 -- 21 November 2026}
 \begin{document}
 \maketitle
 
@@ -19,23 +19,46 @@ Multimodal hand and screen-based gaze observations may simplify teleoperation co
 \section{Introduction}
 Multimodal hand and screen-based gaze observations may simplify teleoperation commands, but ambiguous intent must never bypass an independent motion-safety governor. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
 
-\section{Research question and hypothesis}
-Can multimodal intent requests increase simulated teleoperation throughput without violating predeclared proximity, speed and collision constraints under ambiguous or missing sensor inputs? The working hypothesis is that the proposed approach improves the primary endpoint under an explicitly matched evidence and resource budget. This hypothesis is subject to prior-art review and prospective specification; non-superiority and negative findings must remain reportable.
+\section{Detailed scientific scope and novelty boundary}
+The independent scientific contribution is the separation of uncertain human intent inference from a deterministic robot safety governor. Hand and screen-gaze estimates are request-only commands; the governor independently checks separation, speed, deadman and watchdog invariants. This is not a general gesture-classification benchmark or a physical safety certification.
 
-\section{Materials and methods}
-Use a ROS 2 and Gazebo replay or simulation with deterministic speed and distance guards. Represent hand or gaze recognition as a request-only input and inject conflicting commands, packet loss and missing observations. The experimental unit, independent ground truth, data inclusion criteria, version of software and sensors, and provenance of each dataset or scenario will be fixed in the protocol. Training, calibration and evaluation partitions will be isolated at the appropriate physical scene, sequence, participant or device level.
+\section{Falsifiable hypotheses}
+\paragraph{H1.} At unchanged guardian constraints, multimodal request input improves episode-level successful task completion over the strongest preselected single-modality request interface.
 
-\subsection{Comparators and experimental controls}
-Compare scripted commands, single-modality intent inference and multimodal intent requests under the identical independent governor. Model or policy hyperparameters must not be selected from final held-out results. The implementation will record relevant software versions, seeds, sensor configuration, timestamps and data rights.
+\paragraph{H2.} Under conflicting intentions, sensor dropout and delayed commands, an explicit abstention policy reduces the proportion of ambiguous requests forwarded to the governor relative to simple last-command selection.
 
-\subsection{Primary endpoint}
-Count of independently monitored safety-constraint violations per scenario; task completion rate and p99 command-to-abort latency are secondary. Denominators, operational thresholds, missing observations and failure cases will be defined before inferential analysis. Secondary metrics will not be substituted post hoc for the primary endpoint.
+\paragraph{H3.} The independent monitor detects and forces safe fallback during injected command or transport failures within a predeclared bounded response time; any missed invariant violation is a stop condition, not a tolerable statistical error.
 
-\section{Statistical and computational analysis plan}
-Report violation counts with scenario-level uncertainty, paired task completion differences and fault-specific worst-case abort latencies. Any confirmatory statistical contrast will report uncertainty intervals, effective independent sample size and relevant failure strata. Where a physical validation or participant-based experiment is necessary, approval and feasibility assessment must precede data collection.
+\section{Operationalization and study population}
+\subsection{Independent unit of analysis}
+One scripted task episode; repeated frames and actuator updates remain nested within it. A later human pilot treats the participant as a separate clustering factor.
 
-\section{Anticipated interpretation and limitations}
-Simulated invariant satisfaction does not certify safety of a physical humanoid. Tobii Eye Tracker 5 can provide screen-based gaze input only if a valid setup and usage rights are verified. Confounding from software versions, sensor conditions, scene selection and methodological overlap will be assessed explicitly. Claims about simulated behavior will not be generalized to physical safety or human behavior without matching evidence.
+\subsection{Data, sensors and ground-truth requirements}
+Versioned ROS 2/Gazebo scenes, request and supervisor logs, independent geometry traces, fixed random seeds, event timestamps and declared device interfaces. Tobii Eye Tracker 5 is a monitor-based tracker; its use depends on verified permission and timing rather than an assumed headset integration. Data and models will be versioned with checksums, licensing information, instrument parameters, selection rules and clock provenance. The held-out test cohort must be independent at the acquisition-session, scene or participant level rather than at the individual frame level.
+
+\subsection{Primary and secondary endpoints}
+The primary estimand is defined as follows: A hard acceptance gate of zero observed independent safety-invariant violations in the defined simulation envelope, followed by the comparative episode-level task-completion probability among configurations meeting that gate.
+
+The secondary measurements will be: Unsafe-request rejection, rate of abstention, number of near misses, command recovery, latency p50/p95/p99 and participant workload if ethically collected. The exact numerator, denominator, outcome threshold and permitted exclusions must be fixed in the protocol before inferential analysis.
+
+\section{Planned experiments and research sequence}
+\subsection{A. Command and hazard contract}
+Define ROS 2 typed intent requests, confidence validity, age and provenance. Verify that no inference node can directly command actuators. Specify the supervisor, emergency stop, independent proximity oracle and protected state before tests.
+
+\subsection{B. Matched Gazebo task comparison}
+Compare scripted, hand-only, gaze-only and fused request interfaces with the same safety governor on identical independently seeded manipulation and navigation tasks. Randomize order and stratify scenes by obstacle density, target ambiguity and number of nearby people.
+
+\subsection{C. Fault injection and robustness}
+Replay dropped, delayed, reordered and contradictory commands, occlusion and missing gaze. Measure command abstention, task success, independently verified near misses, hard-invariant violations and p99 time to fallback. Replay every counterexample.
+
+\subsection{D. Optional human feasibility}
+After ethics and data-use review, pilot screen-based commands with an appropriately qualified gaze-tracker setup; determine recruitment needs from observed within-participant variability. Do not claim physical-robot safety from subjective workload or virtual trials.
+
+\section{Comparative design and statistical inference}
+Use paired scenario-level bootstrap intervals or a hierarchical binomial model for successful completion, stratified by task and failure condition. All safety violations are individually reported regardless of confidence intervals; failed runs are not excluded. Compare tail latencies on independently repeated episodes. When human participants or independent trajectories are needed, their number must follow a documented power simulation or precision calculation after a feasible pilot. Report uncertainty, negative results and sensitivity to failure strata. Thresholds, model configurations and exclusion criteria must be frozen before final testing.
+
+\section{Evidence gates, reproducibility and ethical boundary}
+No deployment to live robot actuation. Require independent monitoring, replayability of all injected faults and a separate hardware safety case if physical trials are proposed. Each study phase will preserve source SHA or release, configuration, labels, independent oracle, random seeds, raw event timing, and an auditable trace from inputs to computed figures. Simulated evidence is distinct from measured hardware outcomes. Participant studies require prior ethical review and consent.
 
 \section{Results}
 Empirical results, tables and uncertainty intervals will be incorporated after execution of the documented evaluation protocol and independent verification of the input evidence.
