@@ -1,9 +1,10 @@
 # Manuskrypty i koncepcje badawcze ARC Robo
 
-Program obejmuje **31 pozycji** z centralnego rejestru portfolio. **9 pozycji** wskazuje istniejące manuskrypty LaTeX (8 HRI i 1 S4D), **8 pozycji RVI** wskazuje jedynie szablony, a **14 pozostałych** zawiera prospektywne plany badań `main.tex`, nie manuskrypty wynikowe. Wersja robocza LaTeX 0.3.0 każdej z 14 nowych pozycji określa trzy hipotezy, cztery etapy badań, definicje jednostki analizy, punkty końcowe, wymaganą walidację i bramki dowodowe. Podstawowym miejscem utrzymania protokołów i wyników pozostają repozytoria projektów. Wpis katalogowy ani szkic nie zmieniają decyzji o zatwierdzeniu publikacji.
+Program obejmuje **32 pozycje** z centralnego rejestru portfolio. **9 pozycji** wskazuje istniejące manuskrypty LaTeX (8 HRI i 1 S4D), **8 pozycji RVI** wskazuje jedynie szablony, a **14 pozostałych** zawiera prospektywne plany badań `main.tex`, nie manuskrypty wynikowe. Wersja robocza LaTeX 0.3.0 każdej z 14 nowych pozycji określa trzy hipotezy, cztery etapy badań, definicje jednostki analizy, punkty końcowe, wymaganą walidację i bramki dowodowe. Podstawowym miejscem utrzymania protokołów i wyników pozostają repozytoria projektów. Wpis katalogowy ani szkic nie zmieniają decyzji o zatwierdzeniu publikacji.
 
 | Identyfikator | Temat | Status | LaTeX |
 | --- | --- | --- | --- |
+| [MSC-SUV-P05](MSC-SUV-P05/README.md) | Naturalne zachowanie mechanicznego robota i jego akceptacja | `IDEA_HOLD` | [main.tex](MSC-SUV-P05/main.tex) |
 | [MSC-AFFECT-P07](MSC-AFFECT-P07/README.md) | Intencje dłoni i gaze dla bezpiecznej teleoperacji robota | `PLANNED` | [main.tex](MSC-AFFECT-P07/main.tex) |
 | [MSC-HRI-P01](MSC-HRI-P01/README.md) | Scenowe pola ryzyka dla wielu osób w predykcyjnym bezpieczeństwie humanoida | `PLANNED` | [źródło](https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/01_predictive_risk_fields/main.tex) |
 | [MSC-HRI-P02](MSC-HRI-P02/README.md) | Estymacja świadomości, intencji i adresata interakcji człowiek-humanoid | `PLANNED` | [źródło](https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/02_multimodal_awareness_addressee/main.tex) |

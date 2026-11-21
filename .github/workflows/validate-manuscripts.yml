@@ -50,7 +50,7 @@ jobs:
             latexmk -pdf -cd -interaction=nonstopmode -halt-on-error "$f"
             count=$((count + 1))
           done
-          test "$count" -eq 14
+          test "$count" -eq 15
           echo "Compiled $count manuscript plans."
 
   pages-check:
