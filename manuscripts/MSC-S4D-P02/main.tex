@@ -8,7 +8,7 @@
 \usepackage[hidelinks]{hyperref}
 \title{Calibration of UAV Localization Uncertainty under GNSS Degradation and Environmental Shift}
 \author{Mateusz Pomianek}
-\date{Version 0.2.0 -- 21 November 2026}
+\date{Version 0.3.0 -- 21 November 2026}
 \begin{document}
 \maketitle
 
@@ -18,6 +18,18 @@ Localization confidence may become unreliable when satellite positioning degrade
 
 \section{Introduction}
 Localization confidence may become unreliable when satellite positioning degrades and previously unseen scenes alter the uncertainty structure. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
+
+\section{Related research and novelty assessment}
+The following comparison anchors the scope in selected independently verifiable existing work. The citations are not evidence of completed experiments or of established originality:
+\begin{itemize}
+\item \textbf{Prior art 1:} Integrity-Aware Hierarchical Navigation for UAVs Under GNSS Spoofing and Multi-Sensor Degradation \cite{source1}. Evaluates degraded-source management; it does not settle out-of-environment localization error-bound calibration or novel token persistence.
+\item \textbf{Prior art 2:} RTK and PPK GNSS Positioning Accuracy Assessment for UAVs Using a PPS-Synchronized Robotic Total Station \cite{source2}. Demonstrates reference-trajectory and synchronization issues; error coverage and localization calibration on held-out GNSS regimes remain separate questions.
+\end{itemize}
+\subsection{Specific test beyond existing work}
+Worst GNSS-degradation stratum deficit from nominal held-out coverage of UAV localization error bounds under independently measured reference trajectories. This planned contrast is the candidate independent contribution. A literature overlap audit must confirm that prior publications have not already demonstrated an equivalent contrast under comparable measurement conditions.
+
+\section{Primary estimand and prospective decision rules}
+Worst GNSS-degradation stratum deficit from nominal held-out coverage of UAV localization error bounds under independently measured reference trajectories. No generalization without external environment and truth; distinguish this transfer estimand from S4D-P01 calibration ablations. H1 is the primary scientific hypothesis unless the source protocol states a different frozen confirmatory contrast. H2 and H3 are supporting or exploratory until a prospective multiplicity strategy (e.g., Holm adjustment) is selected. Any sample size, quality boundary, non-inferiority margin, effect threshold or confidence limit not grounded in existing evidence is explicitly pending approval before confirmatory evaluation.
 
 \section{Detailed scientific scope and novelty boundary}
 This conditional study asks whether localization uncertainty remains statistically calibrated in environments and GNSS regimes excluded from model development. The output is coverage of localization-error prediction bounds against genuine reference trajectories, not proof of navigation safety. A separate paper requires generalization beyond the S4D-P01 H3 calibration ablation.
@@ -70,5 +82,9 @@ The planned comparison is intended to determine whether the proposed mechanism y
 This study defines a testable research problem, matched comparators and a primary evaluation target. A substantive empirical conclusion remains conditional on reproducible measurements and appropriate methodological review.
 
 \section{Data and code availability}
-The authoritative scientific source is maintained in the \texttt{MatPomGit/arc-s4d-tam} repository. Dataset permissions, input manifests, source commits, evaluation scripts and permitted public artifacts will be identified in the final version. No participant records or proprietary instrumentation details are included here.
+The source project \texttt{MatPomGit/arc-s4d-tam} remains the authority for the underlying research protocol; this local document is an ARC Robo prospective research plan, not a duplicate final manuscript. Dataset permissions, input manifests, source commits, evaluation scripts and permitted public artifacts will be identified in the final version. No participant records or proprietary instrumentation details are included here.
+\begin{thebibliography}{9}
+\bibitem{source1} Integrity-Aware Hierarchical Navigation for UAVs Under GNSS Spoofing and Multi-Sensor Degradation. Drones 10(10), 738 (2026). \url{https://www.mdpi.com/2504-446X/10/10/738}.
+\bibitem{source2} RTK and PPK GNSS Positioning Accuracy Assessment for UAVs Using a PPS-Synchronized Robotic Total Station. Sensors 26(15), 4907 (2026). \url{https://doi.org/10.3390/s26154907}.
+\end{thebibliography}
 \end{document}

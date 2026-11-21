@@ -8,7 +8,7 @@
 \usepackage[hidelinks]{hyperref}
 \title{Identity-Preserving Multi-Object Tracking in RGB and Long-Wave Infrared Video}
 \author{Mateusz Pomianek}
-\date{Version 0.2.0 -- 21 November 2026}
+\date{Version 0.3.0 -- 21 November 2026}
 \begin{document}
 \maketitle
 
@@ -18,6 +18,18 @@ Tracking requires temporal association and independently annotated identities, n
 
 \section{Introduction}
 Tracking requires temporal association and independently annotated identities, not frame-level detection accuracy alone. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
+
+\section{Related research and novelty assessment}
+The following comparison anchors the scope in selected independently verifiable existing work. The citations are not evidence of completed experiments or of established originality:
+\begin{itemize}
+\item \textbf{Prior art 1:} M3OT: A Multi-Drone Multi-Modality dataset for Multi-Object Tracking \cite{source1}. Provides aerial RGB/thermal video tracking data, but source labels, sensor viewpoints and rights must be verified before cross-sensor comparisons.
+\item \textbf{Prior art 2:} What You Have is What You Track: Adaptive and Robust Multimodal Tracking \cite{source2}. Studies multimodal tracking with missing inputs; it must not be misrepresented as the same multi-object identity-association endpoint of P06.
+\end{itemize}
+\subsection{Specific test beyond existing work}
+Difference in identity switches per eligible annotated object trajectory between two trackers using the identical frozen detections. This planned contrast is the candidate independent contribution. A literature overlap audit must confirm that prior publications have not already demonstrated an equivalent contrast under comparable measurement conditions.
+
+\section{Primary estimand and prospective decision rules}
+Difference in identity switches per eligible annotated object trajectory between two trackers using the identical frozen detections. ICCV FlexTrack is relevant to missing-modality tracking, but is not a direct multi-object identity-switch benchmark. Track-level ground truth and sequence holdout are mandatory. H1 is the primary scientific hypothesis unless the source protocol states a different frozen confirmatory contrast. H2 and H3 are supporting or exploratory until a prospective multiplicity strategy (e.g., Holm adjustment) is selected. Any sample size, quality boundary, non-inferiority margin, effect threshold or confidence limit not grounded in existing evidence is explicitly pending approval before confirmatory evaluation.
 
 \section{Detailed scientific scope and novelty boundary}
 The independent contribution is temporal object-identity continuity in paired RGB/LWIR videos, beyond frame-by-frame detection. Cross-modal association is evaluated against independently annotated persistent track IDs. Tracking metrics cannot be derived from a folder of independent still frames or synthetic bounding-box overlap without valid sequences.
@@ -70,5 +82,9 @@ The planned comparison is intended to determine whether the proposed mechanism y
 This study defines a testable research problem, matched comparators and a primary evaluation target. A substantive empirical conclusion remains conditional on reproducible measurements and appropriate methodological review.
 
 \section{Data and code availability}
-The authoritative scientific source is maintained in the \texttt{MatPomGit/arc-rgbt} repository. Dataset permissions, input manifests, source commits, evaluation scripts and permitted public artifacts will be identified in the final version. No participant records or proprietary instrumentation details are included here.
+The source project \texttt{MatPomGit/arc-rgbt} remains the authority for the underlying research protocol; this local document is an ARC Robo prospective research plan, not a duplicate final manuscript. Dataset permissions, input manifests, source commits, evaluation scripts and permitted public artifacts will be identified in the final version. No participant records or proprietary instrumentation details are included here.
+\begin{thebibliography}{9}
+\bibitem{source1} M3OT: A Multi-Drone Multi-Modality dataset for Multi-Object Tracking. Scientific Data 12, 1927 (2025). \url{https://doi.org/10.1038/s41597-025-06204-0}.
+\bibitem{source2} Tan et al. What You Have is What You Track: Adaptive and Robust Multimodal Tracking. ICCV (2025), pp. 3455-3465. \url{https://openaccess.thecvf.com/content/ICCV2025/html/Tan_What_You_Have_is_What_You_Track_Adaptive_and_Robust_ICCV_2025_paper.html}.
+\end{thebibliography}
 \end{document}

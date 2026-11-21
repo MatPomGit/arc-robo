@@ -8,7 +8,7 @@
 \usepackage[hidelinks]{hyperref}
 \title{Propagating Spatiotemporal Calibration Uncertainty into RGB and LWIR Detection Risk}
 \author{Mateusz Pomianek}
-\date{Version 0.2.0 -- 21 November 2026}
+\date{Version 0.3.0 -- 21 November 2026}
 \begin{document}
 \maketitle
 
@@ -18,6 +18,18 @@ Physical camera and clock uncertainty can be propagated into predictive bounds o
 
 \section{Introduction}
 Physical camera and clock uncertainty can be propagated into predictive bounds on detection-association error. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
+
+\section{Related research and novelty assessment}
+The following comparison anchors the scope in selected independently verifiable existing work. The citations are not evidence of completed experiments or of established originality:
+\begin{itemize}
+\item \textbf{Prior art 1:} Autonomous--Targetless Extrinsic Calibration of Thermal, RGB, and LiDAR Sensors \cite{source1}. Addresses multisensor registration, not necessarily uncertainty-calibrated detection risk bounds on new physical sessions.
+\item \textbf{Prior art 2:} Misaligned Visible-Thermal Object Detection: A Drone-Based Benchmark and Baseline \cite{source2}. Addresses visible-thermal spatial misalignment; exposure-time measurement and scene-motion interactions must supply any distinct P02 result.
+\end{itemize}
+\subsection{Specific test beyond existing work}
+Absolute deviation of observed held-out prediction-bound coverage from a preregistered nominal target for association risk under measured space/time calibration uncertainty. This planned contrast is the candidate independent contribution. A literature overlap audit must confirm that prior publications have not already demonstrated an equivalent contrast under comparable measurement conditions.
+
+\section{Primary estimand and prospective decision rules}
+Absolute deviation of observed held-out prediction-bound coverage from a preregistered nominal target for association risk under measured space/time calibration uncertainty. Quantify interval width alongside empirical coverage to prevent vacuous prediction bounds; independent physical calibration sessions are required. H1 is the primary scientific hypothesis unless the source protocol states a different frozen confirmatory contrast. H2 and H3 are supporting or exploratory until a prospective multiplicity strategy (e.g., Holm adjustment) is selected. Any sample size, quality boundary, non-inferiority margin, effect threshold or confidence limit not grounded in existing evidence is explicitly pending approval before confirmatory evaluation.
 
 \section{Detailed scientific scope and novelty boundary}
 This OPTIONAL\_HOLD study investigates whether uncertainty in physical RGB/LWIR geometric calibration and exposure-time alignment can be propagated into calibrated bounds on fusion association error. P02 asks whether alignment helps; here the distinct outcome is held-out probabilistic risk-bound validity and sharpness, requiring independent physical reference correspondences.
@@ -70,5 +82,9 @@ The planned comparison is intended to determine whether the proposed mechanism y
 This study defines a testable research problem, matched comparators and a primary evaluation target. A substantive empirical conclusion remains conditional on reproducible measurements and appropriate methodological review.
 
 \section{Data and code availability}
-The authoritative scientific source is maintained in the \texttt{MatPomGit/arc-rgbt} repository. Dataset permissions, input manifests, source commits, evaluation scripts and permitted public artifacts will be identified in the final version. No participant records or proprietary instrumentation details are included here.
+The source project \texttt{MatPomGit/arc-rgbt} remains the authority for the underlying research protocol; this local document is an ARC Robo prospective research plan, not a duplicate final manuscript. Dataset permissions, input manifests, source commits, evaluation scripts and permitted public artifacts will be identified in the final version. No participant records or proprietary instrumentation details are included here.
+\begin{thebibliography}{9}
+\bibitem{source1} Autonomous-Targetless Extrinsic Calibration of Thermal, RGB, and LiDAR Sensors. IEEE Transactions on Instrumentation and Measurement (2024). DOI: 10.1109/TIM.2024.3480237. \url{https://doi.org/10.1109/TIM.2024.3480237}.
+\bibitem{source2} Misaligned Visible-Thermal Object Detection: A Drone-Based Benchmark and Baseline. IEEE (2024). \url{https://ieeexplore.ieee.org/abstract/document/10522939}.
+\end{thebibliography}
 \end{document}

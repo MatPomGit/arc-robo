@@ -8,7 +8,7 @@
 \usepackage[hidelinks]{hyperref}
 \title{Cross-Sensor and Cross-Domain Transfer of RGB and Long-Wave Infrared Detectors}
 \author{Mateusz Pomianek}
-\date{Version 0.2.0 -- 21 November 2026}
+\date{Version 0.3.0 -- 21 November 2026}
 \begin{document}
 \maketitle
 
@@ -18,6 +18,18 @@ Detection performance may degrade across genuinely independent sensor platforms,
 
 \section{Introduction}
 Detection performance may degrade across genuinely independent sensor platforms, viewpoints and thermal domains. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
+
+\section{Related research and novelty assessment}
+The following comparison anchors the scope in selected independently verifiable existing work. The citations are not evidence of completed experiments or of established originality:
+\begin{itemize}
+\item \textbf{Prior art 1:} M3OT: A Multi-Drone Multi-Modality dataset for Multi-Object Tracking \cite{source1}. Provides aerial RGB/thermal video tracking data, but source labels, sensor viewpoints and rights must be verified before cross-sensor comparisons.
+\item \textbf{Prior art 2:} Mitigating Spectral Imbalance and Detail Attenuation in RGB-Thermal Object Detection via Frequency-Guided Multimodal Fusion \cite{source2}. Provides a multispectral detection and benchmark comparison, not verified native physical sampling limits or full-pipeline embedded energy.
+\end{itemize}
+\subsection{Specific test beyond existing work}
+Target-domain recall difference between bounded adaptation and source-only inference at a fixed false-positive-per-frame operating point. This planned contrast is the candidate independent contribution. A literature overlap audit must confirm that prior publications have not already demonstrated an equivalent contrast under comparable measurement conditions.
+
+\section{Primary estimand and prospective decision rules}
+Target-domain recall difference between bounded adaptation and source-only inference at a fixed false-positive-per-frame operating point. The primary target must be an independent physical sensor or acquisition cohort with compatible labels; resizing does not count as sensor transfer. H1 is the primary scientific hypothesis unless the source protocol states a different frozen confirmatory contrast. H2 and H3 are supporting or exploratory until a prospective multiplicity strategy (e.g., Holm adjustment) is selected. Any sample size, quality boundary, non-inferiority margin, effect threshold or confidence limit not grounded in existing evidence is explicitly pending approval before confirmatory evaluation.
 
 \section{Detailed scientific scope and novelty boundary}
 The study targets sensor- and domain-generalization of object detection across genuinely different physical RGB/LWIR sensors and acquisition conditions. Image interpolation, video cropping or resizing of one acquisition system do not establish transfer. Cross-domain labels, spectral bands and sensor geometry must be legally and scientifically compatible; NIR cannot be silently equated with LWIR.
@@ -70,5 +82,9 @@ The planned comparison is intended to determine whether the proposed mechanism y
 This study defines a testable research problem, matched comparators and a primary evaluation target. A substantive empirical conclusion remains conditional on reproducible measurements and appropriate methodological review.
 
 \section{Data and code availability}
-The authoritative scientific source is maintained in the \texttt{MatPomGit/arc-rgbt} repository. Dataset permissions, input manifests, source commits, evaluation scripts and permitted public artifacts will be identified in the final version. No participant records or proprietary instrumentation details are included here.
+The source project \texttt{MatPomGit/arc-rgbt} remains the authority for the underlying research protocol; this local document is an ARC Robo prospective research plan, not a duplicate final manuscript. Dataset permissions, input manifests, source commits, evaluation scripts and permitted public artifacts will be identified in the final version. No participant records or proprietary instrumentation details are included here.
+\begin{thebibliography}{9}
+\bibitem{source1} M3OT: A Multi-Drone Multi-Modality dataset for Multi-Object Tracking. Scientific Data 12, 1927 (2025). \url{https://doi.org/10.1038/s41597-025-06204-0}.
+\bibitem{source2} Mitigating Spectral Imbalance and Detail Attenuation in RGB-Thermal Object Detection via Frequency-Guided Multimodal Fusion. Sensors 26(13), 4145 (2026). \url{https://doi.org/10.3390/s26134145}.
+\end{thebibliography}
 \end{document}

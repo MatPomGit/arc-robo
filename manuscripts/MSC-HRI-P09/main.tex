@@ -8,7 +8,7 @@
 \usepackage[hidelinks]{hyperref}
 \title{Adversarial Falsification of Predictive Safety Fields in Multi-Human Humanoid Interaction}
 \author{Mateusz Pomianek}
-\date{Version 0.2.0 -- 21 November 2026}
+\date{Version 0.3.0 -- 21 November 2026}
 \begin{document}
 \maketitle
 
@@ -18,6 +18,18 @@ Active scenario search could reveal safety-field counterexamples that uniform ra
 
 \section{Introduction}
 Active scenario search could reveal safety-field counterexamples that uniform random and grid searches miss within the same evaluation budget. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
+
+\section{Related research and novelty assessment}
+The following comparison anchors the scope in selected independently verifiable existing work. The citations are not evidence of completed experiments or of established originality:
+\begin{itemize}
+\item \textbf{Prior art 1:} Requirement falsification for cyber-physical systems using generative models \cite{source1}. Establishes that search-guided falsification is not itself new; the proposed claim needs a specific multi-human hazard oracle and superior budget-matched counterexample discovery.
+\item \textbf{Prior art 2:} ISO 10218-1:2025 \cite{source2}. Provides industrial-robot requirements; this prospective simulation is not a conformity assessment or safety certificate.
+\end{itemize}
+\subsection{Specific test beyond existing work}
+Difference in unique independently confirmed severe counterexamples per fixed policy-evaluation budget across independent seed and scenario families. This planned contrast is the candidate independent contribution. A literature overlap audit must confirm that prior publications have not already demonstrated an equivalent contrast under comparable measurement conditions.
+
+\section{Primary estimand and prospective decision rules}
+Difference in unique independently confirmed severe counterexamples per fixed policy-evaluation budget across independent seed and scenario families. One primary falsification-efficiency test; H2/H3 treated as secondary unless familywise adjustment is preregistered. H1 is the primary scientific hypothesis unless the source protocol states a different frozen confirmatory contrast. H2 and H3 are supporting or exploratory until a prospective multiplicity strategy (e.g., Holm adjustment) is selected. Any sample size, quality boundary, non-inferiority margin, effect threshold or confidence limit not grounded in existing evidence is explicitly pending approval before confirmatory evaluation.
 
 \section{Detailed scientific scope and novelty boundary}
 This proposed methods paper evaluates efficiency of finding reproducible safety-field counterexamples, not predictive-field accuracy (MSC-HRI-P01), reachability calibration (P04), benchmark construction (P05) or protective fallback (P07). The evaluated controller and independent hazard oracle remain frozen while the search method changes.
@@ -70,5 +82,9 @@ The planned comparison is intended to determine whether the proposed mechanism y
 This study defines a testable research problem, matched comparators and a primary evaluation target. A substantive empirical conclusion remains conditional on reproducible measurements and appropriate methodological review.
 
 \section{Data and code availability}
-The authoritative scientific source is maintained in the \texttt{MatPomGit/arc-hri-safety} repository. Dataset permissions, input manifests, source commits, evaluation scripts and permitted public artifacts will be identified in the final version. No participant records or proprietary instrumentation details are included here.
+The source project \texttt{MatPomGit/arc-hri-safety} remains the authority for the underlying research protocol; this local document is an ARC Robo prospective research plan, not a duplicate final manuscript. Dataset permissions, input manifests, source commits, evaluation scripts and permitted public artifacts will be identified in the final version. No participant records or proprietary instrumentation details are included here.
+\begin{thebibliography}{9}
+\bibitem{source1} Requirement falsification for cyber-physical systems using generative models. Automated Software Engineering 32, 33 (2025). \url{https://link.springer.com/article/10.1007/s10515-025-00503-x}.
+\bibitem{source2} ISO 10218-1:2025. Robotics -- Safety requirements -- Part 1: Industrial robots. ISO. \url{https://www.iso.org/standard/73933.html}.
+\end{thebibliography}
 \end{document}
