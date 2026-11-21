@@ -1,49 +1,30 @@
-# ARC Robo — badania percepcji, nawigacji i bezpieczeństwa robotów
+# ARC Robo: percepcja, nawigacja i bezpieczeństwo robotów
 
-**Rodzaj repozytorium:** program naukowy `arc-*`  
-**Program:** `arc-robo`  
-**Schemat rejestrów:** `1` (starszy format, przed migracją)  
-**Autor podstawowy:** Mateusz Pomianek; dodatkowi współautorzy po potwierdzeniu wkładu  
-**Stan naukowy:** indeks planowany, bez potwierdzonych wyników empirycznych
+**Program naukowy:** `arc-robo`  
+**Opieka naukowa:** Mateusz Pomianek
 
-## Misja i granice programu
+ARC Robo obejmuje badania percepcji multimodalnej robotów, autonomicznej inspekcji, predykcyjnego bezpieczeństwa interakcji człowiek–robot, teleoperacji oraz nawigacji bezzałogowej. Projekty łączy możliwość walidacji wyniku w kontekście zadania robotycznego.
 
-ARC Robo skupia projekty naukowe dotyczące percepcji RGB/LWIR, aktywnej inspekcji humanoidów, predykcyjnego bezpieczeństwa interakcji człowiek–robot, wspomaganej multimodalnie teleoperacji oraz nawigacji UAV. Kryterium przypisania stanowi robotyczny wynik główny i możliwość jego niezależnej walidacji. Szczegółowe protokoły, dane i kanoniczne źródła dojrzałych manuskryptów pozostają w projektach źródłowych; ARC Robo utrzymuje indeks przekrojowy.
+## Główne kierunki badań
 
-## Katalog artykułów
+| Obszar | Problematyka |
+| --- | --- |
+| Percepcja RGB/LWIR | Integracja informacji wizyjnej i termicznej |
+| Inspekcja autonomiczna | Niezawodność i weryfikacja ukończenia misji |
+| Interakcja człowiek–robot | Bezpieczeństwo, komunikacja i przewidywanie ryzyka |
+| Teleoperacja | Multimodalne wspomaganie operatora |
+| Nawigacja UAV | Planowanie, lokalizacja i ocena działania |
 
-[Indeks 31 artykułów oraz pliki LaTeX dla brakujących pozycji](manuscripts/README.md). Szczegółowy status i lokalizacja oryginalnego manuskryptu są opisane osobno dla każdego identyfikatora MSC.
+## Manuskrypty i projekty
 
-## Propozycje kierunków badawczych
+[Katalog 31 planowanych artykułów](manuscripts/README.md) zawiera zakres, identyfikatory MSC i informacje o źródłach. Część pozycji jest rozwijana lokalnie, a część pozostaje powiązana z projektami zewnętrznymi. Główny wykaz źródeł przedstawia [manifest manuskryptów](manuscripts/source_manifest.json). Materiały mają charakter prospektywny i nie stanowią potwierdzonych wyników empirycznych.
 
-[MSC-RVI-P09: wiarygodność dowodów ukończenia misji inspekcyjnej w ocenie operatora](docs/research-proposals-2026.md) to propozycja naukowa oparta na planowanym wtórnym użyciu symulacji robotycznej, **bez zatwierdzonego manuskryptu i bez badania na robocie fizycznym**.
+[Rejestr projektów](portfolio/projects.json), [rejestr artykułów](portfolio/papers.json) i [rejestr zależności](portfolio/dependencies.json) opisują związki pomiędzy programem i jego projektami. Program ARC nie gromadzi surowych danych uczestników.
 
-## Katalog badań
+## Publiczna witryna
 
-Programowy rejestr projektu i zależności znajduje się w [`portfolio/projects.json`](portfolio/projects.json) oraz [`portfolio/dependencies.json`](portfolio/dependencies.json). W obecnym schemacie v1 [`portfolio/papers.json`](portfolio/papers.json) pozostaje pusty, a **rzeczywisty indeks 31 pozycji i przypiętych źródeł** znajduje się w [`manuscripts/source_manifest.json`](manuscripts/source_manifest.json). Nie traktuj pustego `portfolio/papers.json` jako dowodu braku manuskryptów. Projekt `msc-*` ma własny protokół, manuskrypt, dane referencyjne i GitHub Pages; ARC utrzymuje tylko odnośniki oraz metadane zależności. Starsze repozytoria mogą być wskazywane pod obecną nazwą do czasu kontrolowanej migracji.
+[Publiczny opis programu](pages/index.md) oraz [katalog projektów](pages/projects.md) powstają z wyodrębnionego katalogu `pages/`. Portal może wykorzystywać logo ARC Robo w nagłówku i odrębne logo konkretnego projektu, jeżeli odpowiednie grafiki zostały zatwierdzone. Samo repozytorium nie uruchamia automatycznej publikacji Pages.
 
-[Dokumentacja katalogu projektów](docs/projects.md) nie jest automatycznie publikowaną witryną; GitHub Pages pozostaje nieskonfigurowany. Program ARC nie jest repozytorium surowych danych uczestników ani pakietem aplikacji.
+## Odtwarzalność i dostępność badań
 
-## Uruchomienie
-
-```bash
-python scripts/validate_repository.py --phase scaffold
-python -m unittest discover -s tests -v
-python scripts/build_public_catalog.py
-# Jeśli skonfigurowano submoduły, pobierz przypięte wersje:
-python scripts/bootstrap.py --mode reproduce
-# Gdy potrzebujesz analizy bieżącego portfolio, sprawdź aktualne gałęzie zdalne:
-python scripts/bootstrap.py --mode audit-live
-```
-
-Weryfikacja `audit-live` **nie zmienia** przypiętych commitów i nie uruchamia kodu projektów podrzędnych. Brak dostępu do prywatnego repozytorium daje `UNAVAILABLE`, nie `PASS`.
-
-## Audyt i plan napraw
-
-Zobacz [niezależny audyt szablonu ARC z 2026-11-19](reviews/2026-11-19-template-audit.md), zawierający priorytety P0–P2 i test akceptacyjny. Repozytorium ma workflow `.github/workflows/validate-manuscripts.yml`, który uruchamia testy struktury i kompilację 14 lokalnych planów LaTeX. Odsyłacze do pozostałych 17 manuskryptów są testowane jako źródła zewnętrzne.
-
-## Otwartość
-
-Strona programu: **NOT_CONFIGURED**. Strony indywidualnych projektów znajdują się w odpowiednich repozytoriach. Architektura: [ARCHITECTURE.md](ARCHITECTURE.md). Zasady badań: [RESEARCH.md](RESEARCH.md). Reprodukowanie wersji: [REPRODUCIBILITY.md](REPRODUCIBILITY.md). Kryteria publikacji: [docs/publication-policy.md](docs/publication-policy.md).
-
-Nie publikować prywatnych nazw, danych ani wewnętrznych ścieżek bez zgody właściciela. Plik `LICENSE` pozostaje nieaktywnym szablonem do chwili wyboru właściwej licencji.
+[REPRODUCIBILITY.md](REPRODUCIBILITY.md) opisuje powiązania wersji i materiałów, [ARCHITECTURE.md](ARCHITECTURE.md) granice programu, a [RESEARCH.md](RESEARCH.md) metodologię i założenia naukowe. Warunki wykorzystania materiałów reguluje [licencja](LICENSE) i prawa do poszczególnych zasobów.

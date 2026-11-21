@@ -19,6 +19,17 @@ jobs:
         run: python3 scripts/validate_repository.py --phase scaffold
       - name: Run Python unit tests
         run: python3 -m unittest discover -s tests -v
+      - name: Validate curated Pages and optional programme logo
+        run: |
+          set -euo pipefail
+          python3 scripts/site_branding.py
+          python3 scripts/validate_pages.py
+          python3 scripts/build_public_catalog.py
+          git diff --exit-code -- pages/projects.md
+      - name: Build isolated public MkDocs site
+        run: |
+          python3 -m pip install --disable-pip-version-check mkdocs==1.6.1
+          python3 -m mkdocs build --strict --clean
 
   latex-plans:
     runs-on: ubuntu-latest
