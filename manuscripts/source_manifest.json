@@ -13,7 +13,14 @@
       "source_commit_sha": "0ff5f1531f03270c4f9fdcc7f3af6d2e9aca85dd",
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-AFFECT-P07/main.tex",
-      "source_reference_url": "https://github.com/MatPomGit/arc-affective/blob/0ff5f1531f03270c4f9fdcc7f3af6d2e9aca85dd/manuscripts/P07/plan.md"
+      "source_reference_url": "https://github.com/MatPomGit/arc-affective/blob/0ff5f1531f03270c4f9fdcc7f3af6d2e9aca85dd/manuscripts/P07/plan.md",
+      "source_blob_sha": "92d7c570f926f4160ca7093c2b4b3acf6756aec2",
+      "migrated_research_plan_path": "manuscripts/MSC-AFFECT-P07/plan.md",
+      "migration_phase": "copy_verified_pending_pr_merge",
+      "migration_scope": "plan_only_no_robot_code_or_data",
+      "source_issues": [
+        "https://github.com/MatPomGit/arc-affective/issues/11"
+      ]
     },
     {
       "id": "MSC-HRI-P01",
