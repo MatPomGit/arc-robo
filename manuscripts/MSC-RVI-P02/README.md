@@ -1,9 +1,7 @@
 # MSC-RVI-P02: Odporna lokalizacja właściwego egzemplarza przy dystraktorach
 
-Lokalizacja właściwego egzemplarza obiektu jest oceniana w obecności podobnych obiektów, przesłonięć i zakłóceń identyfikacji.
+**Status naukowy:** `PLANNED`. **Typ źródła:** `tex_placeholder`.
 
-**Status naukowy:** planowany manuskrypt (`PLANNED`). **Tytuł angielski:** *Robust Instance-Level Object Localization in Multi-Object Environments for Humanoid Robots*.
+[Źródło LaTeX w wersji przypiętej](https://github.com/MatPomGit/arc-rvi/blob/3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649/papers/paper02/manuscript.tex). Źródło jest krótkim szablonem LaTeX z niedopełnionymi sekcjami. Nie należy nazywać go opracowanym manuskryptem.
 
-[Kanoniczny manuskrypt LaTeX](https://github.com/MatPomGit/arc-rvi/blob/main/papers/paper02/manuscript.tex) jest utrzymywany w repozytorium projektu źródłowego. Nie powiela się jego źródła w indeksie programu ARC Robo.
-
-Przypisanie do katalogu programu nie zmienia statusu zatwierdzenia ani nie stanowi potwierdzenia wykonania badań.
+[Manifest źródeł](../source_manifest.json) podaje dokładny commit, repozytorium i ścieżkę; istnienie pliku nie stanowi potwierdzenia wykonania badania ani zatwierdzenia publikacji.

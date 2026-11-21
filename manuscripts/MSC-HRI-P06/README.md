@@ -1,9 +1,7 @@
 # MSC-HRI-P06: Walidacja real-to-sim digital twin dla bezpieczeństwa humanoida
 
-Porównanie sparowanych prób rzeczywistych i symulacyjnych ustala granice wierności bliźniaka cyfrowego dla wniosków o bezpieczeństwie.
+**Status naukowy:** `CONDITIONAL`. **Typ źródła:** `existing_manuscript_tex`.
 
-**Status naukowy:** manuskrypt warunkowy (`CONDITIONAL`). **Tytuł angielski:** *When Does Simulation Preserve Humanoid Safety Evidence? A Real-to-Sim Validation Study*.
+[Źródło LaTeX w wersji przypiętej](https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/06_real_to_sim_digital_twin/main.tex). Źródło zawiera manuskrypt LaTeX utrzymywany przez projekt źródłowy; stopień gotowości i wyniki weryfikuje się tam.
 
-[Kanoniczny manuskrypt LaTeX](https://github.com/MatPomGit/arc-hri-safety/blob/main/manuscripts/06_real_to_sim_digital_twin/main.tex) jest utrzymywany w repozytorium projektu źródłowego. Nie powiela się jego źródła w indeksie programu ARC Robo.
-
-Przypisanie do katalogu programu nie zmienia statusu zatwierdzenia ani nie stanowi potwierdzenia wykonania badań.
+[Manifest źródeł](../source_manifest.json) podaje dokładny commit, repozytorium i ścieżkę; istnienie pliku nie stanowi potwierdzenia wykonania badania ani zatwierdzenia publikacji.

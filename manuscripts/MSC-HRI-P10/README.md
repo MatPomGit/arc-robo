@@ -4,6 +4,6 @@ Stale or delayed sensor observations can make predictive risk estimates appear m
 
 **Status naukowy:** koncepcja do weryfikacji (`IDEA_REVIEW`). **Tytuł angielski:** *Telemetry Staleness and False Confidence in Predictive Humanoid Interaction Risk*.
 
-[Źródło roboczego manuskryptu LaTeX](main.tex) zawiera tytuł, streszczenie, pytanie badawcze, plan metodologiczny, wynik główny i granice interpretacji. [Pierwotny materiał badawczy](https://github.com/MatPomGit/arc-hri-safety/blob/main/manuscripts/FUTURE_RESEARCH_PROPOSALS.md) pozostaje źródłem szczegółowych założeń i protokołu.
+[Źródło roboczego manuskryptu LaTeX](main.tex) zawiera tytuł, streszczenie, pytanie badawcze, plan metodologiczny, wynik główny i granice interpretacji. [Wersjonowane źródło zakresu badania](https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/FUTURE_RESEARCH_PROPOSALS.md) pozostaje źródłem szczegółowych założeń i protokołu.
 
 Przypisanie do katalogu programu nie zmienia statusu zatwierdzenia ani nie stanowi potwierdzenia wykonania badań.

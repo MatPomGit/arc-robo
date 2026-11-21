@@ -1,9 +1,7 @@
 # MSC-S4D-P01: Semantyczne tokeny 4D dla nawigacji UAV w środowisku o osłabionym GNSS
 
-Model pamięci przestrzenno-czasowej tokenów semantycznych służy do planowania nawigacji UAV przy degradacji lokalizacji GNSS.
+**Status naukowy:** `DRAFT`. **Typ źródła:** `existing_manuscript_tex`.
 
-**Status naukowy:** istniejący manuskrypt (`DRAFT`). **Tytuł angielski:** *Semantic 4D Token Attention Maps for Autonomous Navigation of Unmanned Aerial Vehicles in Global Navigation Satellite System-Degraded Environments*.
+[Źródło LaTeX w wersji przypiętej](https://github.com/MatPomGit/arc-s4d-tam/blob/1d73cfa958d625602821bb7aea83850a790342ba/manuscript/main.tex). Źródło zawiera manuskrypt LaTeX utrzymywany przez projekt źródłowy; stopień gotowości i wyniki weryfikuje się tam.
 
-[Kanoniczny manuskrypt LaTeX](https://github.com/MatPomGit/arc-s4d-tam/blob/main/manuscript/main.tex) jest utrzymywany w repozytorium projektu źródłowego. Nie powiela się jego źródła w indeksie programu ARC Robo.
-
-Przypisanie do katalogu programu nie zmienia statusu zatwierdzenia ani nie stanowi potwierdzenia wykonania badań.
+[Manifest źródeł](../source_manifest.json) podaje dokładny commit, repozytorium i ścieżkę; istnienie pliku nie stanowi potwierdzenia wykonania badania ani zatwierdzenia publikacji.
