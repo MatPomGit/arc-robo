@@ -50,3 +50,23 @@ jobs:
           done
           test "$count" -eq 14
           echo "Compiled $count manuscript plans."
+
+  pages-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          submodules: false
+          lfs: false
+      - name: Validate curated Pages source and allowlist
+        run: python3 -B scripts/validate_pages.py
+      - name: Build curated Pages offline without deployment
+        run: |
+          set -euo pipefail
+          python3 -m venv "$RUNNER_TEMP/arc-robo-pages"
+          "$RUNNER_TEMP/arc-robo-pages/bin/python" -m pip install --disable-pip-version-check mkdocs==1.6.1
+          "$RUNNER_TEMP/arc-robo-pages/bin/python" -m mkdocs build --strict --clean
+          test -f site/index.html
+          test -f site/projects/index.html
