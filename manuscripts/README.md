@@ -1,6 +1,6 @@
 # Manuskrypty i koncepcje badawcze ARC Robo
 
-Program obejmuje **31 pozycji** z centralnego rejestru portfolio. **17 pozycji** posiada już kanoniczny plik LaTeX w repozytorium projektu źródłowego; **14 pozostałych** otrzymuje tutaj samodzielny szkic `main.tex`. Podstawowym miejscem utrzymania protokołów i wyników pozostają repozytoria projektów. Wpis katalogowy ani szkic nie zmieniają decyzji o zatwierdzeniu publikacji.
+Program obejmuje **31 pozycji** z centralnego rejestru portfolio. **17 pozycji** posiada już kanoniczny plik LaTeX w repozytorium projektu źródłowego; **14 pozostałych** otrzymuje tutaj samodzielny szkic `main.tex`. Wersja robocza LaTeX 0.2.0 każdej z 14 nowych pozycji określa trzy hipotezy, cztery etapy badań, definicje jednostki analizy, punkty końcowe, wymaganą walidację i bramki dowodowe. Podstawowym miejscem utrzymania protokołów i wyników pozostają repozytoria projektów. Wpis katalogowy ani szkic nie zmieniają decyzji o zatwierdzeniu publikacji.
 
 | Identyfikator | Temat | Status | LaTeX |
 | --- | --- | --- | --- |
