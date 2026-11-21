@@ -24,7 +24,7 @@ class ResearchDesignTests(unittest.TestCase):
                 tex = (MANUSCRIPTS / ident / "main.tex").read_text(encoding="utf-8")
                 labels = re.findall(r"\\paragraph\{(H[1-3])\.\}", tex)
                 self.assertEqual(labels, ["H1", "H2", "H3"])
-                self.assertIn("Version 0.2.0", tex)
+                self.assertIn("Version 0.3.0", tex)
 
     def test_every_new_draft_defines_four_study_stages(self):
         for ident in IDS:

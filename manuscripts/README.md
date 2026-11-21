@@ -1,6 +1,6 @@
 # Manuskrypty i koncepcje badawcze ARC Robo
 
-Program obejmuje **31 pozycji** z centralnego rejestru portfolio. **9 pozycji** wskazuje istniejące manuskrypty LaTeX (8 HRI i 1 S4D), **8 pozycji RVI** wskazuje jedynie szablony, a **14 pozostałych** zawiera prospektywne plany badań `main.tex`, nie manuskrypty wynikowe. Wersja robocza LaTeX 0.2.0 każdej z 14 nowych pozycji określa trzy hipotezy, cztery etapy badań, definicje jednostki analizy, punkty końcowe, wymaganą walidację i bramki dowodowe. Podstawowym miejscem utrzymania protokołów i wyników pozostają repozytoria projektów. Wpis katalogowy ani szkic nie zmieniają decyzji o zatwierdzeniu publikacji.
+Program obejmuje **31 pozycji** z centralnego rejestru portfolio. **9 pozycji** wskazuje istniejące manuskrypty LaTeX (8 HRI i 1 S4D), **8 pozycji RVI** wskazuje jedynie szablony, a **14 pozostałych** zawiera prospektywne plany badań `main.tex`, nie manuskrypty wynikowe. Wersja robocza LaTeX 0.3.0 każdej z 14 nowych pozycji określa trzy hipotezy, cztery etapy badań, definicje jednostki analizy, punkty końcowe, wymaganą walidację i bramki dowodowe. Podstawowym miejscem utrzymania protokołów i wyników pozostają repozytoria projektów. Wpis katalogowy ani szkic nie zmieniają decyzji o zatwierdzeniu publikacji.
 
 | Identyfikator | Temat | Status | LaTeX |
 | --- | --- | --- | --- |
@@ -40,4 +40,4 @@ Materiały źródłowe obejmują projekty `arc-affective`, `arc-hri-safety`, `ar
 
 Katalog nie jest automatycznie publikowany przez GitHub Pages. Utrzymywane osobno rejestry `portfolio/papers.json` i `portfolio/projects.json` nie są automatycznie uzupełniane niezatwierdzonymi pozycjami.
 
-[Wersjonowany manifest źródeł](source_manifest.json) przechowuje powiązania z przypiętymi SHA. **Osiem zewnętrznych plików RVI to wyłącznie szablony LaTeX**, nie opracowane artykuły.
+[Wersjonowany manifest źródeł](source_manifest.json) i [macierz nowości na tle literatury](literature/novelty_matrix.md) przechowuje powiązania z przypiętymi SHA. **Osiem zewnętrznych plików RVI to wyłącznie szablony LaTeX**, nie opracowane artykuły.

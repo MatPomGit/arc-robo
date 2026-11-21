@@ -21,7 +21,7 @@ TEX_EXTERNAL = {
 
 class RoboManuscriptCatalogTest(unittest.TestCase):
     def test_31_distinct_manuscript_directories(self):
-        got = {p.name for p in FOLDER.iterdir() if p.is_dir()}
+        got = {p.name for p in FOLDER.iterdir() if p.is_dir() and p.name.startswith("MSC-")}
         self.assertEqual(got, TEX_NEW | TEX_EXTERNAL)
         self.assertEqual(len(got), 31)
 

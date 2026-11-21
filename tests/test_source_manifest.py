@@ -11,7 +11,7 @@ class SourceManifestContract(unittest.TestCase):
         records = json.loads((BASE / "source_manifest.json").read_text(encoding="utf-8"))["papers"]
         self.assertEqual(len(records), 31)
         self.assertEqual(len({p["id"] for p in records}), 31)
-        self.assertEqual({p["id"] for p in records},{p.name for p in BASE.iterdir() if p.is_dir()})
+        self.assertEqual({p["id"] for p in records},{p.name for p in BASE.iterdir() if p.is_dir() and p.name.startswith("MSC-")})
         roles = {}
         for p in records:
             with self.subTest(id=p["id"]):
