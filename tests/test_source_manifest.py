@@ -16,6 +16,7 @@ class SourceManifestContract(unittest.TestCase):
         for p in records:
             with self.subTest(id=p["id"]):
                 self.assertRegex(p["source_commit_sha"],r"^[0-9a-f]{40}$")
+                self.assertRegex(p["source_blob_sha"],r"^[0-9a-f]{40}$")
                 url = "https://github.com/{}/blob/{}/{}".format(p["source_repository"],p["source_commit_sha"],p["source_path"])
                 self.assertEqual(p["source_reference_url"],url)
                 self.assertIn(url,(BASE/p["id"]/"README.md").read_text(encoding="utf-8"))
