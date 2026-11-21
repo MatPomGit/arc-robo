@@ -2,7 +2,7 @@
 
 **Rodzaj repozytorium:** program naukowy `arc-*`  
 **Program:** `arc-robo`  
-**Wersja szablonu:** `1.0.0`  
+**Schemat rejestrów:** `1` (starszy format, przed migracją)  
 **Autor podstawowy:** Mateusz Pomianek; dodatkowi współautorzy po potwierdzeniu wkładu  
 **Stan naukowy:** indeks planowany, bez potwierdzonych wyników empirycznych
 
@@ -20,9 +20,9 @@ ARC Robo skupia projekty naukowe dotyczące percepcji RGB/LWIR, aktywnej inspekc
 
 ## Katalog badań
 
-Rejestr kanonicznych projektów jest w [`portfolio/projects.json`](portfolio/projects.json), artykułów w [`portfolio/papers.json`](portfolio/papers.json), zależności w [`portfolio/dependencies.json`](portfolio/dependencies.json). Projekt `msc-*` ma własny protokół, manuskrypt, dane referencyjne i GitHub Pages; ARC utrzymuje tylko odnośniki oraz metadane zależności. Starsze repozytoria mogą być wskazywane pod obecną nazwą do czasu kontrolowanej migracji.
+Programowy rejestr projektu i zależności znajduje się w [`portfolio/projects.json`](portfolio/projects.json) oraz [`portfolio/dependencies.json`](portfolio/dependencies.json). W obecnym schemacie v1 [`portfolio/papers.json`](portfolio/papers.json) pozostaje pusty, a **rzeczywisty indeks 31 pozycji i przypiętych źródeł** znajduje się w [`manuscripts/source_manifest.json`](manuscripts/source_manifest.json). Nie traktuj pustego `portfolio/papers.json` jako dowodu braku manuskryptów. Projekt `msc-*` ma własny protokół, manuskrypt, dane referencyjne i GitHub Pages; ARC utrzymuje tylko odnośniki oraz metadane zależności. Starsze repozytoria mogą być wskazywane pod obecną nazwą do czasu kontrolowanej migracji.
 
-[Publiczny katalog projektów](docs/projects.md) jest generowany z pozycji jawnie zatwierdzonych do publikacji. Program ARC nie jest repozytorium surowych danych uczestników ani pakietem aplikacji.
+[Dokumentacja katalogu projektów](docs/projects.md) nie jest automatycznie publikowaną witryną; GitHub Pages pozostaje nieskonfigurowany. Program ARC nie jest repozytorium surowych danych uczestników ani pakietem aplikacji.
 
 ## Uruchomienie
 
@@ -40,7 +40,7 @@ Weryfikacja `audit-live` **nie zmienia** przypiętych commitów i nie uruchamia 
 
 ## Audyt i plan napraw
 
-Zobacz [niezależny audyt szablonu ARC z 2026-11-19](reviews/2026-11-19-template-audit.md), zawierający priorytety P0–P2 i test akceptacyjny. Publiczne repozytoria mogą używać GitHub-hosted runners do bezpiecznych, izolowanych kontroli CI; nie oznacza to, że szablon już ma workflow.
+Zobacz [niezależny audyt szablonu ARC z 2026-11-19](reviews/2026-11-19-template-audit.md), zawierający priorytety P0–P2 i test akceptacyjny. Repozytorium ma workflow `.github/workflows/validate-manuscripts.yml`, który uruchamia testy struktury i kompilację 14 lokalnych planów LaTeX. Odsyłacze do pozostałych 17 manuskryptów są testowane jako źródła zewnętrzne.
 
 ## Otwartość
 
