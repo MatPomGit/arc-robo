@@ -66,8 +66,8 @@ class ResearchDesignTests(unittest.TestCase):
     def test_exact_draft_count(self):
         self.assertEqual(len(IDS), 14)
         tex = {p.parent.name for p in MANUSCRIPTS.glob("*/main.tex")}
-        self.assertEqual(tex, set(IDS) | {"MSC-SUV-P05"})
-        # MSC-SUV-P05 is a separate early concept and is not part of the 14\n        # historical four-stage designs covered by IDS.
+        self.assertEqual(tex, set(IDS) | {"MSC-ZAH-P05"})
+        # MSC-ZAH-P05 is a separate early concept and is not part of the 14\n        # historical four-stage designs covered by IDS.
 
 
 if __name__ == "__main__":

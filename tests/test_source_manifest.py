@@ -12,7 +12,7 @@ class SourceManifestContract(unittest.TestCase):
         self.assertEqual(len(records), 31)
         self.assertEqual(len({p["id"] for p in records}), 31)
         self.assertEqual({p["id"] for p in records},
-                         {p.name for p in BASE.iterdir() if p.is_dir() and p.name.startswith("MSC-")} - {"MSC-SUV-P05"})
+                         {p.name for p in BASE.iterdir() if p.is_dir() and p.name.startswith("MSC-")} - {"MSC-ZAH-P05"})
         # The version-pinned source manifest covers 31 original records only.
         roles = {}
         for p in records:
