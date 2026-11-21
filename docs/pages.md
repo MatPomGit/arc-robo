@@ -1,6 +1,6 @@
 # Publiczna witryna ARC Robo
 
-Publiczne treści programu pochodzą wyłącznie z wydzielonego katalogu `pages/`. Repozytorium zachowuje `docs/` dla dokumentacji technicznej; `mkdocs.yml` wskazuje na `docs_dir: pages`. Witryna i jej wdrożenie są odrębne. Bieżące repozytorium nie zawiera workflow publikującego GitHub Pages.
+Publiczne treści programu pochodzą wyłącznie z wydzielonego katalogu `pages/`. Repozytorium zachowuje `docs/` dla dokumentacji technicznej; `mkdocs.yml` wskazuje na `docs_dir: pages`. Witryna i jej wdrożenie są odrębne. Repozytorium nie zawiera workflow publikującego GitHub Pages. Job `pages-check` w `.github/workflows/validate-manuscripts.yml` sprawdza listę dopuszczonych treści i buduje witrynę MkDocs **wyłącznie offline w izolowanym CI**, bez wdrożenia i bez podnoszenia uprawnień.
 
 ## Identyfikacja wizualna
 
