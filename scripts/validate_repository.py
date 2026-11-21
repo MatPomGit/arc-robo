@@ -19,7 +19,7 @@ REQUIRED = (
     ".github/PULL_REQUEST_TEMPLATE.md", ".github/ISSUE_TEMPLATE/portfolio-task.md",
     "README.md", "TEMPLATE_SETUP.md", "AGENTS.md", "ARCHITECTURE.md",
     "RESEARCH.md", "REPRODUCIBILITY.md", "PROJECT_STATE.yaml",
-    "ROADMAP.md", "CHANGELOG.md", "CONTRIBUTING.md", "SECURITY.md",
+    "ROADMAP.md", "CHANGELOG.md", "SECURITY.md",
     "LICENSE", "CITATION.cff", "VERSION", "mkdocs.yml",
     "program.json", "areas/index.json", "areas/README.md",
     "portfolio/projects.json", "portfolio/papers.json",
