@@ -1,0 +1,90 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[margin=27mm]{geometry}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\title{Energy-Constrained Adaptive Sensor Selection for RGB and Thermal Perception}
+\author{Mateusz Pomianek}
+\date{Version 0.3.0 -- 21 November 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Dynamic selection of RGB, thermal or dual sensing may conserve actual energy while preserving perception quality. Can an on-device sensing policy reduce measured energy expenditure relative to fixed pipelines without violating predefined detection constraints? The prospective design is as follows: Run a dynamic sensor-mode policy on a target device with measured power, controllable capture modes, synchronized annotated sequences and documented switch overhead. The primary outcome is Measured joules per independently evaluated scene or sequence while satisfying locked detection performance bounds. The manuscript defines a research question and an evaluation strategy; it does not report experimental estimates.
+\end{abstract}
+
+\section{Introduction}
+Dynamic selection of RGB, thermal or dual sensing may conserve actual energy while preserving perception quality. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
+
+\section{Related research and novelty assessment}
+The following comparison anchors the scope in selected independently verifiable existing work. The citations are not evidence of completed experiments or of established originality:
+\begin{itemize}
+\item \textbf{Prior art 1:} SDR-YOLO: Scale-Selective Detail Residual Enhanced YOLO for Visible--Thermal Object Detection \cite{source1}. Includes embedded inference measurements explicitly excluding image decoding and pairing; this motivates independent instrumented whole-pipeline assessment.
+\item \textbf{Prior art 2:} Adaptive feature fusion and task-dynamic alignment for real-time object detection on edge devices \cite{source2}. Addresses efficient edge detection; the planned P07 claim depends specifically on physical mode-switching energy and detection constraints.
+\end{itemize}
+\subsection{Specific test beyond existing work}
+Difference in measured Joules per complete evaluated scene between adaptive sensing and the best feasible fixed sensor mode at matched quality and latency. This planned contrast is the candidate independent contribution. A literature overlap audit must confirm that prior publications have not already demonstrated an equivalent contrast under comparable measurement conditions.
+
+\section{Primary estimand and prospective decision rules}
+Difference in measured Joules per complete evaluated scene between adaptive sensing and the best feasible fixed sensor mode at matched quality and latency. Proceed only after fixed-mode P03 measurements and verified real sensor switching. The decision margin must incorporate start-up and switching energy. H1 is the primary scientific hypothesis unless the source protocol states a different frozen confirmatory contrast. H2 and H3 are supporting or exploratory until a prospective multiplicity strategy (e.g., Holm adjustment) is selected. Any sample size, quality boundary, non-inferiority margin, effect threshold or confidence limit not grounded in existing evidence is explicitly pending approval before confirmatory evaluation.
+
+\section{Detailed scientific scope and novelty boundary}
+This OPTIONAL\_HOLD study tests runtime sensor-mode selection for lower physically measured energy while preserving perception quality. Its independent contribution is policy-dependent switching among RGB, LWIR and dual sensing, not the static hardware efficiency comparison of P03. Device switching overhead, sensor startup and thermal transitions must be part of the energy accounting.
+
+\section{Falsifiable hypotheses}
+\paragraph{H1.} At locked held-out detection quality and latency requirements, a constrained adaptive policy saves physically measured Joules per scene relative to the best feasible fixed sensing mode.
+
+\paragraph{H2.} Measured mode-transition energy and delay reduce the savings expected from an idealized zero-switch-cost simulation, and switching cost scales with policy frequency.
+
+\paragraph{H3.} Under environment changes, quality-constrained selection produces fewer detection/latency-budget violations than an unconstrained energy-only selection policy.
+
+\section{Operationalization and study population}
+\subsection{Independent unit of analysis}
+An independent device-and-scene workload run; framewise energy observations are within-run samples.
+
+\subsection{Data, sensors and ground-truth requirements}
+Real power-instrumented embedded target, lawful labelled RGB/LWIR scene sequences, controllable sensor modes, fixed policy checkpoints, mode-event timestamps and thermal and idle baselines. Data and models will be versioned with checksums, licensing information, instrument parameters, selection rules and clock provenance. The held-out test cohort must be independent at the acquisition-session, scene or participant level rather than at the individual frame level.
+
+\subsection{Primary and secondary endpoints}
+The primary estimand is defined as follows: Physically metered Joules per evaluated scene subject to a locked minimum recall, maximum false-positive-per-frame and latency envelope.
+
+The secondary measurements will be: Switching overhead, switched-mode count, quality-budget failures, sustained FPS, memory and p95/p99 latency. The exact numerator, denominator, outcome threshold and permitted exclusions must be fixed in the protocol before inferential analysis.
+
+\section{Planned experiments and research sequence}
+\subsection{A. Hardware and P03 dependency qualification}
+Require a target device with verified controllable camera modes, physical power metering and reproducible P03 fixed-mode baseline. Verify mode switching does not silently invalidate timestamps or thermal stabilization assumptions.
+
+\subsection{B. Constrained-policy offline development}
+Define quality and latency budgets, compare fixed RGB/LWIR/dual choices, a heuristic selector and a constrained selector on matched scene sequences. Use offline simulation only to design policies, not to assert energy savings.
+
+\subsection{C. Physically instrumented randomized crossover}
+Run frozen policies on repeated independently annotated workloads on the same target, varying order and thermal state. Include acquisition, standby, wake-up, switching, processing and reporting in integrated power.
+
+\subsection{D. Stress envelope and failure audit}
+Use predeclared illumination, thermal contrast, object density and modality-fault conditions. Compare actual Joules per scene with missed target/false alert limits and report all infeasible policy episodes.
+
+\section{Comparative design and statistical inference}
+Use paired device-run energy differences and confidence intervals against the best feasible fixed-mode comparator. Report cost and false-alert trade-offs jointly and include all rejected/unprocessable runs. When human participants or independent trajectories are needed, their number must follow a documented power simulation or precision calculation after a feasible pilot. Report uncertainty, negative results and sensitivity to failure strata. Thresholds, model configurations and exclusion criteria must be frozen before final testing.
+
+\section{Evidence gates, reproducibility and ethical boundary}
+Remain OPTIONAL\_HOLD until P03 has validated physical power, actual sensor controllability and quality constraints. Host estimates or symbolic switch costs cannot establish this paper's primary result. Each study phase will preserve source SHA or release, configuration, labels, independent oracle, random seeds, raw event timing, and an auditable trace from inputs to computed figures. Simulated evidence is distinct from measured hardware outcomes. Participant studies require prior ethical review and consent.
+
+\section{Results}
+Empirical results, tables and uncertainty intervals will be incorporated after execution of the documented evaluation protocol and independent verification of the input evidence.
+
+\section{Discussion}
+The planned comparison is intended to determine whether the proposed mechanism yields an identifiable gain over the stated controls. Interpretation must distinguish failure of a scientific hypothesis from an incomplete implementation, and should describe practical operating conditions under which conclusions remain valid.
+
+\section{Conclusion}
+This study defines a testable research problem, matched comparators and a primary evaluation target. A substantive empirical conclusion remains conditional on reproducible measurements and appropriate methodological review.
+
+\section{Data and code availability}
+The source project \texttt{MatPomGit/arc-rgbt} remains the authority for the underlying research protocol; this local document is an ARC Robo prospective research plan, not a duplicate final manuscript. Dataset permissions, input manifests, source commits, evaluation scripts and permitted public artifacts will be identified in the final version. No participant records or proprietary instrumentation details are included here.
+\begin{thebibliography}{9}
+\bibitem{source1} SDR-YOLO: Scale-Selective Detail Residual Enhanced YOLO for Visible-Thermal Object Detection. Remote Sensing 18(18), 3216 (2026). \url{https://www.mdpi.com/2072-4292/18/18/3216}.
+\bibitem{source2} Adaptive feature fusion and task-dynamic alignment for real-time object detection on edge devices. Expert Systems with Applications (2025). \url{https://www.sciencedirect.com/science/article/pii/S0957417425019608}.
+\end{thebibliography}
+\end{document}

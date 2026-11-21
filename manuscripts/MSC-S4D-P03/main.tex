@@ -1,0 +1,90 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[margin=27mm]{geometry}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\title{Persistence of Semantic 4D Tokens under Joint Sensor and GNSS Degradation in UAV Navigation}
+\author{Mateusz Pomianek}
+\date{Version 0.3.0 -- 21 November 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The retention and expiry policy of a tokenized world model may affect navigation utility when semantic observations and positioning fail simultaneously. Does an explicit quality-aware semantic-token lifecycle preserve predictive occupancy accuracy under joint sensor failure and GNSS degradation better than fixed-memory policies at equal memory budgets? The prospective design is as follows: Replay identical flight or simulation sequences with synchronized camera dropout, corrupted semantics and GNSS degradation; compare token eviction, quality decay and reintegration policies. The primary outcome is Predictive-occupancy accuracy loss at a fixed token-memory and compute budget across jointly degraded sequences. The manuscript defines a research question and an evaluation strategy; it does not report experimental estimates.
+\end{abstract}
+
+\section{Introduction}
+The retention and expiry policy of a tokenized world model may affect navigation utility when semantic observations and positioning fail simultaneously. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
+
+\section{Related research and novelty assessment}
+The following comparison anchors the scope in selected independently verifiable existing work. The citations are not evidence of completed experiments or of established originality:
+\begin{itemize}
+\item \textbf{Prior art 1:} A Survey of Map Construction and Management Methods for Single Embodied Agents \cite{source1}. Reviews spatial-memory/map management; retaining 4D tokens alone is not an independently novel contribution.
+\item \textbf{Prior art 2:} Integrity-Aware Hierarchical Navigation for UAVs Under GNSS Spoofing and Multi-Sensor Degradation \cite{source2}. Evaluates degraded-source management; it does not settle out-of-environment localization error-bound calibration or novel token persistence.
+\end{itemize}
+\subsection{Specific test beyond existing work}
+Paired per-sequence change in predictive occupancy score under joint GNSS/vision degradation at fixed token-memory and compute budgets. This planned contrast is the candidate independent contribution. A literature overlap audit must confirm that prior publications have not already demonstrated an equivalent contrast under comparable measurement conditions.
+
+\section{Primary estimand and prospective decision rules}
+Paired per-sequence change in predictive occupancy score under joint GNSS/vision degradation at fixed token-memory and compute budgets. Define H3 as an additive-scale interaction contrast: change in joint degradation minus vision-only change minus GNSS-only change plus undegraded change, all in the same occupancy-score units. H1 is the primary scientific hypothesis unless the source protocol states a different frozen confirmatory contrast. H2 and H3 are supporting or exploratory until a prospective multiplicity strategy (e.g., Holm adjustment) is selected. Any sample size, quality boundary, non-inferiority margin, effect threshold or confidence limit not grounded in existing evidence is explicitly pending approval before confirmatory evaluation.
+
+\section{Detailed scientific scope and novelty boundary}
+This proposed paper studies how 4D semantic world-model tokens are invalidated, retained and refreshed when camera perception, semantic classification and GNSS quality deteriorate at the same time. The algorithmic variable is token lifecycle at a constant memory and compute budget. It must not republish the baseline S4D-P01 H7 token lifecycle ablation.
+
+\section{Falsifiable hypotheses}
+\paragraph{H1.} Quality-aware token decay and invalidation reduce the loss of future occupancy-forecast accuracy under joint sensor and GNSS failures compared with fixed-time and FIFO retention at equal capacity.
+
+\paragraph{H2.} After sensors recover, explicit contradiction resolution and token refresh restore occupancy-prediction accuracy faster than fixed-memory retention.
+
+\paragraph{H3.} The new lifecycle produces a favorable vision-by-GNSS degradation interaction on the additive per-sequence occupancy-score scale, using the contrast joint minus vision-only minus GNSS-only plus undegraded.
+
+\section{Operationalization and study population}
+\subsection{Independent unit of analysis}
+One independently held-out flight/scene sequence with nested prediction windows, not individual forecast pixels or tokens.
+
+\subsection{Data, sensors and ground-truth requirements}
+Licensed scene trajectories, independently labelled occupancy or future occupancy, time-indexed semantic token histories and versioned scripts for joint perturbation; all policies use fixed upstream perception. Data and models will be versioned with checksums, licensing information, instrument parameters, selection rules and clock provenance. The held-out test cohort must be independent at the acquisition-session, scene or participant level rather than at the individual frame level.
+
+\subsection{Primary and secondary endpoints}
+The primary estimand is defined as follows: Change in occupancy forecast IoU or a preregistered proper score relative to undegraded replay at a fixed token-memory and compute budget.
+
+The secondary measurements will be: Recovery time after outage, stale-token false positives, peak memory, processing delay and deterioration under individual failure mechanisms. The exact numerator, denominator, outcome threshold and permitted exclusions must be fixed in the protocol before inferential analysis.
+
+\section{Planned experiments and research sequence}
+\subsection{A. Novelty and lifecycle formalization}
+Compare existing S4D-P01 H7 mechanisms to a distinct confidence decay or contradiction-detection rule. Write precise token update/expiry semantics and memory accounting; cancel the standalone paper if the mechanism is only a threshold sweep.
+
+\subsection{B. Factorial offline replay}
+Cross normal/degraded GNSS, camera loss or blur, semantic corruption and token-memory budgets on the same frozen sensor observations. Compare baseline lifecycle, FIFO, time-based expiry and the proposed policy.
+
+\subsection{C. Post-outage recovery episodes}
+Include independently labelled occupancy scenes and planned recovery periods. Measure stale-token persistence, forecast accuracy, time to return to baseline after sensor recovery and system latency.
+
+\subsection{D. Out-of-domain failure evaluation}
+Evaluate previously unseen environments and loss schedules with frozen policy parameters, explicitly modelling interaction terms rather than only averaged performance across all degradations.
+
+\section{Comparative design and statistical inference}
+Pre-register sequence-level paired contrasts and a factorial interaction test for combined degradation. Report grouped uncertainty intervals across independent environments and treat repeated frames as clustered. When human participants or independent trajectories are needed, their number must follow a documented power simulation or precision calculation after a feasible pilot. Report uncertainty, negative results and sensitivity to failure strata. Thresholds, model configurations and exclusion criteria must be frozen before final testing.
+
+\section{Evidence gates, reproducibility and ethical boundary}
+Remain IDEA\_HOLD until an independently novel lifecycle policy and actual occupancy truth exist; if overlap with S4D-P01 persists, retain this as a supplemental P01 stress test. Each study phase will preserve source SHA or release, configuration, labels, independent oracle, random seeds, raw event timing, and an auditable trace from inputs to computed figures. Simulated evidence is distinct from measured hardware outcomes. Participant studies require prior ethical review and consent.
+
+\section{Results}
+Empirical results, tables and uncertainty intervals will be incorporated after execution of the documented evaluation protocol and independent verification of the input evidence.
+
+\section{Discussion}
+The planned comparison is intended to determine whether the proposed mechanism yields an identifiable gain over the stated controls. Interpretation must distinguish failure of a scientific hypothesis from an incomplete implementation, and should describe practical operating conditions under which conclusions remain valid.
+
+\section{Conclusion}
+This study defines a testable research problem, matched comparators and a primary evaluation target. A substantive empirical conclusion remains conditional on reproducible measurements and appropriate methodological review.
+
+\section{Data and code availability}
+The source project \texttt{MatPomGit/arc-s4d-tam} remains the authority for the underlying research protocol; this local document is an ARC Robo prospective research plan, not a duplicate final manuscript. Dataset permissions, input manifests, source commits, evaluation scripts and permitted public artifacts will be identified in the final version. No participant records or proprietary instrumentation details are included here.
+\begin{thebibliography}{9}
+\bibitem{source1} A Survey of Map Construction and Management Methods for Single Embodied Agents. Sensors 26(19), 6242 (2026). \url{https://doi.org/10.3390/s26196242}.
+\bibitem{source2} Integrity-Aware Hierarchical Navigation for UAVs Under GNSS Spoofing and Multi-Sensor Degradation. Drones 10(10), 738 (2026). \url{https://www.mdpi.com/2504-446X/10/10/738}.
+\end{thebibliography}
+\end{document}

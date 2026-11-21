@@ -1,0 +1,90 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[margin=27mm]{geometry}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\title{Intent-Aware Hand and Gaze Interaction With an Independent Deterministic Robot Safety Governor}
+\author{Mateusz Pomianek}
+\date{Version 0.3.0 -- 21 November 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Multimodal hand and screen-based gaze observations may simplify teleoperation commands, but ambiguous intent must never bypass an independent motion-safety governor. Can multimodal intent requests increase simulated teleoperation throughput without violating predeclared proximity, speed and collision constraints under ambiguous or missing sensor inputs? The prospective design is as follows: Use a ROS 2 and Gazebo replay or simulation with deterministic speed and distance guards. Represent hand or gaze recognition as a request-only input and inject conflicting commands, packet loss and missing observations. The primary outcome is Count of independently monitored safety-constraint violations per scenario; task completion rate and p99 command-to-abort latency are secondary. The manuscript defines a research question and an evaluation strategy; it does not report experimental estimates.
+\end{abstract}
+
+\section{Introduction}
+Multimodal hand and screen-based gaze observations may simplify teleoperation commands, but ambiguous intent must never bypass an independent motion-safety governor. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
+
+\section{Related research and novelty assessment}
+The following comparison anchors the scope in selected independently verifiable existing work. The citations are not evidence of completed experiments or of established originality:
+\begin{itemize}
+\item \textbf{Prior art 1:} Uncertainty-aware hand gesture recognition for safety-critical and emergency human--robot interaction \cite{source1}. Addresses gesture recognition with uncertainty; it does not test an independent request-only deterministic governor with matched task throughput.
+\item \textbf{Prior art 2:} ISO 10218-1:2025 \cite{source2}. Provides industrial-robot requirements; this prospective simulation is not a conformity assessment or safety certificate.
+\end{itemize}
+\subsection{Specific test beyond existing work}
+Difference in task-completion probability between fused and best eligible unimodal interfaces, conditional on independently passing a prespecified safety-invariant test envelope. This planned contrast is the candidate independent contribution. A literature overlap audit must confirm that prior publications have not already demonstrated an equivalent contrast under comparable measurement conditions.
+
+\section{Primary estimand and prospective decision rules}
+Difference in task-completion probability between fused and best eligible unimodal interfaces, conditional on independently passing a prespecified safety-invariant test envelope. Episode-level randomized crossover; safety failures are binary disqualifiers, not evidence of safe operation at population scale. H1 is the primary scientific hypothesis unless the source protocol states a different frozen confirmatory contrast. H2 and H3 are supporting or exploratory until a prospective multiplicity strategy (e.g., Holm adjustment) is selected. Any sample size, quality boundary, non-inferiority margin, effect threshold or confidence limit not grounded in existing evidence is explicitly pending approval before confirmatory evaluation.
+
+\section{Detailed scientific scope and novelty boundary}
+The independent scientific contribution is the separation of uncertain human intent inference from a deterministic robot safety governor. Hand and screen-gaze estimates are request-only commands; the governor independently checks separation, speed, deadman and watchdog invariants. This is not a general gesture-classification benchmark or a physical safety certification.
+
+\section{Falsifiable hypotheses}
+\paragraph{H1.} At unchanged guardian constraints, multimodal request input improves episode-level successful task completion over the strongest preselected single-modality request interface.
+
+\paragraph{H2.} Under conflicting intentions, sensor dropout and delayed commands, an explicit abstention policy reduces the proportion of ambiguous requests forwarded to the governor relative to simple last-command selection.
+
+\paragraph{H3.} The independent monitor detects and forces safe fallback during injected command or transport failures within a predeclared bounded response time; any missed invariant violation is a stop condition, not a tolerable statistical error.
+
+\section{Operationalization and study population}
+\subsection{Independent unit of analysis}
+One scripted task episode; repeated frames and actuator updates remain nested within it. A later human pilot treats the participant as a separate clustering factor.
+
+\subsection{Data, sensors and ground-truth requirements}
+Versioned ROS 2/Gazebo scenes, request and supervisor logs, independent geometry traces, fixed random seeds, event timestamps and declared device interfaces. Tobii Eye Tracker 5 is a monitor-based tracker; its use depends on verified permission and timing rather than an assumed headset integration. Data and models will be versioned with checksums, licensing information, instrument parameters, selection rules and clock provenance. The held-out test cohort must be independent at the acquisition-session, scene or participant level rather than at the individual frame level.
+
+\subsection{Primary and secondary endpoints}
+The primary estimand is defined as follows: A hard acceptance gate of zero observed independent safety-invariant violations in the defined simulation envelope, followed by the comparative episode-level task-completion probability among configurations meeting that gate.
+
+The secondary measurements will be: Unsafe-request rejection, rate of abstention, number of near misses, command recovery, latency p50/p95/p99 and participant workload if ethically collected. The exact numerator, denominator, outcome threshold and permitted exclusions must be fixed in the protocol before inferential analysis.
+
+\section{Planned experiments and research sequence}
+\subsection{A. Command and hazard contract}
+Define ROS 2 typed intent requests, confidence validity, age and provenance. Verify that no inference node can directly command actuators. Specify the supervisor, emergency stop, independent proximity oracle and protected state before tests.
+
+\subsection{B. Matched Gazebo task comparison}
+Compare scripted, hand-only, gaze-only and fused request interfaces with the same safety governor on identical independently seeded manipulation and navigation tasks. Randomize order and stratify scenes by obstacle density, target ambiguity and number of nearby people.
+
+\subsection{C. Fault injection and robustness}
+Replay dropped, delayed, reordered and contradictory commands, occlusion and missing gaze. Measure command abstention, task success, independently verified near misses, hard-invariant violations and p99 time to fallback. Replay every counterexample.
+
+\subsection{D. Optional human feasibility}
+After ethics and data-use review, pilot screen-based commands with an appropriately qualified gaze-tracker setup; determine recruitment needs from observed within-participant variability. Do not claim physical-robot safety from subjective workload or virtual trials.
+
+\section{Comparative design and statistical inference}
+Use paired scenario-level bootstrap intervals or a hierarchical binomial model for successful completion, stratified by task and failure condition. All safety violations are individually reported regardless of confidence intervals; failed runs are not excluded. Compare tail latencies on independently repeated episodes. When human participants or independent trajectories are needed, their number must follow a documented power simulation or precision calculation after a feasible pilot. Report uncertainty, negative results and sensitivity to failure strata. Thresholds, model configurations and exclusion criteria must be frozen before final testing.
+
+\section{Evidence gates, reproducibility and ethical boundary}
+No deployment to live robot actuation. Require independent monitoring, replayability of all injected faults and a separate hardware safety case if physical trials are proposed. Each study phase will preserve source SHA or release, configuration, labels, independent oracle, random seeds, raw event timing, and an auditable trace from inputs to computed figures. Simulated evidence is distinct from measured hardware outcomes. Participant studies require prior ethical review and consent.
+
+\section{Results}
+Empirical results, tables and uncertainty intervals will be incorporated after execution of the documented evaluation protocol and independent verification of the input evidence.
+
+\section{Discussion}
+The planned comparison is intended to determine whether the proposed mechanism yields an identifiable gain over the stated controls. Interpretation must distinguish failure of a scientific hypothesis from an incomplete implementation, and should describe practical operating conditions under which conclusions remain valid.
+
+\section{Conclusion}
+This study defines a testable research problem, matched comparators and a primary evaluation target. A substantive empirical conclusion remains conditional on reproducible measurements and appropriate methodological review.
+
+\section{Data and code availability}
+The source project \texttt{MatPomGit/arc-affective} remains the authority for the underlying research protocol; this local document is an ARC Robo prospective research plan, not a duplicate final manuscript. Dataset permissions, input manifests, source commits, evaluation scripts and permitted public artifacts will be identified in the final version. No participant records or proprietary instrumentation details are included here.
+\begin{thebibliography}{9}
+\bibitem{source1} Uncertainty-aware hand gesture recognition for safety-critical and emergency human-robot interaction. Sensors and Actuators A: Physical (2025). DOI: 10.1016/j.sna.2024.116178 \url{https://doi.org/10.1016/j.sna.2024.116178}.
+\bibitem{source2} ISO 10218-1:2025. Robotics -- Safety requirements -- Part 1: Industrial robots. ISO. \url{https://www.iso.org/standard/73933.html}.
+\end{thebibliography}
+\end{document}

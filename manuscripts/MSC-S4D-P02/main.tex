@@ -1,0 +1,90 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[margin=27mm]{geometry}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\title{Calibration of UAV Localization Uncertainty under GNSS Degradation and Environmental Shift}
+\author{Mateusz Pomianek}
+\date{Version 0.3.0 -- 21 November 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Localization confidence may become unreliable when satellite positioning degrades and previously unseen scenes alter the uncertainty structure. Can shift-aware calibration maintain nominal out-of-sample localization-error coverage under degraded GNSS and changed scene conditions? The prospective design is as follows: Use versioned localization estimates and independently referenced UAV trajectories from separate domains and GNSS-degradation strata; freeze the uncertainty estimator before held-out calibration assessment. The primary outcome is Empirical coverage error of preregistered localization-error bounds on held-out sequences under environmental and GNSS shifts. The manuscript defines a research question and an evaluation strategy; it does not report experimental estimates.
+\end{abstract}
+
+\section{Introduction}
+Localization confidence may become unreliable when satellite positioning degrades and previously unseen scenes alter the uncertainty structure. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
+
+\section{Related research and novelty assessment}
+The following comparison anchors the scope in selected independently verifiable existing work. The citations are not evidence of completed experiments or of established originality:
+\begin{itemize}
+\item \textbf{Prior art 1:} Integrity-Aware Hierarchical Navigation for UAVs Under GNSS Spoofing and Multi-Sensor Degradation \cite{source1}. Evaluates degraded-source management; it does not settle out-of-environment localization error-bound calibration or novel token persistence.
+\item \textbf{Prior art 2:} RTK and PPK GNSS Positioning Accuracy Assessment for UAVs Using a PPS-Synchronized Robotic Total Station \cite{source2}. Demonstrates reference-trajectory and synchronization issues; error coverage and localization calibration on held-out GNSS regimes remain separate questions.
+\end{itemize}
+\subsection{Specific test beyond existing work}
+Worst GNSS-degradation stratum deficit from nominal held-out coverage of UAV localization error bounds under independently measured reference trajectories. This planned contrast is the candidate independent contribution. A literature overlap audit must confirm that prior publications have not already demonstrated an equivalent contrast under comparable measurement conditions.
+
+\section{Primary estimand and prospective decision rules}
+Worst GNSS-degradation stratum deficit from nominal held-out coverage of UAV localization error bounds under independently measured reference trajectories. No generalization without external environment and truth; distinguish this transfer estimand from S4D-P01 calibration ablations. H1 is the primary scientific hypothesis unless the source protocol states a different frozen confirmatory contrast. H2 and H3 are supporting or exploratory until a prospective multiplicity strategy (e.g., Holm adjustment) is selected. Any sample size, quality boundary, non-inferiority margin, effect threshold or confidence limit not grounded in existing evidence is explicitly pending approval before confirmatory evaluation.
+
+\section{Detailed scientific scope and novelty boundary}
+This conditional study asks whether localization uncertainty remains statistically calibrated in environments and GNSS regimes excluded from model development. The output is coverage of localization-error prediction bounds against genuine reference trajectories, not proof of navigation safety. A separate paper requires generalization beyond the S4D-P01 H3 calibration ablation.
+
+\section{Falsifiable hypotheses}
+\paragraph{H1.} Source-domain localization-error bounds under-cover true error more often under unseen GNSS degradation and environmental shift than under matched development conditions.
+
+\paragraph{H2.} A frozen shift-aware calibration method improves worst-stratum held-out coverage relative to global calibration without using reference labels from the evaluation environment.
+
+\paragraph{H3.} At the same acceptable empirical coverage, the shift-aware method produces narrower error bounds than a conservative fixed worst-case radius.
+
+\section{Operationalization and study population}
+\subsection{Independent unit of analysis}
+One independent flight or simulated trajectory sequence; frame residuals within a sequence are serially dependent.
+
+\subsection{Data, sensors and ground-truth requirements}
+Frozen localization model outputs, independent reference positions, synchronized sensor timelines, sequence hashes and documented GNSS-quality and visual-change indicators. Data and models will be versioned with checksums, licensing information, instrument parameters, selection rules and clock provenance. The held-out test cohort must be independent at the acquisition-session, scene or participant level rather than at the individual frame level.
+
+\subsection{Primary and secondary endpoints}
+The primary estimand is defined as follows: Worst-stratum absolute deficit from a preregistered nominal empirical coverage level of localization-error bounds, measured on held-out reference trajectories.
+
+The secondary measurements will be: Interval sharpness/width, absolute trajectory error, conditional coverage by GNSS regime, calibrated negative log likelihood when appropriate and computational latency. The exact numerator, denominator, outcome threshold and permitted exclusions must be fixed in the protocol before inferential analysis.
+
+\section{Planned experiments and research sequence}
+\subsection{A. Data rights and reference truth audit}
+Identify legal GNSS-degraded UAV trajectories with independent position reference, coherent clock domains and original localization uncertainty outputs. Document environment and loss-of-fix regime; do not invent reference positions during outages.
+
+\subsection{B. Shift-structured calibration}
+Separate source, calibration and evaluation sequences by flight and environment. Compare raw predicted uncertainty, global quantile calibration, context-stratified calibration and an intentionally conservative fixed-radius baseline.
+
+\subsection{C. Controlled GNSS loss and appearance change}
+Assess independently labelled localization under GNSS outage, quality degradation and changed visual conditions. Preserve original trajectories while using traceable synthetic perturbations only for a separately named simulation stratum.
+
+\subsection{D. External-domain and overlap gate}
+Evaluate complete held-out locations or flight sessions without retuning. Decide whether the result is independent cross-environment calibration rather than another within-P01 ablation.
+
+\section{Comparative design and statistical inference}
+Use sequence-bootstrap confidence intervals for empirical coverage and width. Stratify by environment and GNSS regime, freeze calibration thresholds before external tests and preserve failures in unsupported strata. When human participants or independent trajectories are needed, their number must follow a documented power simulation or precision calculation after a feasible pilot. Report uncertainty, negative results and sensitivity to failure strata. Thresholds, model configurations and exclusion criteria must be frozen before final testing.
+
+\section{Evidence gates, reproducibility and ethical boundary}
+Requires source-verified independent reference data and a novel cross-environment estimand. Hardware flight validation requires separate aviation authorization; simulation alone is not flight assurance. Each study phase will preserve source SHA or release, configuration, labels, independent oracle, random seeds, raw event timing, and an auditable trace from inputs to computed figures. Simulated evidence is distinct from measured hardware outcomes. Participant studies require prior ethical review and consent.
+
+\section{Results}
+Empirical results, tables and uncertainty intervals will be incorporated after execution of the documented evaluation protocol and independent verification of the input evidence.
+
+\section{Discussion}
+The planned comparison is intended to determine whether the proposed mechanism yields an identifiable gain over the stated controls. Interpretation must distinguish failure of a scientific hypothesis from an incomplete implementation, and should describe practical operating conditions under which conclusions remain valid.
+
+\section{Conclusion}
+This study defines a testable research problem, matched comparators and a primary evaluation target. A substantive empirical conclusion remains conditional on reproducible measurements and appropriate methodological review.
+
+\section{Data and code availability}
+The source project \texttt{MatPomGit/arc-s4d-tam} remains the authority for the underlying research protocol; this local document is an ARC Robo prospective research plan, not a duplicate final manuscript. Dataset permissions, input manifests, source commits, evaluation scripts and permitted public artifacts will be identified in the final version. No participant records or proprietary instrumentation details are included here.
+\begin{thebibliography}{9}
+\bibitem{source1} Integrity-Aware Hierarchical Navigation for UAVs Under GNSS Spoofing and Multi-Sensor Degradation. Drones 10(10), 738 (2026). \url{https://www.mdpi.com/2504-446X/10/10/738}.
+\bibitem{source2} RTK and PPK GNSS Positioning Accuracy Assessment for UAVs Using a PPS-Synchronized Robotic Total Station. Sensors 26(15), 4907 (2026). \url{https://doi.org/10.3390/s26154907}.
+\end{thebibliography}
+\end{document}

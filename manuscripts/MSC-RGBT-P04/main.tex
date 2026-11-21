@@ -1,0 +1,90 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[margin=27mm]{geometry}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\title{Failure-Aware RGB and LWIR Object Detection under Missing and Degraded Modalities}
+\author{Mateusz Pomianek}
+\date{Version 0.3.0 -- 21 November 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A sensor fusion model may require explicit failure detection and selective prediction to remain dependable under missing or corrupted modalities. Does failure-aware selection lower worst-condition missed detections while respecting fixed false-positive and minimum-coverage budgets? The prospective design is as follows: Inject documented dropout, stale frames, blur and contrast degradation into independently labelled paired sequences; distinguish synthetic corruption from observed sensor faults. The primary outcome is Worst-stratum miss rate at a locked false-positive-per-frame ceiling and minimum prediction coverage. The manuscript defines a research question and an evaluation strategy; it does not report experimental estimates.
+\end{abstract}
+
+\section{Introduction}
+A sensor fusion model may require explicit failure detection and selective prediction to remain dependable under missing or corrupted modalities. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
+
+\section{Related research and novelty assessment}
+The following comparison anchors the scope in selected independently verifiable existing work. The citations are not evidence of completed experiments or of established originality:
+\begin{itemize}
+\item \textbf{Prior art 1:} DRNet: Dynamic routing for robust multispectral object detection under modality missing \cite{source1}. Already proposes modality-aware detection under missing inputs; P04 cannot claim that gating itself is new and must prove a distinct constrained worst-condition miss-rate benefit.
+\item \textbf{Prior art 2:} Mitigating Spectral Imbalance and Detail Attenuation in RGB-Thermal Object Detection via Frequency-Guided Multimodal Fusion \cite{source2}. Provides a multispectral detection and benchmark comparison, not verified native physical sampling limits or full-pipeline embedded energy.
+\end{itemize}
+\subsection{Specific test beyond existing work}
+Difference in worst-stratum missed-detection risk between failure-aware and fixed-fusion policies at a frozen false-alarm ceiling and minimum accepted prediction coverage. This planned contrast is the candidate independent contribution. A literature overlap audit must confirm that prior publications have not already demonstrated an equivalent contrast under comparable measurement conditions.
+
+\section{Primary estimand and prospective decision rules}
+Difference in worst-stratum missed-detection risk between failure-aware and fixed-fusion policies at a frozen false-alarm ceiling and minimum accepted prediction coverage. Select fault strata and minimum coverage on development sequences; report worst-stratum confidence intervals rather than pooled mAP alone. H1 is the primary scientific hypothesis unless the source protocol states a different frozen confirmatory contrast. H2 and H3 are supporting or exploratory until a prospective multiplicity strategy (e.g., Holm adjustment) is selected. Any sample size, quality boundary, non-inferiority margin, effect threshold or confidence limit not grounded in existing evidence is explicitly pending approval before confirmatory evaluation.
+
+\section{Detailed scientific scope and novelty boundary}
+This study evaluates failures of sensor fusion when RGB and LWIR data are absent, stale or corrupted. The primary target is the worst-condition missed-detection risk, explicitly constrained by false-positive ceiling and a minimum accepted prediction coverage. It is separate from P02, which owns calibration and normal-condition fusion gain; quality-aware abstention cannot trivially improve apparent accuracy by refusing all cases.
+
+\section{Falsifiable hypotheses}
+\paragraph{H1.} At equal false positives per frame and minimum accepted-output coverage, explicit modality-health gating decreases worst-stratum miss rate relative to fixed RGB/LWIR fusion.
+
+\paragraph{H2.} Frame freshness and fault-state monitoring decrease overconfident missed detections under channel dropout or stale sensor frames compared with an always-present-channel assumption.
+
+\paragraph{H3.} On intact healthy data, failure-aware gating preserves detection recall within a preregistered non-inferiority margin relative to fixed fusion.
+
+\section{Operationalization and study population}
+\subsection{Independent unit of analysis}
+An independent scene or capture sequence; synthetic variants of that sequence are paired repeated conditions, not separate samples.
+
+\subsection{Data, sensors and ground-truth requirements}
+Licensed paired RGB/LWIR sequences with independent object labels, timestamps, source manifests, validity masks and predeclared corruption scripts. Preserve physical versus synthetic fault provenance. Data and models will be versioned with checksums, licensing information, instrument parameters, selection rules and clock provenance. The held-out test cohort must be independent at the acquisition-session, scene or participant level rather than at the individual frame level.
+
+\subsection{Primary and secondary endpoints}
+The primary estimand is defined as follows: Maximum miss rate over predeclared fault strata at a fixed false-positive-per-all-source-frames limit and minimum accepted-decision coverage.
+
+The secondary measurements will be: Accepted prediction fraction, risk-coverage AURC, false-confidence rate, fault-detection sensitivity, latency and healthy-condition recall. The exact numerator, denominator, outcome threshold and permitted exclusions must be fixed in the protocol before inferential analysis.
+
+\section{Planned experiments and research sequence}
+\subsection{A. Fault classification and labelled data audit}
+Collect independent positive and zero-target negative RGB/LWIR scenes with valid timing and annotations. Define distinct simulated faults for RGB dropout, thermal loss, stale frames, blur and low contrast; keep observed hardware faults in a separately labelled evidence stratum.
+
+\subsection{B. Fixed-baseline robustness benchmark}
+Compare RGB-only, thermal-only, fixed fusion, quality-weighted fusion and health-aware selective detection on the same frozen per-frame inputs. Choose confidence thresholds and fault triggers using development sequences only.
+
+\subsection{C. Factorial fault-severity experiment}
+Cross fault type, severity and modality in deterministic paired replay scenarios. Keep untouched healthy controls and independent scene holdouts; calculate risk-coverage curves and worst-condition miss rate at a locked false-alert ceiling.
+
+\subsection{D. Realistic failure-transfer assessment}
+Where rights-cleared measured failure traces exist, compare their error profile with synthetic degradations and report whether the policy benefits persist. Include negative and non-superiority findings rather than selecting only successful fault types.
+
+\section{Comparative design and statistical inference}
+Use sequence-level clustered risk intervals and a predefined worst-stratum contrast; report abstention and accepted coverage together with misses. Check healthy-condition non-inferiority and adjust multiplicity for confirmatory fault strata. When human participants or independent trajectories are needed, their number must follow a documented power simulation or precision calculation after a feasible pilot. Report uncertainty, negative results and sensitivity to failure strata. Thresholds, model configurations and exclusion criteria must be frozen before final testing.
+
+\section{Evidence gates, reproducibility and ethical boundary}
+An independent scene holdout, fault taxonomy and minimum output coverage are mandatory. If observed improvement is only average fusion mAP without failure differentiation, the paper overlaps P02. Each study phase will preserve source SHA or release, configuration, labels, independent oracle, random seeds, raw event timing, and an auditable trace from inputs to computed figures. Simulated evidence is distinct from measured hardware outcomes. Participant studies require prior ethical review and consent.
+
+\section{Results}
+Empirical results, tables and uncertainty intervals will be incorporated after execution of the documented evaluation protocol and independent verification of the input evidence.
+
+\section{Discussion}
+The planned comparison is intended to determine whether the proposed mechanism yields an identifiable gain over the stated controls. Interpretation must distinguish failure of a scientific hypothesis from an incomplete implementation, and should describe practical operating conditions under which conclusions remain valid.
+
+\section{Conclusion}
+This study defines a testable research problem, matched comparators and a primary evaluation target. A substantive empirical conclusion remains conditional on reproducible measurements and appropriate methodological review.
+
+\section{Data and code availability}
+The source project \texttt{MatPomGit/arc-rgbt} remains the authority for the underlying research protocol; this local document is an ARC Robo prospective research plan, not a duplicate final manuscript. Dataset permissions, input manifests, source commits, evaluation scripts and permitted public artifacts will be identified in the final version. No participant records or proprietary instrumentation details are included here.
+\begin{thebibliography}{9}
+\bibitem{source1} DRNet: Dynamic routing for robust multispectral object detection under modality missing. Signal Processing: Image Communication (2026). \url{https://www.sciencedirect.com/science/article/pii/S1051200426005798}.
+\bibitem{source2} Mitigating Spectral Imbalance and Detail Attenuation in RGB-Thermal Object Detection via Frequency-Guided Multimodal Fusion. Sensors 26(13), 4145 (2026). \url{https://doi.org/10.3390/s26134145}.
+\end{thebibliography}
+\end{document}

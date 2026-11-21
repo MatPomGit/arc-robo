@@ -1,0 +1,90 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[margin=27mm]{geometry}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\title{Source-Resolution and Physical Limits of RGB and Long-Wave Infrared Object Detection}
+\author{Mateusz Pomianek}
+\date{Version 0.3.0 -- 21 November 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Native sampling density and object footprint impose physical limits on detector recall that should not be confused with interpolation or exported annotation grids. How does source-native object footprint relate to held-out detection recall and false alerts for RGB and LWIR sensors? The prospective design is as follows: Evaluate fixed detector checkpoints on lawfully obtained, independently annotated native-resolution sensor data; retain intrinsic sampling grids, object footprint, viewing conditions and source provenance. The primary outcome is Held-out detection recall as a function of native object footprint at a predeclared false-positive-per-frame ceiling. The manuscript defines a research question and an evaluation strategy; it does not report experimental estimates.
+\end{abstract}
+
+\section{Introduction}
+Native sampling density and object footprint impose physical limits on detector recall that should not be confused with interpolation or exported annotation grids. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
+
+\section{Related research and novelty assessment}
+The following comparison anchors the scope in selected independently verifiable existing work. The citations are not evidence of completed experiments or of established originality:
+\begin{itemize}
+\item \textbf{Prior art 1:} Mitigating Spectral Imbalance and Detail Attenuation in RGB-Thermal Object Detection via Frequency-Guided Multimodal Fusion \cite{source1}. Provides a multispectral detection and benchmark comparison, not verified native physical sampling limits or full-pipeline embedded energy.
+\item \textbf{Prior art 2:} SDR-YOLO: Scale-Selective Detail Residual Enhanced YOLO for Visible--Thermal Object Detection \cite{source2}. Includes embedded inference measurements explicitly excluding image decoding and pairing; this motivates independent instrumented whole-pipeline assessment.
+\end{itemize}
+\subsection{Specific test beyond existing work}
+Tier A primary: held-out recall of the fixed LWIR car detector by predefined source-size proxy strata at locked false alerts per labelled source frame. This planned contrast is the candidate independent contribution. A literature overlap audit must confirm that prior publications have not already demonstrated an equivalent contrast under comparable measurement conditions.
+
+\section{Primary estimand and prospective decision rules}
+Tier A primary: held-out recall of the fixed LWIR car detector by predefined source-size proxy strata at locked false alerts per labelled source frame. The RGB-versus-LWIR H2 is an optional extension requiring independent sensor evidence and separate approval; it is explicitly outside the current conditional Tier A freeze. H1 is the primary scientific hypothesis unless the source protocol states a different frozen confirmatory contrast. H2 and H3 are supporting or exploratory until a prospective multiplicity strategy (e.g., Holm adjustment) is selected. Any sample size, quality boundary, non-inferiority margin, effect threshold or confidence limit not grounded in existing evidence is explicitly pending approval before confirmatory evaluation.
+
+\section{Detailed scientific scope and novelty boundary}
+The study estimates detector reliability in relation to true native sensor sampling rather than image-grid scaling artifacts. A COCO export-grid box size is only a proxy unless mapping to physical camera sampling has been verified. Existing fixed LWIR vehicle Tier A planning and author-controlled study-freeze decisions in arc-rgbt remain authoritative.
+
+\section{Falsifiable hypotheses}
+\paragraph{H1.} At a fixed false-positive-per-frame ceiling, independently labelled vehicle detection recall decreases with smaller verified native object footprints in a predeclared source-size range.
+
+\paragraph{H2.} As a separate, optional post-Tier-A extension only, the footprint-recall relationship may differ between independently verified RGB and LWIR sensor configurations; this is not included in the current conditional Tier A freeze.
+
+\paragraph{H3.} Incorrectly treating exported-grid bounding-box size as native footprint materially changes the inferred resolution-to-recall association compared with the verified native mapping.
+
+\section{Operationalization and study population}
+\subsection{Independent unit of analysis}
+An independently recorded scene or source sequence; multiple instances and frames in that sequence are correlated.
+
+\subsection{Data, sensors and ground-truth requirements}
+Versioned labelled RGB/LWIR imagery, verified band and native grid metadata, documented detector checkpoint, real zero-object negatives and explicit separation of export dimensions from source pixels. Data and models will be versioned with checksums, licensing information, instrument parameters, selection rules and clock provenance. The held-out test cohort must be independent at the acquisition-session, scene or participant level rather than at the individual frame level.
+
+\subsection{Primary and secondary endpoints}
+The primary estimand is defined as follows: Held-out recall in preregistered vehicle-footprint strata at a locked false positives per all source-labelled frames operating point.
+
+The secondary measurements will be: Size-recall curves, conditional missed-detection risk, false-positive counts on zero-object frames and uncertainty in native-pixel mapping. The exact numerator, denominator, outcome threshold and permitted exclusions must be fixed in the protocol before inferential analysis.
+
+\section{Planned experiments and research sequence}
+\subsection{A. Tier A artifact qualification}
+Document original data rights, sensor release and resolution, checkpoint training provenance, COCO label meaning, scene split, image and annotation hashes and physical mapping uncertainties. Retain the already approved conditional design without asserting a frozen source.
+
+\subsection{B. Locked footprint strata and operating point}
+Derive the known export-grid proxy from box width and height, record native mapping only where documented, and compare recall across predefined size bins with same-class one-to-one matching and negative zero-car frames.
+
+\subsection{C. Physical sampling and modality comparison}
+Where original acquisition geometry exists, estimate angular or native-pixel footprint and separately test LWIR and RGB sampling relationships without treating upscaled pixels as new physical information.
+
+\subsection{D. Independent cohort sensitivity}
+Re-evaluate the association on a legally compatible acquisition session or sensor cohort; quantify effects of annotations, occlusion and threshold choices while retaining scene-disjoint test sets.
+
+\section{Comparative design and statistical inference}
+Use scene-level clustered binomial uncertainty or bootstrap recall contrasts and sensitivity to footprint strata. Report native and exported pixel units separately; preserve denominator and label provenance. When human participants or independent trajectories are needed, their number must follow a documented power simulation or precision calculation after a feasible pilot. Report uncertainty, negative results and sensitivity to failure strata. Thresholds, model configurations and exclusion criteria must be frozen before final testing.
+
+\section{Evidence gates, reproducibility and ethical boundary}
+The arc-rgbt author must explicitly freeze source, detector, thresholds and sequence partition before confirmatory use. No physical range or cross-sensor conclusion without calibration evidence. Each study phase will preserve source SHA or release, configuration, labels, independent oracle, random seeds, raw event timing, and an auditable trace from inputs to computed figures. Simulated evidence is distinct from measured hardware outcomes. Participant studies require prior ethical review and consent.
+
+\section{Results}
+Empirical results, tables and uncertainty intervals will be incorporated after execution of the documented evaluation protocol and independent verification of the input evidence.
+
+\section{Discussion}
+The planned comparison is intended to determine whether the proposed mechanism yields an identifiable gain over the stated controls. Interpretation must distinguish failure of a scientific hypothesis from an incomplete implementation, and should describe practical operating conditions under which conclusions remain valid.
+
+\section{Conclusion}
+This study defines a testable research problem, matched comparators and a primary evaluation target. A substantive empirical conclusion remains conditional on reproducible measurements and appropriate methodological review.
+
+\section{Data and code availability}
+The source project \texttt{MatPomGit/arc-rgbt} remains the authority for the underlying research protocol; this local document is an ARC Robo prospective research plan, not a duplicate final manuscript. Dataset permissions, input manifests, source commits, evaluation scripts and permitted public artifacts will be identified in the final version. No participant records or proprietary instrumentation details are included here.
+\begin{thebibliography}{9}
+\bibitem{source1} Mitigating Spectral Imbalance and Detail Attenuation in RGB-Thermal Object Detection via Frequency-Guided Multimodal Fusion. Sensors 26(13), 4145 (2026). \url{https://doi.org/10.3390/s26134145}.
+\bibitem{source2} SDR-YOLO: Scale-Selective Detail Residual Enhanced YOLO for Visible-Thermal Object Detection. Remote Sensing 18(18), 3216 (2026). \url{https://www.mdpi.com/2072-4292/18/18/3216}.
+\end{thebibliography}
+\end{document}

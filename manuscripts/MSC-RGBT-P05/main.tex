@@ -1,0 +1,90 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[margin=27mm]{geometry}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\title{Cross-Sensor and Cross-Domain Transfer of RGB and Long-Wave Infrared Detectors}
+\author{Mateusz Pomianek}
+\date{Version 0.3.0 -- 21 November 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Detection performance may degrade across genuinely independent sensor platforms, viewpoints and thermal domains. Can training-only bounded adaptation reduce detection error on unseen RGB/LWIR sensors without access to held-out target annotations? The prospective design is as follows: Choose independent legally reusable sensor-domain cohorts with harmonized class definitions and explicit optics, resolution and spectral-band metadata; freeze adaptation on training cohorts. The primary outcome is Out-of-domain recall loss at a matched false-positive operating point on independently held-out sensor cohorts. The manuscript defines a research question and an evaluation strategy; it does not report experimental estimates.
+\end{abstract}
+
+\section{Introduction}
+Detection performance may degrade across genuinely independent sensor platforms, viewpoints and thermal domains. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
+
+\section{Related research and novelty assessment}
+The following comparison anchors the scope in selected independently verifiable existing work. The citations are not evidence of completed experiments or of established originality:
+\begin{itemize}
+\item \textbf{Prior art 1:} M3OT: A Multi-Drone Multi-Modality dataset for Multi-Object Tracking \cite{source1}. Provides aerial RGB/thermal video tracking data, but source labels, sensor viewpoints and rights must be verified before cross-sensor comparisons.
+\item \textbf{Prior art 2:} Mitigating Spectral Imbalance and Detail Attenuation in RGB-Thermal Object Detection via Frequency-Guided Multimodal Fusion \cite{source2}. Provides a multispectral detection and benchmark comparison, not verified native physical sampling limits or full-pipeline embedded energy.
+\end{itemize}
+\subsection{Specific test beyond existing work}
+Target-domain recall difference between bounded adaptation and source-only inference at a fixed false-positive-per-frame operating point. This planned contrast is the candidate independent contribution. A literature overlap audit must confirm that prior publications have not already demonstrated an equivalent contrast under comparable measurement conditions.
+
+\section{Primary estimand and prospective decision rules}
+Target-domain recall difference between bounded adaptation and source-only inference at a fixed false-positive-per-frame operating point. The primary target must be an independent physical sensor or acquisition cohort with compatible labels; resizing does not count as sensor transfer. H1 is the primary scientific hypothesis unless the source protocol states a different frozen confirmatory contrast. H2 and H3 are supporting or exploratory until a prospective multiplicity strategy (e.g., Holm adjustment) is selected. Any sample size, quality boundary, non-inferiority margin, effect threshold or confidence limit not grounded in existing evidence is explicitly pending approval before confirmatory evaluation.
+
+\section{Detailed scientific scope and novelty boundary}
+The study targets sensor- and domain-generalization of object detection across genuinely different physical RGB/LWIR sensors and acquisition conditions. Image interpolation, video cropping or resizing of one acquisition system do not establish transfer. Cross-domain labels, spectral bands and sensor geometry must be legally and scientifically compatible; NIR cannot be silently equated with LWIR.
+
+\section{Falsifiable hypotheses}
+\paragraph{H1.} A source-trained detector experiences a measurable held-out recall deficit on unseen independent sensor-domain cohorts compared with source-domain evaluation at the same false-alert point.
+
+\paragraph{H2.} A bounded adaptation procedure trained only on approved source/development material improves unseen target-device recall relative to frozen source-only inference without accessing target test labels.
+
+\paragraph{H3.} Cross-sensor gain remains after controlling for native sampling, class distribution and fixed preprocessing, indicating benefit beyond simple normalization or rescaling.
+
+\section{Operationalization and study population}
+\subsection{Independent unit of analysis}
+An independent acquisition session and device/domain cohort; frames and objects within a cohort are correlated.
+
+\subsection{Data, sensors and ground-truth requirements}
+At least two genuinely distinct sensor/domain cohorts with documented bands, optics, release rights, compatible labels, sensor-native grids, independent scene partitions and versioned detector checkpoints. Data and models will be versioned with checksums, licensing information, instrument parameters, selection rules and clock provenance. The held-out test cohort must be independent at the acquisition-session, scene or participant level rather than at the individual frame level.
+
+\subsection{Primary and secondary endpoints}
+The primary estimand is defined as follows: Matched-false-alert target-domain detection recall difference between a frozen source-only detector and the predeclared bounded adaptation method.
+
+The secondary measurements will be: Source-to-target generalization gap, calibration, per-class/object-size recall, adaptation cost and latency. The exact numerator, denominator, outcome threshold and permitted exclusions must be fixed in the protocol before inferential analysis.
+
+\section{Planned experiments and research sequence}
+\subsection{A. Domain qualification and provenance}
+Select independent physical acquisition devices or environments with compatible semantics, RGB/LWIR bands and independent annotations. Record optics, native grids, capture viewpoints, licences, class prevalence and archive hashes.
+
+\subsection{B. Leakage-free source and adaptation development}
+Create source/development, calibration and completely held-out target domains. Compare source-only weights, fixed harmonized preprocessing, limited fine-tuning and the stated adaptation method. Count all allowed labels and training data budgets.
+
+\subsection{C. Blind target-device transfer study}
+Freeze model and operating point before evaluating target acquisitions. Compare source-domain and target-domain recall and false alarms by cohort, class, target size and viewpoint. Use more than one genuine target sensor where feasible.
+
+\subsection{D. Source of transfer benefit}
+Ablate spectral representation, native footprint, normalization and class balancing on development cohorts. Evaluate whether the final target gain persists without test-dependent threshold or model selection.
+
+\section{Comparative design and statistical inference}
+Report cohort-stratified paired effects and interval estimates, avoiding unsupported inference from a single device pair. Where independent domain count is small, describe limits rather than fitting overconfident cross-domain random effects. When human participants or independent trajectories are needed, their number must follow a documented power simulation or precision calculation after a feasible pilot. Report uncertainty, negative results and sensitivity to failure strata. Thresholds, model configurations and exclusion criteria must be frozen before final testing.
+
+\section{Evidence gates, reproducibility and ethical boundary}
+Verified cross-sensor provenance and rights are prerequisites. A single camera resized to multiple resolutions is not adequate transfer evidence. Each study phase will preserve source SHA or release, configuration, labels, independent oracle, random seeds, raw event timing, and an auditable trace from inputs to computed figures. Simulated evidence is distinct from measured hardware outcomes. Participant studies require prior ethical review and consent.
+
+\section{Results}
+Empirical results, tables and uncertainty intervals will be incorporated after execution of the documented evaluation protocol and independent verification of the input evidence.
+
+\section{Discussion}
+The planned comparison is intended to determine whether the proposed mechanism yields an identifiable gain over the stated controls. Interpretation must distinguish failure of a scientific hypothesis from an incomplete implementation, and should describe practical operating conditions under which conclusions remain valid.
+
+\section{Conclusion}
+This study defines a testable research problem, matched comparators and a primary evaluation target. A substantive empirical conclusion remains conditional on reproducible measurements and appropriate methodological review.
+
+\section{Data and code availability}
+The source project \texttt{MatPomGit/arc-rgbt} remains the authority for the underlying research protocol; this local document is an ARC Robo prospective research plan, not a duplicate final manuscript. Dataset permissions, input manifests, source commits, evaluation scripts and permitted public artifacts will be identified in the final version. No participant records or proprietary instrumentation details are included here.
+\begin{thebibliography}{9}
+\bibitem{source1} M3OT: A Multi-Drone Multi-Modality dataset for Multi-Object Tracking. Scientific Data 12, 1927 (2025). \url{https://doi.org/10.1038/s41597-025-06204-0}.
+\bibitem{source2} Mitigating Spectral Imbalance and Detail Attenuation in RGB-Thermal Object Detection via Frequency-Guided Multimodal Fusion. Sensors 26(13), 4145 (2026). \url{https://doi.org/10.3390/s26134145}.
+\end{thebibliography}
+\end{document}

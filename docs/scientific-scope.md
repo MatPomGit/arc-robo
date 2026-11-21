@@ -1,3 +1,7 @@
-# REPLACE_PROGRAM_NAME — zakres programu
+# ARC Robo — zakres programu badawczego
 
-Opisz pytania, główny wkład, kryterium przypisania projektów i zakres wyłączeń. Programy ARC są rozdzielane według **głównego rezultatu badania**, nie według samego użycia AI/EEG/XR. Badania wielodyscyplinarne mogą być dodatkowo odsyłane przez inne ARC bez ponownego opublikowania materiałów.
+Program obejmuje badania nad fizycznie weryfikowalną percepcją RGB/LWIR, autonomiczną inspekcją robotyczną, interakcją człowiek–humanoid i bezpieczeństwem wykonywania zadań oraz nawigacją UAV w warunkach utraty informacji z czujników. Głównym kryterium przypisania projektu jest robotyczne pytanie badawcze, jednoznacznie określony wynik główny i niezależny protokół walidacji. Badania z pogranicza psychologii, AI i XR mogą być powiązane z innymi programami, ale posiadają jednego właściciela naukowego.
+
+Katalog [31 pozycji](../manuscripts/README.md) rozróżnia dziewięć istniejących manuskryptów, osiem szablonów RVI oraz czternaście prospektywnych planów LaTeX. [Manifest źródeł](../manuscripts/source_manifest.json) przypisuje każdej pozycji repozytorium, ścieżkę, commit źródłowy i status. Opracowanie planu nie zmienia zatwierdzenia eksperymentu ani odpowiedzialności za oryginalny manuskrypt w projekcie źródłowym.
+
+Prace symulacyjne i replay pozwalają testować algorytmy, ale nie dowodzą bezpieczeństwa lub niezawodności fizycznego robota. Metryki ustala się z uwzględnieniem niezależności scen, sesji lub uczestników; wyniki wymagają wersjonowanych danych, niezależnej prawdy odniesienia i jawnych ograniczeń transferu. Dokumentacja programu nie zawiera nieautoryzowanych danych uczestników, a publikacja stron odbywa się wyłącznie po przeglądzie jawności.

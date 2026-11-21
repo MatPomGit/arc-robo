@@ -1,0 +1,90 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[margin=27mm]{geometry}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\title{Propagating Spatiotemporal Calibration Uncertainty into RGB and LWIR Detection Risk}
+\author{Mateusz Pomianek}
+\date{Version 0.3.0 -- 21 November 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Physical camera and clock uncertainty can be propagated into predictive bounds on detection-association error. Do calibrated spatiotemporal uncertainty models yield valid held-out prediction coverage for fusion-induced detection errors? The prospective design is as follows: Measure independent calibration sessions with reference targets and common exposure-time evidence, propagate uncertainty through association and test on separate scenes. The primary outcome is Observed held-out coverage error of predeclared fusion-association risk bounds. The manuscript defines a research question and an evaluation strategy; it does not report experimental estimates.
+\end{abstract}
+
+\section{Introduction}
+Physical camera and clock uncertainty can be propagated into predictive bounds on detection-association error. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
+
+\section{Related research and novelty assessment}
+The following comparison anchors the scope in selected independently verifiable existing work. The citations are not evidence of completed experiments or of established originality:
+\begin{itemize}
+\item \textbf{Prior art 1:} Autonomous--Targetless Extrinsic Calibration of Thermal, RGB, and LiDAR Sensors \cite{source1}. Addresses multisensor registration, not necessarily uncertainty-calibrated detection risk bounds on new physical sessions.
+\item \textbf{Prior art 2:} Misaligned Visible-Thermal Object Detection: A Drone-Based Benchmark and Baseline \cite{source2}. Addresses visible-thermal spatial misalignment; exposure-time measurement and scene-motion interactions must supply any distinct P02 result.
+\end{itemize}
+\subsection{Specific test beyond existing work}
+Absolute deviation of observed held-out prediction-bound coverage from a preregistered nominal target for association risk under measured space/time calibration uncertainty. This planned contrast is the candidate independent contribution. A literature overlap audit must confirm that prior publications have not already demonstrated an equivalent contrast under comparable measurement conditions.
+
+\section{Primary estimand and prospective decision rules}
+Absolute deviation of observed held-out prediction-bound coverage from a preregistered nominal target for association risk under measured space/time calibration uncertainty. Quantify interval width alongside empirical coverage to prevent vacuous prediction bounds; independent physical calibration sessions are required. H1 is the primary scientific hypothesis unless the source protocol states a different frozen confirmatory contrast. H2 and H3 are supporting or exploratory until a prospective multiplicity strategy (e.g., Holm adjustment) is selected. Any sample size, quality boundary, non-inferiority margin, effect threshold or confidence limit not grounded in existing evidence is explicitly pending approval before confirmatory evaluation.
+
+\section{Detailed scientific scope and novelty boundary}
+This OPTIONAL\_HOLD study investigates whether uncertainty in physical RGB/LWIR geometric calibration and exposure-time alignment can be propagated into calibrated bounds on fusion association error. P02 asks whether alignment helps; here the distinct outcome is held-out probabilistic risk-bound validity and sharpness, requiring independent physical reference correspondences.
+
+\section{Falsifiable hypotheses}
+\paragraph{H1.} On independently acquired sessions, propagated spatial and temporal calibration uncertainty yields association-risk prediction intervals with better nominal coverage than point-estimate alignment and arbitrary fixed-jitter bounds.
+
+\paragraph{H2.} At matched accepted-decision coverage, an uncertainty-aware decision policy reduces false-high-confidence RGB/LWIR associations compared with a point-registration policy.
+
+\paragraph{H3.} At the same preregistered target risk coverage, the calibrated uncertainty bound remains narrower than a conservative global worst-case margin, preserving usable precision.
+
+\section{Operationalization and study population}
+\subsection{Independent unit of analysis}
+A physically independent acquisition or calibration session; correspondences and frame pairs are nested in the session.
+
+\subsection{Data, sensors and ground-truth requirements}
+Source-native paired RGB/LWIR measurements, independently measured calibration reference positions, exposure-timestamp clock evidence, uncertainty estimates, annotated detections, validity masks and session hashes. Data and models will be versioned with checksums, licensing information, instrument parameters, selection rules and clock provenance. The held-out test cohort must be independent at the acquisition-session, scene or participant level rather than at the individual frame level.
+
+\subsection{Primary and secondary endpoints}
+The primary estimand is defined as follows: Absolute held-out deviation between empirical detection-association risk-bound coverage and a preregistered nominal coverage target.
+
+The secondary measurements will be: Interval width, falsely confident associations, risk-coverage AURC, detection recall at fixed false alarms, reprojection-error distribution and latency. The exact numerator, denominator, outcome threshold and permitted exclusions must be fixed in the protocol before inferential analysis.
+
+\section{Planned experiments and research sequence}
+\subsection{A. Physical uncertainty measurement}
+Obtain independent repeated calibration-target observations, camera intrinsics/extrinsics, independently validated spatial correspondences and exposure-tied clock transforms. Estimate covariance and systematic error components without treating frame-arrival jitter as sensing time.
+
+\subsection{B. Error-propagation comparator construction}
+Compare fixed point registration, naive synthetic jitter, propagation of measured geometric and timing errors, and calibrated predictive risk bounds with identical frozen detections and labels. Tune on development acquisition sessions only.
+
+\subsection{C. Held-out risk-bound coverage}
+Evaluate independent camera-calibration and scene sessions, reporting nominal versus empirical coverage, bound width and false-confidence under predeclared high-skew and high-reprojection-residual strata.
+
+\subsection{D. Joint-source ablation and utility test}
+Ablate geometric-only, time-only and joint uncertainty. Detect whether nominal coverage is attained only by unusably wide intervals; compare risk-coverage and latency constraints at fixed acceptance rates.
+
+\section{Comparative design and statistical inference}
+Use session-level clustered intervals for empirical coverage and sharpness. Specify nominal coverage and decision thresholds before final evaluation; report reliability conditional on high-skew and out-of-calibration sessions. When human participants or independent trajectories are needed, their number must follow a documented power simulation or precision calculation after a feasible pilot. Report uncertainty, negative results and sensitivity to failure strata. Thresholds, model configurations and exclusion criteria must be frozen before final testing.
+
+\section{Evidence gates, reproducibility and ethical boundary}
+Remain OPTIONAL\_HOLD until physically measured spatial and temporal calibration uncertainty and independent detection labels exist. Average reprojection residuals or synthetic jitter alone are not independently predictive risk bounds. Each study phase will preserve source SHA or release, configuration, labels, independent oracle, random seeds, raw event timing, and an auditable trace from inputs to computed figures. Simulated evidence is distinct from measured hardware outcomes. Participant studies require prior ethical review and consent.
+
+\section{Results}
+Empirical results, tables and uncertainty intervals will be incorporated after execution of the documented evaluation protocol and independent verification of the input evidence.
+
+\section{Discussion}
+The planned comparison is intended to determine whether the proposed mechanism yields an identifiable gain over the stated controls. Interpretation must distinguish failure of a scientific hypothesis from an incomplete implementation, and should describe practical operating conditions under which conclusions remain valid.
+
+\section{Conclusion}
+This study defines a testable research problem, matched comparators and a primary evaluation target. A substantive empirical conclusion remains conditional on reproducible measurements and appropriate methodological review.
+
+\section{Data and code availability}
+The source project \texttt{MatPomGit/arc-rgbt} remains the authority for the underlying research protocol; this local document is an ARC Robo prospective research plan, not a duplicate final manuscript. Dataset permissions, input manifests, source commits, evaluation scripts and permitted public artifacts will be identified in the final version. No participant records or proprietary instrumentation details are included here.
+\begin{thebibliography}{9}
+\bibitem{source1} Autonomous-Targetless Extrinsic Calibration of Thermal, RGB, and LiDAR Sensors. IEEE Transactions on Instrumentation and Measurement (2024). DOI: 10.1109/TIM.2024.3480237. \url{https://doi.org/10.1109/TIM.2024.3480237}.
+\bibitem{source2} Misaligned Visible-Thermal Object Detection: A Drone-Based Benchmark and Baseline. IEEE (2024). \url{https://ieeexplore.ieee.org/abstract/document/10522939}.
+\end{thebibliography}
+\end{document}

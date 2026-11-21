@@ -1,0 +1,41 @@
+name: ARC Robo - structural and LaTeX checks
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  python-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check ARC repository contract
+        run: python3 scripts/validate_repository.py --phase scaffold
+      - name: Run Python unit tests
+        run: python3 -m unittest discover -s tests -v
+
+  latex-plans:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install minimal LaTeX build dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends latexmk lmodern texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
+      - name: Compile every new prospective manuscript
+        run: |
+          set -euo pipefail
+          count=0
+          for f in manuscripts/MSC-*/main.tex; do
+            latexmk -pdf -cd -interaction=nonstopmode -halt-on-error "$f"
+            count=$((count + 1))
+          done
+          test "$count" -eq 14
+          echo "Compiled $count manuscript plans."

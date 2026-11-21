@@ -1,14 +1,18 @@
-# ARC — REPLACE_PROGRAM_NAME
+# ARC Robo — badania percepcji, nawigacji i bezpieczeństwa robotów
 
 **Rodzaj repozytorium:** program naukowy `arc-*`  
-**Program:** `arc-REPLACE`  
+**Program:** `arc-robo`  
 **Wersja szablonu:** `1.0.0`  
 **Autor podstawowy:** Mateusz Pomianek; dodatkowi współautorzy po potwierdzeniu wkładu  
 **Stan naukowy:** indeks planowany, bez potwierdzonych wyników empirycznych
 
 ## Misja i granice programu
 
-Zastąp ten akapit zwięzłym opisem pytań naukowych, kryterium przypisania manuskryptu i odrębności od innych ARC. Dostępne programy nadrzędne: **ARC Neuro, ARC AI, ARC XR, ARC Robo**. NDD to linia w Neuro, a nie osobny program. Okulometria jest metodą, nie piątym programem.
+ARC Robo skupia projekty naukowe dotyczące percepcji RGB/LWIR, aktywnej inspekcji humanoidów, predykcyjnego bezpieczeństwa interakcji człowiek–robot, wspomaganej multimodalnie teleoperacji oraz nawigacji UAV. Kryterium przypisania stanowi robotyczny wynik główny i możliwość jego niezależnej walidacji. Szczegółowe protokoły, dane i kanoniczne źródła dojrzałych manuskryptów pozostają w projektach źródłowych; ARC Robo utrzymuje indeks przekrojowy.
+
+## Katalog artykułów
+
+[Indeks 31 artykułów oraz pliki LaTeX dla brakujących pozycji](manuscripts/README.md). Szczegółowy status i lokalizacja oryginalnego manuskryptu są opisane osobno dla każdego identyfikatora MSC.
 
 ## Propozycje kierunków badawczych
 

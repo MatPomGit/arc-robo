@@ -1,9 +1,9 @@
 schema_version: 1
 repository_type: research_program
 template_version: 1.0.0
-programme: arc-REPLACE
-scientific_owner: REPLACE_OWNER
-updated: null
+programme: arc-robo
+scientific_owner: Mateusz Pomianek
+updated: '2026-11-21'
 phase: scaffold
 projects_registered: 0
 papers_registered: 0
@@ -12,5 +12,5 @@ pages_status: not_configured
 hardware_validation_status: not_run
 last_live_audit: null
 known_blockers:
-  - configure_programme_owner_scope_and_projects
+  - register_primary_projects_after_scientific_approval
 next_action: inventory_primary_msc_repositories
