@@ -1,0 +1,53 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[margin=27mm]{geometry}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage[hidelinks]{hyperref}
+\title{Human-Like Social Motion in Mechanically Embodied Robots: Benefit or Uncanny Mismatch?}
+\author{Mateusz Pomianek}
+\date{Concept manuscript 0.1.0, 21 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Increasing the naturalness of social behaviour in an overtly mechanical robot might increase perceived acceptance, but it may also intensify appearance--behaviour mismatch. This prospective study tests whether the effect of motion naturalness depends on the visual embodiment and whether findings from computer-rendered avatars transfer to recorded physical robots. The primary outcome is the interaction of motion naturalness and embodiment on perceived acceptance and eeriness. No empirical results are asserted.
+\end{abstract}
+\section{Introduction}
+Uncanny-valley accounts typically focus on appearance or the incompatibility of appearance and movement. In practical social robotics, the reverse mismatch is also relevant: a clearly mechanical platform may exhibit smooth, expressive and human-like interaction. It remains an empirical question whether this improves acceptance or creates a different form of prediction error. The present study approaches the question with controlled video stimuli rather than assuming that a humanoid robot is socially equivalent to a human-looking avatar. The study belongs to a shared stimulus-generation programme, ST-08, but has a distinct robotics-oriented outcome.
+
+\section{Research question and hypotheses}
+How does the naturalness of motion change the perceived acceptance of mechanically embodied robots? Can the direction and magnitude of this effect be transported from rendered avatars to videos of actual robots?
+\paragraph{H1.} Motion naturalness interacts with embodiment and visual human-likeness when predicting acceptance and eeriness.
+\paragraph{H2.} Increasing the biological fluidity of mechanical robots is not necessarily a monotonic improvement in social acceptance; a mismatch penalty remains possible.
+These hypotheses are prospective and require prespecified contrasts and adequate uncertainty estimation before confirmatory testing.
+
+\section{Operationalization and study population}
+The first-stage study presents adult observers with validated short videos of mechanically rendered robot avatars created using ST-08. The source behaviour is derived from legally usable, contextualized videos of social interactions. Motion conditions vary independently from visual appearance while preserving the original event order, speech timing, camera, illumination and scenario. Motion variation must be independently calibrated so that the numerical parameter of the renderer is not treated as the observer's psychological rating of naturalness.
+
+The unit of analysis is an observer-by-clip rating with participant-, clip- and robot-level dependencies. Primary measures are perceived acceptance and eeriness recorded with prespecified rating instruments. Secondary outcomes include willingness to interact, perceived social competence and trust. A small technical pilot establishes audiovisual comparability; it is not a source of confirmatory estimates.
+
+\section{Study procedure}
+In stage one, scenes with several levels of kinematic naturalness are randomly allocated to observers, with counterbalancing to limit habituation and order effects. At least two robot appearances and multiple independent source sequences are needed to distinguish stimulus-specific features from the target interaction. For each clip, record the exact renderer parameters, source-clip identifier, versioned motion description, visual integrity assessment and timebase.
+
+In a conditional stage two, the corresponding behaviour is evaluated using videos of a physical robot, but only where its actuator range, velocity, synchronisation, autonomy and safety constraints permit a defensible matched comparison. This stage does not require observers to encounter a moving robot. Successful simulation, a vendor demonstration and video playback do not constitute hardware validation.
+
+\section{Primary estimand and statistical analysis}
+The first-stage estimand is the difference in the association of motion naturalness with acceptance across levels of appearance realism, including a test for nonlinearity. The second-stage estimand, only after readiness approval, is the difference in this relationship between rendered and physically instantiated embodiments. A hierarchical model will incorporate observer, stimulus and source-sequence effects. Model comparisons will test monotonic and nonmonotonic hypotheses, with confidence intervals, prespecified exclusion rules and validation on held-out sequences. Sample size will be established by simulation-based precision or power analysis before the experiment.
+
+\section{Independent validation and safety}
+Source-data licenses, the rights to publish derivative animated stimuli, and any MetaHuman or third-party model terms must be checked separately. The physical study requires explicit approval of the platform, emergency stop, mechanical motion limits, capture permissions and a reproducible control procedure. No robot movement, participant recruitment, clinical inference or cost-bearing service is authorized merely by this concept manuscript.
+
+\section{Results}
+No empirical results are available. Neither rendered animations nor unvalidated robot demonstrations are evidence of an observed acceptance effect. Results shall report the effect size, precision, negative findings and all prespecified quality failures, rather than only visually successful trials.
+
+\section{Discussion and limitations}
+The mechanism may involve social expectation, anthropomorphism, familiarity and physical morphology, and a single subjective scale cannot resolve these causes. A difference between physical and rendered robots could also arise from lighting, audiovisual synchronisation or restrictions imposed by real motors. This work is distinct from MSC-SUV-P02, which maps a general appearance-by-motion surface, and from MSC-SUV-P03, which manipulates expectations. Its independent contribution requires a transportability test relevant to social robot design.
+
+\section{Conclusion}
+The proposed experiment isolates whether more human-like social behaviour helps or harms acceptance of clearly robotic agents. Scientific conclusions await qualified data, controlled stimuli and preregistered analysis; physical validation is optional and subject to its own readiness gate.
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

@@ -1,0 +1,28 @@
+schema_version: 1
+paper_id: MSC-SUV-P05
+study_type: empirical
+research_question: "Czy naturalne zachowanie mechanicznego robota zwiększa akceptację czy pogłębia niesamowitość?"
+hypotheses:
+  - id: H1
+    statement: "Naturalność ruchu współdziała z wyglądem i typem ucieleśnienia."
+    status: proposed
+  - id: H2
+    statement: "Wzrost naturalności ruchu nie musi monotonicznie zwiększać akceptacji."
+    status: proposed
+design:
+  type: "Randomizowane oceny klipów, późniejszy warunkowy transfer do robota fizycznego"
+  unit_of_analysis: "Ocena klipu przez obserwatora"
+  population: null
+  sample_size: null
+outcomes:
+  primary:
+    name: "Embodiment by motion interaction"
+    unit: null
+    definition: "Zmiana akceptacji i eeriness zależna od naturalności ruchu i formy ucieleśnienia"
+  secondary: []
+analysis:
+  methods: ["Model hierarchiczny, analiza nieliniowości, przedziały niepewności"]
+  validation: "Wierność scen, etyka i bezpieczeństwo fizycznego robota wymagają odrębnych bramek"
+evidence:
+  empirical_results: not_available
+  protocol_frozen: false

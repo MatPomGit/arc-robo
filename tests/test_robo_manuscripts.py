@@ -11,7 +11,7 @@ TEX_NEW = {
     "MSC-HRI-P09", "MSC-HRI-P10",
     "MSC-RGBT-P01", "MSC-RGBT-P02", "MSC-RGBT-P03", "MSC-RGBT-P04",
     "MSC-RGBT-P05", "MSC-RGBT-P06", "MSC-RGBT-P07", "MSC-RGBT-P08",
-    "MSC-RVI-P09", "MSC-S4D-P02", "MSC-S4D-P03",
+    "MSC-RVI-P09", "MSC-SUV-P05", "MSC-S4D-P02", "MSC-S4D-P03",
 }
 TEX_EXTERNAL = {
     *(f"MSC-HRI-P{i:02d}" for i in range(1, 9)),
@@ -20,10 +20,10 @@ TEX_EXTERNAL = {
 }
 
 class RoboManuscriptCatalogTest(unittest.TestCase):
-    def test_31_distinct_manuscript_directories(self):
+    def test_32_distinct_manuscript_directories(self):
         got = {p.name for p in FOLDER.iterdir() if p.is_dir() and p.name.startswith("MSC-")}
         self.assertEqual(got, TEX_NEW | TEX_EXTERNAL)
-        self.assertEqual(len(got), 31)
+        self.assertEqual(len(got), 32)
 
     def test_each_has_descriptive_readme(self):
         for ident in TEX_NEW | TEX_EXTERNAL:
