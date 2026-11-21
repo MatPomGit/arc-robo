@@ -8,12 +8,21 @@ import argparse
 import json
 import re
 from collections import Counter
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parents[1]
 MSC = re.compile(r"^MSC-[A-Z0-9]+(?:-[A-Z0-9]+)+$")
 SHA = re.compile(r"^[0-9a-f]{40}$")
 ROLES = {"research_protocol_or_proposal", "existing_manuscript_tex", "tex_placeholder"}
+REPOSITORY = re.compile(r"^MatPomGit/[A-Za-z0-9_.-]+$")
+
+
+def safe_source_path(value: object) -> bool:
+    if not isinstance(value, str) or not value or "\\\\" in value or "\\x00" in value:
+        return False
+    parts = PurePosixPath(value).parts
+    return (not value.startswith(("/", "./")) and "//" not in value and
+            bool(parts) and all(part not in {".", "..", ""} for part in parts))
 
 
 def audit(root: Path = ROOT) -> dict:
@@ -46,13 +55,19 @@ def audit(root: Path = ROOT) -> dict:
             problems.append("invalid_source_sha:" + ident)
         if not isinstance(row.get("source_blob_sha"), str) or not SHA.fullmatch(row["source_blob_sha"]):
             problems.append("missing_or_invalid_source_blob_sha:" + ident)
+        if not isinstance(row.get("source_repository"), str) or not REPOSITORY.fullmatch(row["source_repository"]):
+            problems.append("invalid_source_repository:" + ident)
+        if not safe_source_path(row.get("source_path")):
+            problems.append("unsafe_source_path:" + ident)
         path = row.get("local_plan_path")
         if path is not None:
             expected = "manuscripts/" + ident + "/main.tex"
-            if path != expected or not (root / path).is_file():
+            if (path != expected or not (root / path).is_file() or
+                    (root / path).is_symlink() or (root / "manuscripts" / ident).is_symlink()):
                 problems.append("missing_or_invalid_local_plan:" + ident)
         else:
-            if (root / "manuscripts" / ident / "main.tex").exists():
+            if ((root / "manuscripts" / ident / "main.tex").exists() or
+                    (root / "manuscripts" / ident).is_symlink()):
                 problems.append("unexpected_local_manuscript:" + ident)
         url = "https://github.com/{}/blob/{}/{}".format(
             row.get("source_repository"), row.get("source_commit_sha"), row.get("source_path"))
