@@ -42,7 +42,7 @@ class RoboManuscriptCatalogTest(unittest.TestCase):
                 for fragment in (
                     r"\documentclass", r"\begin{document}", r"\end{document}",
                     r"\begin{abstract}", r"\end{abstract}",
-                    r"\section{Materials and methods}", r"\section{Results}",
+                    r"\section{Operationalization and study population}", r"\section{Results}",
                 ):
                     self.assertIn(fragment, text)
                 title = re.search(r"\\title\{(.+?)\}", text)

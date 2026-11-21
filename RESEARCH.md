@@ -1,7 +1,7 @@
 # Zakres naukowy i zarządzanie publikacjami
 
-**Program:** REPLACE_PROGRAM_NAME  
-**Główne pytanie:** REPLACE_SCIENTIFIC_SCOPE  
+**Program:** ARC Robo  
+**Główne pytanie:** Jak projektować, mierzyć i walidować percepcję multimodalną, autonomiczną inspekcję, bezpieczeństwo interakcji człowiek–robot oraz nawigację autonomiczną, rozdzielając wnioski symulacyjne od fizycznych?  
 **Kryterium przypisania:** główna hipoteza i główny wynik, nie użyta metoda pomocnicza.
 
 ## Programy
