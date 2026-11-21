@@ -18,7 +18,7 @@ REPOSITORY = re.compile(r"^MatPomGit/[A-Za-z0-9_.-]+$")
 
 
 def safe_source_path(value: object) -> bool:
-    if not isinstance(value, str) or not value or "\\\\" in value or "\\x00" in value:
+    if not isinstance(value, str) or not value or "\\" in value or "\x00" in value:
         return False
     parts = PurePosixPath(value).parts
     return (not value.startswith(("/", "./")) and "//" not in value and
