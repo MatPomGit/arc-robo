@@ -8,7 +8,7 @@
 \usepackage[hidelinks]{hyperref}
 \title{Energy-Constrained Adaptive Sensor Selection for RGB and Thermal Perception}
 \author{Mateusz Pomianek}
-\date{Version 0.1.0 -- 21 November 2026}
+\date{Version 0.2.0 -- 21 November 2026}
 \begin{document}
 \maketitle
 
@@ -19,23 +19,46 @@ Dynamic selection of RGB, thermal or dual sensing may conserve actual energy whi
 \section{Introduction}
 Dynamic selection of RGB, thermal or dual sensing may conserve actual energy while preserving perception quality. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
 
-\section{Research question and hypothesis}
-Can an on-device sensing policy reduce measured energy expenditure relative to fixed pipelines without violating predefined detection constraints? The working hypothesis is that the proposed approach improves the primary endpoint under an explicitly matched evidence and resource budget. This hypothesis is subject to prior-art review and prospective specification; non-superiority and negative findings must remain reportable.
+\section{Detailed scientific scope and novelty boundary}
+This OPTIONAL\_HOLD study tests runtime sensor-mode selection for lower physically measured energy while preserving perception quality. Its independent contribution is policy-dependent switching among RGB, LWIR and dual sensing, not the static hardware efficiency comparison of P03. Device switching overhead, sensor startup and thermal transitions must be part of the energy accounting.
 
-\section{Materials and methods}
-Run a dynamic sensor-mode policy on a target device with measured power, controllable capture modes, synchronized annotated sequences and documented switch overhead. The experimental unit, independent ground truth, data inclusion criteria, version of software and sensors, and provenance of each dataset or scenario will be fixed in the protocol. Training, calibration and evaluation partitions will be isolated at the appropriate physical scene, sequence, participant or device level.
+\section{Falsifiable hypotheses}
+\paragraph{H1.} At locked held-out detection quality and latency requirements, a constrained adaptive policy saves physically measured Joules per scene relative to the best feasible fixed sensing mode.
 
-\subsection{Comparators and experimental controls}
-Compare fixed RGB, fixed LWIR, fixed dual sensing and adaptive selection at matched workload and perception-quality budgets. Model or policy hyperparameters must not be selected from final held-out results. The implementation will record relevant software versions, seeds, sensor configuration, timestamps and data rights.
+\paragraph{H2.} Measured mode-transition energy and delay reduce the savings expected from an idealized zero-switch-cost simulation, and switching cost scales with policy frequency.
 
-\subsection{Primary endpoint}
-Measured joules per independently evaluated scene or sequence while satisfying locked detection performance bounds. Denominators, operational thresholds, missing observations and failure cases will be defined before inferential analysis. Secondary metrics will not be substituted post hoc for the primary endpoint.
+\paragraph{H3.} Under environment changes, quality-constrained selection produces fewer detection/latency-budget violations than an unconstrained energy-only selection policy.
 
-\section{Statistical and computational analysis plan}
-Report energy-quality Pareto differences, mode-switch counts, thermal effects and p99 latency with device-run uncertainty. Any confirmatory statistical contrast will report uncertainty intervals, effective independent sample size and relevant failure strata. Where a physical validation or participant-based experiment is necessary, approval and feasibility assessment must precede data collection.
+\section{Operationalization and study population}
+\subsection{Independent unit of analysis}
+An independent device-and-scene workload run; framewise energy observations are within-run samples.
 
-\section{Anticipated interpretation and limitations}
-This optional study depends on completed instrumented RGBT-P03 measurements and must demonstrate added policy value beyond static pipeline optimization. Confounding from software versions, sensor conditions, scene selection and methodological overlap will be assessed explicitly. Claims about simulated behavior will not be generalized to physical safety or human behavior without matching evidence.
+\subsection{Data, sensors and ground-truth requirements}
+Real power-instrumented embedded target, lawful labelled RGB/LWIR scene sequences, controllable sensor modes, fixed policy checkpoints, mode-event timestamps and thermal and idle baselines. Data and models will be versioned with checksums, licensing information, instrument parameters, selection rules and clock provenance. The held-out test cohort must be independent at the acquisition-session, scene or participant level rather than at the individual frame level.
+
+\subsection{Primary and secondary endpoints}
+The primary estimand is defined as follows: Physically metered Joules per evaluated scene subject to a locked minimum recall, maximum false-positive-per-frame and latency envelope.
+
+The secondary measurements will be: Switching overhead, switched-mode count, quality-budget failures, sustained FPS, memory and p95/p99 latency. The exact numerator, denominator, outcome threshold and permitted exclusions must be fixed in the protocol before inferential analysis.
+
+\section{Planned experiments and research sequence}
+\subsection{A. Hardware and P03 dependency qualification}
+Require a target device with verified controllable camera modes, physical power metering and reproducible P03 fixed-mode baseline. Verify mode switching does not silently invalidate timestamps or thermal stabilization assumptions.
+
+\subsection{B. Constrained-policy offline development}
+Define quality and latency budgets, compare fixed RGB/LWIR/dual choices, a heuristic selector and a constrained selector on matched scene sequences. Use offline simulation only to design policies, not to assert energy savings.
+
+\subsection{C. Physically instrumented randomized crossover}
+Run frozen policies on repeated independently annotated workloads on the same target, varying order and thermal state. Include acquisition, standby, wake-up, switching, processing and reporting in integrated power.
+
+\subsection{D. Stress envelope and failure audit}
+Use predeclared illumination, thermal contrast, object density and modality-fault conditions. Compare actual Joules per scene with missed target/false alert limits and report all infeasible policy episodes.
+
+\section{Comparative design and statistical inference}
+Use paired device-run energy differences and confidence intervals against the best feasible fixed-mode comparator. Report cost and false-alert trade-offs jointly and include all rejected/unprocessable runs. When human participants or independent trajectories are needed, their number must follow a documented power simulation or precision calculation after a feasible pilot. Report uncertainty, negative results and sensitivity to failure strata. Thresholds, model configurations and exclusion criteria must be frozen before final testing.
+
+\section{Evidence gates, reproducibility and ethical boundary}
+Remain OPTIONAL\_HOLD until P03 has validated physical power, actual sensor controllability and quality constraints. Host estimates or symbolic switch costs cannot establish this paper's primary result. Each study phase will preserve source SHA or release, configuration, labels, independent oracle, random seeds, raw event timing, and an auditable trace from inputs to computed figures. Simulated evidence is distinct from measured hardware outcomes. Participant studies require prior ethical review and consent.
 
 \section{Results}
 Empirical results, tables and uncertainty intervals will be incorporated after execution of the documented evaluation protocol and independent verification of the input evidence.

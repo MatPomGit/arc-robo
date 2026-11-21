@@ -8,7 +8,7 @@
 \usepackage[hidelinks]{hyperref}
 \title{Identity-Preserving Multi-Object Tracking in RGB and Long-Wave Infrared Video}
 \author{Mateusz Pomianek}
-\date{Version 0.1.0 -- 21 November 2026}
+\date{Version 0.2.0 -- 21 November 2026}
 \begin{document}
 \maketitle
 
@@ -19,23 +19,46 @@ Tracking requires temporal association and independently annotated identities, n
 \section{Introduction}
 Tracking requires temporal association and independently annotated identities, not frame-level detection accuracy alone. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
 
-\section{Research question and hypothesis}
-Does modality-aware temporal association reduce identity switches during occlusion and intermittent sensing compared with fixed-fusion and single-modality trackers? The working hypothesis is that the proposed approach improves the primary endpoint under an explicitly matched evidence and resource budget. This hypothesis is subject to prior-art review and prospective specification; non-superiority and negative findings must remain reportable.
+\section{Detailed scientific scope and novelty boundary}
+The independent contribution is temporal object-identity continuity in paired RGB/LWIR videos, beyond frame-by-frame detection. Cross-modal association is evaluated against independently annotated persistent track IDs. Tracking metrics cannot be derived from a folder of independent still frames or synthetic bounding-box overlap without valid sequences.
 
-\section{Materials and methods}
-Use legally available paired RGB/LWIR video with verified timestamps, individual object IDs and sequence-disjoint training and test partitions. The experimental unit, independent ground truth, data inclusion criteria, version of software and sensors, and provenance of each dataset or scenario will be fixed in the protocol. Training, calibration and evaluation partitions will be isolated at the appropriate physical scene, sequence, participant or device level.
+\section{Falsifiable hypotheses}
+\paragraph{H1.} With matched underlying detections, modality-aware temporal association lowers identity switches per annotated trajectory relative to RGB-only, LWIR-only and fixed-fusion trackers.
 
-\subsection{Comparators and experimental controls}
-Compare RGB tracking, LWIR tracking, fixed-fusion association and uncertainty-aware multimodal association with matched base detections. Model or policy hyperparameters must not be selected from final held-out results. The implementation will record relevant software versions, seeds, sensor configuration, timestamps and data rights.
+\paragraph{H2.} During real occlusions and controlled single-channel loss, multimodal tracking improves correct post-occlusion identity recovery relative to a tracker assuming uninterrupted sensing.
 
-\subsection{Primary endpoint}
-Identity switches per annotated trajectory, with IDF1 and HOTA as secondary tracking metrics where annotations permit. Denominators, operational thresholds, missing observations and failure cases will be defined before inferential analysis. Secondary metrics will not be substituted post hoc for the primary endpoint.
+\paragraph{H3.} Association benefits persist on capture-sequence-disjoint test material after stratifying by object density, camera motion and ground-truth track duration.
 
-\section{Statistical and computational analysis plan}
-Report sequence-clustered identity-consistency estimates stratified by occlusion, missing frames and sensor availability. Any confirmatory statistical contrast will report uncertainty intervals, effective independent sample size and relevant failure strata. Where a physical validation or participant-based experiment is necessary, approval and feasibility assessment must precede data collection.
+\section{Operationalization and study population}
+\subsection{Independent unit of analysis}
+An independently captured video sequence or annotated trajectory, with repeated frames nested within tracks and scenes.
 
-\section{Anticipated interpretation and limitations}
-Still images, synthetic rectangle overlap and uncertain timestamp correspondence cannot substantiate real temporal tracking claims. Confounding from software versions, sensor conditions, scene selection and methodological overlap will be assessed explicitly. Claims about simulated behavior will not be generalized to physical safety or human behavior without matching evidence.
+\subsection{Data, sensors and ground-truth requirements}
+Rights-cleared paired RGB/LWIR video, object track identifiers, genuine time semantics or a stated unknown clock mapping, camera provenance and sequence-disjoint partitions. Data and models will be versioned with checksums, licensing information, instrument parameters, selection rules and clock provenance. The held-out test cohort must be independent at the acquisition-session, scene or participant level rather than at the individual frame level.
+
+\subsection{Primary and secondary endpoints}
+The primary estimand is defined as follows: Identity switch rate per eligible ground-truth trajectory (or per predeclared trajectory exposure duration) at fixed underlying detector outputs.
+
+The secondary measurements will be: IDF1, HOTA, track fragmentation, successful post-occlusion reacquisition and latency. The exact numerator, denominator, outcome threshold and permitted exclusions must be fixed in the protocol before inferential analysis.
+
+\section{Planned experiments and research sequence}
+\subsection{A. Tracking-dataset admissibility}
+Verify paired native videos, exposure-time semantics, object IDs and consistent cross-frame annotation. Define track inclusion and occlusion/reappearance rules and separate scene-level train, validation and test splits.
+
+\subsection{B. Controlled detection-identical comparison}
+Feed the same fixed object detections into RGB-only, thermal-only, fixed-fusion and modality-aware temporal association. Hold output track-eligibility and matching rules constant; optimize parameters only on development sequences.
+
+\subsection{C. Occlusion and missing-sensor stress}
+Evaluate separately naturally annotated occlusion and deterministic synthetic single-sensor interruptions. Quantify ID switches, re-identification errors, fragmentation and time to correct track recovery.
+
+\subsection{D. External environment replication}
+Test independent sequences with different object density, motion, viewpoints and ambient conditions. Report failure patterns and sensitivity to uncertain cross-camera timestamps.
+
+\section{Comparative design and statistical inference}
+Compare per-sequence paired identity error using clustered bootstrap or a rate model with duration offset; use IDF1/HOTA as separately defined secondary metrics. Preserve equal base detection quality to isolate association rather than detector gain. When human participants or independent trajectories are needed, their number must follow a documented power simulation or precision calculation after a feasible pilot. Report uncertainty, negative results and sensitivity to failure strata. Thresholds, model configurations and exclusion criteria must be frozen before final testing.
+
+\section{Evidence gates, reproducibility and ethical boundary}
+Independent temporal ID ground truth and source rights are required. Still-image tests are not proof of tracking and must not be presented as such. Each study phase will preserve source SHA or release, configuration, labels, independent oracle, random seeds, raw event timing, and an auditable trace from inputs to computed figures. Simulated evidence is distinct from measured hardware outcomes. Participant studies require prior ethical review and consent.
 
 \section{Results}
 Empirical results, tables and uncertainty intervals will be incorporated after execution of the documented evaluation protocol and independent verification of the input evidence.

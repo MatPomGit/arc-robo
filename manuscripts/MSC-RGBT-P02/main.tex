@@ -8,7 +8,7 @@
 \usepackage[hidelinks]{hyperref}
 \title{Exposure-Time Registration and Geometric Synchronization for RGB and Infrared Sensor Fusion}
 \author{Mateusz Pomianek}
-\date{Version 0.1.0 -- 21 November 2026}
+\date{Version 0.2.0 -- 21 November 2026}
 \begin{document}
 \maketitle
 
@@ -19,23 +19,46 @@ Multispectral fusion depends on physically meaningful exposure timing and spatia
 \section{Introduction}
 Multispectral fusion depends on physically meaningful exposure timing and spatial registration, not merely frame-arrival order. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
 
-\section{Research question and hypothesis}
-Does verified exposure-time alignment and geometric registration improve held-out object detection over unsynchronized and single-modality baselines? The working hypothesis is that the proposed approach improves the primary endpoint under an explicitly matched evidence and resource budget. This hypothesis is subject to prior-art review and prospective specification; non-superiority and negative findings must remain reportable.
+\section{Detailed scientific scope and novelty boundary}
+The contribution concerns physically meaningful exposure-time alignment and geometric registration of paired RGB and long-wave infrared sensors. Arrival timestamps are not exposure timestamps. The experiment must distinguish fusion effects from detector confidence and sensor sampling. This study owns the effect of temporal and spatial registration, not robustness under missing modalities (P04) or calibrated predictive risk bounds (P08).
 
-\section{Materials and methods}
-Collect or reuse calibrated paired RGB/LWIR sequences with documented exposure clocks, common-time transforms and independently assessed alignment residuals. The experimental unit, independent ground truth, data inclusion criteria, version of software and sensors, and provenance of each dataset or scenario will be fixed in the protocol. Training, calibration and evaluation partitions will be isolated at the appropriate physical scene, sequence, participant or device level.
+\section{Falsifiable hypotheses}
+\paragraph{H1.} With fixed detection models and a matched false-alert operating point, measured exposure-time and geometric alignment improve held-out object-detection recall in dynamic scenes over unregistered fixed fusion.
 
-\subsection{Comparators and experimental controls}
-Compare RGB-only, LWIR-only, unsynchronized fixed fusion and calibrated fusion at matched false-alarm operating points. Model or policy hyperparameters must not be selected from final held-out results. The implementation will record relevant software versions, seeds, sensor configuration, timestamps and data rights.
+\paragraph{H2.} At increasing temporal skew, valid cross-modal associations decrease, with a larger degradation in high-motion scenes than in static scenes.
 
-\subsection{Primary endpoint}
-Held-out detection recall at a fixed false-positive rate, with measured temporal skew and spatial registration error as explanatory variables. Denominators, operational thresholds, missing observations and failure cases will be defined before inferential analysis. Secondary metrics will not be substituted post hoc for the primary endpoint.
+\paragraph{H3.} An independently calibrated alignment-validity mask lowers mismatched cross-modal associations compared with accepting all fused pairs, without decreasing valid-pair coverage beyond a predefined margin.
 
-\section{Statistical and computational analysis plan}
-Use scene-disjoint comparisons, report alignment uncertainty separately from classifier confidence and stratify effects by frame skew. Any confirmatory statistical contrast will report uncertainty intervals, effective independent sample size and relevant failure strata. Where a physical validation or participant-based experiment is necessary, approval and feasibility assessment must precede data collection.
+\section{Operationalization and study population}
+\subsection{Independent unit of analysis}
+One physical capture sequence or independently recorded dynamic scene; multiple aligned frame pairs are repeated observations.
 
-\section{Anticipated interpretation and limitations}
-Arrival timestamps and synthetic offsets are not evidence of physical capture synchronization. Calibration validity masks and thermal sampling must be explicitly documented. Confounding from software versions, sensor conditions, scene selection and methodological overlap will be assessed explicitly. Claims about simulated behavior will not be generalized to physical safety or human behavior without matching evidence.
+\subsection{Data, sensors and ground-truth requirements}
+Paired sensor recordings with source-native geometry, original exposure timestamps, verified common-clock transformations, registered calibration targets, independent object annotations, field-of-view masks and checksummed acquisition metadata. Data and models will be versioned with checksums, licensing information, instrument parameters, selection rules and clock provenance. The held-out test cohort must be independent at the acquisition-session, scene or participant level rather than at the individual frame level.
+
+\subsection{Primary and secondary endpoints}
+The primary estimand is defined as follows: Held-out object-detection recall at a fixed false positives per labelled frame budget, evaluated on independent dynamic scenes with measured exposure and registration evidence.
+
+The secondary measurements will be: Cross-modal association precision, spatial reprojection residuals, inter-exposure time skew, coverage of the valid overlap region and end-to-end latency. The exact numerator, denominator, outcome threshold and permitted exclusions must be fixed in the protocol before inferential analysis.
+
+\section{Planned experiments and research sequence}
+\subsection{A. Sensor timing and geometric calibration}
+Identify native camera grids, thermal exposure mechanisms, shared clock or verified clock transform, intrinsics/extrinsics and overlap masks. Independently measure spatial residuals, timing offsets and uncertainties. Exclude unverifiable clock claims.
+
+\subsection{B. Controlled misalignment replay}
+Perturb exposure-skew and registration parameters in paired labelled sequences while keeping source frames and detectors fixed. Compare RGB-only, LWIR-only, fixed raw fusion and calibrated fusion at one frozen false-alarm operating point.
+
+\subsection{C. Independent dynamic-scene evaluation}
+Use capture-session-disjoint moving scenes with verified exposure timing and independent object labels. Stratify by object velocity, occlusion and observed clock error; report association correctness and recall alongside registration residuals.
+
+\subsection{D. Causal error decomposition}
+Hold detection scores constant and separately vary geometry, timing and overlap masks. Quantify whether any recall gain is due to time alignment, spatial validity or an unrelated confidence-threshold change.
+
+\section{Comparative design and statistical inference}
+Use paired per-sequence contrasts and mixed regression with temporal skew, geometric residual, object speed and their interactions. Report sensor/scene-stratified uncertainty and compare at matched false-positive points. Do not optimize calibration or fusion on final test scenes. When human participants or independent trajectories are needed, their number must follow a documented power simulation or precision calculation after a feasible pilot. Report uncertainty, negative results and sensitivity to failure strata. Thresholds, model configurations and exclusion criteria must be frozen before final testing.
+
+\section{Evidence gates, reproducibility and ethical boundary}
+No physical synchronization claim from arrival-time alignment or synthetic offsets. Require lawfully used independently labelled pairs, measured timing and calibration residuals before confirmatory testing. Each study phase will preserve source SHA or release, configuration, labels, independent oracle, random seeds, raw event timing, and an auditable trace from inputs to computed figures. Simulated evidence is distinct from measured hardware outcomes. Participant studies require prior ethical review and consent.
 
 \section{Results}
 Empirical results, tables and uncertainty intervals will be incorporated after execution of the documented evaluation protocol and independent verification of the input evidence.

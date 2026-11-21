@@ -8,7 +8,7 @@
 \usepackage[hidelinks]{hyperref}
 \title{Cross-Sensor and Cross-Domain Transfer of RGB and Long-Wave Infrared Detectors}
 \author{Mateusz Pomianek}
-\date{Version 0.1.0 -- 21 November 2026}
+\date{Version 0.2.0 -- 21 November 2026}
 \begin{document}
 \maketitle
 
@@ -19,23 +19,46 @@ Detection performance may degrade across genuinely independent sensor platforms,
 \section{Introduction}
 Detection performance may degrade across genuinely independent sensor platforms, viewpoints and thermal domains. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
 
-\section{Research question and hypothesis}
-Can training-only bounded adaptation reduce detection error on unseen RGB/LWIR sensors without access to held-out target annotations? The working hypothesis is that the proposed approach improves the primary endpoint under an explicitly matched evidence and resource budget. This hypothesis is subject to prior-art review and prospective specification; non-superiority and negative findings must remain reportable.
+\section{Detailed scientific scope and novelty boundary}
+The study targets sensor- and domain-generalization of object detection across genuinely different physical RGB/LWIR sensors and acquisition conditions. Image interpolation, video cropping or resizing of one acquisition system do not establish transfer. Cross-domain labels, spectral bands and sensor geometry must be legally and scientifically compatible; NIR cannot be silently equated with LWIR.
 
-\section{Materials and methods}
-Choose independent legally reusable sensor-domain cohorts with harmonized class definitions and explicit optics, resolution and spectral-band metadata; freeze adaptation on training cohorts. The experimental unit, independent ground truth, data inclusion criteria, version of software and sensors, and provenance of each dataset or scenario will be fixed in the protocol. Training, calibration and evaluation partitions will be isolated at the appropriate physical scene, sequence, participant or device level.
+\section{Falsifiable hypotheses}
+\paragraph{H1.} A source-trained detector experiences a measurable held-out recall deficit on unseen independent sensor-domain cohorts compared with source-domain evaluation at the same false-alert point.
 
-\subsection{Comparators and experimental controls}
-Compare source-only inference, controlled fine-tuning and explicitly parameter-limited adaptation on unseen target-device sequences. Model or policy hyperparameters must not be selected from final held-out results. The implementation will record relevant software versions, seeds, sensor configuration, timestamps and data rights.
+\paragraph{H2.} A bounded adaptation procedure trained only on approved source/development material improves unseen target-device recall relative to frozen source-only inference without accessing target test labels.
 
-\subsection{Primary endpoint}
-Out-of-domain recall loss at a matched false-positive operating point on independently held-out sensor cohorts. Denominators, operational thresholds, missing observations and failure cases will be defined before inferential analysis. Secondary metrics will not be substituted post hoc for the primary endpoint.
+\paragraph{H3.} Cross-sensor gain remains after controlling for native sampling, class distribution and fixed preprocessing, indicating benefit beyond simple normalization or rescaling.
 
-\section{Statistical and computational analysis plan}
-Estimate domain-wise generalization gaps and uncertainty over source/target sensor pairs, keeping adaptation and evaluation data disjoint. Any confirmatory statistical contrast will report uncertainty intervals, effective independent sample size and relevant failure strata. Where a physical validation or participant-based experiment is necessary, approval and feasibility assessment must precede data collection.
+\section{Operationalization and study population}
+\subsection{Independent unit of analysis}
+An independent acquisition session and device/domain cohort; frames and objects within a cohort are correlated.
 
-\section{Anticipated interpretation and limitations}
-Image resizing of one sensor does not constitute cross-sensor transfer; incompatible labels or infrared bands cannot be silently pooled. Confounding from software versions, sensor conditions, scene selection and methodological overlap will be assessed explicitly. Claims about simulated behavior will not be generalized to physical safety or human behavior without matching evidence.
+\subsection{Data, sensors and ground-truth requirements}
+At least two genuinely distinct sensor/domain cohorts with documented bands, optics, release rights, compatible labels, sensor-native grids, independent scene partitions and versioned detector checkpoints. Data and models will be versioned with checksums, licensing information, instrument parameters, selection rules and clock provenance. The held-out test cohort must be independent at the acquisition-session, scene or participant level rather than at the individual frame level.
+
+\subsection{Primary and secondary endpoints}
+The primary estimand is defined as follows: Matched-false-alert target-domain detection recall difference between a frozen source-only detector and the predeclared bounded adaptation method.
+
+The secondary measurements will be: Source-to-target generalization gap, calibration, per-class/object-size recall, adaptation cost and latency. The exact numerator, denominator, outcome threshold and permitted exclusions must be fixed in the protocol before inferential analysis.
+
+\section{Planned experiments and research sequence}
+\subsection{A. Domain qualification and provenance}
+Select independent physical acquisition devices or environments with compatible semantics, RGB/LWIR bands and independent annotations. Record optics, native grids, capture viewpoints, licences, class prevalence and archive hashes.
+
+\subsection{B. Leakage-free source and adaptation development}
+Create source/development, calibration and completely held-out target domains. Compare source-only weights, fixed harmonized preprocessing, limited fine-tuning and the stated adaptation method. Count all allowed labels and training data budgets.
+
+\subsection{C. Blind target-device transfer study}
+Freeze model and operating point before evaluating target acquisitions. Compare source-domain and target-domain recall and false alarms by cohort, class, target size and viewpoint. Use more than one genuine target sensor where feasible.
+
+\subsection{D. Source of transfer benefit}
+Ablate spectral representation, native footprint, normalization and class balancing on development cohorts. Evaluate whether the final target gain persists without test-dependent threshold or model selection.
+
+\section{Comparative design and statistical inference}
+Report cohort-stratified paired effects and interval estimates, avoiding unsupported inference from a single device pair. Where independent domain count is small, describe limits rather than fitting overconfident cross-domain random effects. When human participants or independent trajectories are needed, their number must follow a documented power simulation or precision calculation after a feasible pilot. Report uncertainty, negative results and sensitivity to failure strata. Thresholds, model configurations and exclusion criteria must be frozen before final testing.
+
+\section{Evidence gates, reproducibility and ethical boundary}
+Verified cross-sensor provenance and rights are prerequisites. A single camera resized to multiple resolutions is not adequate transfer evidence. Each study phase will preserve source SHA or release, configuration, labels, independent oracle, random seeds, raw event timing, and an auditable trace from inputs to computed figures. Simulated evidence is distinct from measured hardware outcomes. Participant studies require prior ethical review and consent.
 
 \section{Results}
 Empirical results, tables and uncertainty intervals will be incorporated after execution of the documented evaluation protocol and independent verification of the input evidence.
