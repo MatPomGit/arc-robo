@@ -19,6 +19,8 @@ jobs:
         run: python3 scripts/validate_repository.py --phase scaffold
       - name: Run Python unit tests
         run: python3 -m unittest discover -s tests -v
+      - name: Audit v2 migration inventory without modifying registries
+        run: python3 -B scripts/migration_preflight.py
       - name: Validate curated Pages and optional programme logo
         run: |
           set -euo pipefail
