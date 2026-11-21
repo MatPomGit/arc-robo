@@ -15,5 +15,8 @@
   "source_issues": [
     "https://github.com/MatPomGit/arc-affective/issues/11"
   ],
-  "migration_phase": "copy_verified_pending_pr_merge"
+  "migration_phase": "copy_verified_pending_pr_merge",
+  "source_license_spdx": "Apache-2.0",
+  "source_license_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+  "local_license_path": "manuscripts/MSC-AFFECT-P07/ORIGINAL_LICENSE"
 }
