@@ -7,7 +7,7 @@
   "owner": "Mateusz Pomianek",
   "scope": "Robot perception, multimodal RGB/LWIR acquisition, autonomous inspection, human-robot safety and UAV navigation",
   "default_branch": "main",
-  "license_spdx": "UNDECIDED",
+  "license_spdx": "Apache-2.0",
   "pages_status": "not_configured",
   "pages_url": null,
   "public_catalog_policy": "explicit_opt_in",
