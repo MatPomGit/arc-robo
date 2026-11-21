@@ -1,4 +1,25 @@
 {
   "schema_version": 1,
-  "lines": []
+  "lines": [
+    {
+      "id": "perception",
+      "title": "Multimodalna percepcja RGB/LWIR i fuzja sensoryczna"
+    },
+    {
+      "id": "inspection",
+      "title": "Autonomiczna inspekcja i ocena wykonania zadań"
+    },
+    {
+      "id": "hri-safety",
+      "title": "Bezpieczeństwo interakcji człowiek–robot"
+    },
+    {
+      "id": "teleoperation",
+      "title": "Teleoperacja i rozpoznawanie intencji operatora"
+    },
+    {
+      "id": "navigation",
+      "title": "Nawigacja UAV i odporność na degradację sensorów"
+    }
+  ]
 }
