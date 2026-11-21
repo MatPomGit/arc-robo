@@ -17,6 +17,8 @@ class AffectiveP07MigrationTest(unittest.TestCase):
         self.assertNotIn("../../docs/",plan)
         self.assertIn("0ff5f1531f03270c4f9fdcc7f3af6d2e9aca85dd",plan)
         self.assertEqual(source["status"],"PLANNED")
+        self.assertEqual(p["migration_phase"],"copy_verified_integrated")
+        self.assertEqual(source["migration_phase"],p["migration_phase"])
         self.assertFalse(p["physical_robot_execution_authorized"])
         self.assertEqual(p["source_license_spdx"],"Apache-2.0")
         self.assertIn("Apache License",(d/"ORIGINAL_LICENSE").read_text(encoding="utf-8"))
