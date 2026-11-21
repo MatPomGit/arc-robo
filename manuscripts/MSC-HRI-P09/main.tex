@@ -1,0 +1,51 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[margin=27mm]{geometry}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\title{Adversarial Falsification of Predictive Safety Fields in Multi-Human Humanoid Interaction}
+\author{Mateusz Pomianek}
+\date{Version 0.1.0 -- 21 November 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Active scenario search could reveal safety-field counterexamples that uniform random and grid searches miss within the same evaluation budget. Does coverage-guided adversarial search discover independently verified severe violations more efficiently than budget-matched random, grid and conventional scenario searches? The prospective design is as follows: Execute simulation-only perturbations of crossing patterns, occlusion, payload geometry, stale telemetry and sensor dropout with fixed scenario seeds and independent scenario holdouts. The primary outcome is Number of distinct confirmed hazardous counterexamples per fixed simulator budget, together with time to first severe violation. The manuscript defines a research question and an evaluation strategy; it does not report experimental estimates.
+\end{abstract}
+
+\section{Introduction}
+Active scenario search could reveal safety-field counterexamples that uniform random and grid searches miss within the same evaluation budget. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
+
+\section{Research question and hypothesis}
+Does coverage-guided adversarial search discover independently verified severe violations more efficiently than budget-matched random, grid and conventional scenario searches? The working hypothesis is that the proposed approach improves the primary endpoint under an explicitly matched evidence and resource budget. This hypothesis is subject to prior-art review and prospective specification; non-superiority and negative findings must remain reportable.
+
+\section{Materials and methods}
+Execute simulation-only perturbations of crossing patterns, occlusion, payload geometry, stale telemetry and sensor dropout with fixed scenario seeds and independent scenario holdouts. The experimental unit, independent ground truth, data inclusion criteria, version of software and sensors, and provenance of each dataset or scenario will be fixed in the protocol. Training, calibration and evaluation partitions will be isolated at the appropriate physical scene, sequence, participant or device level.
+
+\subsection{Comparators and experimental controls}
+Use equal-budget random search, stratified grid search and predefined scenario sweeps against the same immutable risk-field implementation. Model or policy hyperparameters must not be selected from final held-out results. The implementation will record relevant software versions, seeds, sensor configuration, timestamps and data rights.
+
+\subsection{Primary endpoint}
+Number of distinct confirmed hazardous counterexamples per fixed simulator budget, together with time to first severe violation. Denominators, operational thresholds, missing observations and failure cases will be defined before inferential analysis. Secondary metrics will not be substituted post hoc for the primary endpoint.
+
+\section{Statistical and computational analysis plan}
+Estimate paired discovery-rate differences across seeds and independent scenario families, including negative searches and replay reproducibility. Any confirmatory statistical contrast will report uncertainty intervals, effective independent sample size and relevant failure strata. Where a physical validation or participant-based experiment is necessary, approval and feasibility assessment must precede data collection.
+
+\section{Anticipated interpretation and limitations}
+A synthetic failure predicate must agree with the actual policy semantics. A simple parameter sweep without a novel falsification mechanism is not a separate scientific contribution. Confounding from software versions, sensor conditions, scene selection and methodological overlap will be assessed explicitly. Claims about simulated behavior will not be generalized to physical safety or human behavior without matching evidence.
+
+\section{Results}
+Empirical results, tables and uncertainty intervals will be incorporated after execution of the documented evaluation protocol and independent verification of the input evidence.
+
+\section{Discussion}
+The planned comparison is intended to determine whether the proposed mechanism yields an identifiable gain over the stated controls. Interpretation must distinguish failure of a scientific hypothesis from an incomplete implementation, and should describe practical operating conditions under which conclusions remain valid.
+
+\section{Conclusion}
+This study defines a testable research problem, matched comparators and a primary evaluation target. A substantive empirical conclusion remains conditional on reproducible measurements and appropriate methodological review.
+
+\section{Data and code availability}
+The authoritative scientific source is maintained in the \texttt{MatPomGit/arc-hri-safety} repository. Dataset permissions, input manifests, source commits, evaluation scripts and permitted public artifacts will be identified in the final version. No participant records or proprietary instrumentation details are included here.
+\end{document}

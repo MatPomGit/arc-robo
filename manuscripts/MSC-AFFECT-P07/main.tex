@@ -1,0 +1,51 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[margin=27mm]{geometry}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\title{Intent-Aware Hand and Gaze Interaction With an Independent Deterministic Robot Safety Governor}
+\author{Mateusz Pomianek}
+\date{Version 0.1.0 -- 21 November 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Multimodal hand and screen-based gaze observations may simplify teleoperation commands, but ambiguous intent must never bypass an independent motion-safety governor. Can multimodal intent requests increase simulated teleoperation throughput without violating predeclared proximity, speed and collision constraints under ambiguous or missing sensor inputs? The prospective design is as follows: Use a ROS 2 and Gazebo replay or simulation with deterministic speed and distance guards. Represent hand or gaze recognition as a request-only input and inject conflicting commands, packet loss and missing observations. The primary outcome is Count of independently monitored safety-constraint violations per scenario; task completion rate and p99 command-to-abort latency are secondary. The manuscript defines a research question and an evaluation strategy; it does not report experimental estimates.
+\end{abstract}
+
+\section{Introduction}
+Multimodal hand and screen-based gaze observations may simplify teleoperation commands, but ambiguous intent must never bypass an independent motion-safety governor. The scientific contribution under consideration is a falsifiable comparison in which alternative explanations, measurement limitations and distinct hypotheses from related ARC Robo studies can be assessed independently. Both the source of observations and the assumptions needed to interpret results must be documented before any confirmatory comparison.
+
+\section{Research question and hypothesis}
+Can multimodal intent requests increase simulated teleoperation throughput without violating predeclared proximity, speed and collision constraints under ambiguous or missing sensor inputs? The working hypothesis is that the proposed approach improves the primary endpoint under an explicitly matched evidence and resource budget. This hypothesis is subject to prior-art review and prospective specification; non-superiority and negative findings must remain reportable.
+
+\section{Materials and methods}
+Use a ROS 2 and Gazebo replay or simulation with deterministic speed and distance guards. Represent hand or gaze recognition as a request-only input and inject conflicting commands, packet loss and missing observations. The experimental unit, independent ground truth, data inclusion criteria, version of software and sensors, and provenance of each dataset or scenario will be fixed in the protocol. Training, calibration and evaluation partitions will be isolated at the appropriate physical scene, sequence, participant or device level.
+
+\subsection{Comparators and experimental controls}
+Compare scripted commands, single-modality intent inference and multimodal intent requests under the identical independent governor. Model or policy hyperparameters must not be selected from final held-out results. The implementation will record relevant software versions, seeds, sensor configuration, timestamps and data rights.
+
+\subsection{Primary endpoint}
+Count of independently monitored safety-constraint violations per scenario; task completion rate and p99 command-to-abort latency are secondary. Denominators, operational thresholds, missing observations and failure cases will be defined before inferential analysis. Secondary metrics will not be substituted post hoc for the primary endpoint.
+
+\section{Statistical and computational analysis plan}
+Report violation counts with scenario-level uncertainty, paired task completion differences and fault-specific worst-case abort latencies. Any confirmatory statistical contrast will report uncertainty intervals, effective independent sample size and relevant failure strata. Where a physical validation or participant-based experiment is necessary, approval and feasibility assessment must precede data collection.
+
+\section{Anticipated interpretation and limitations}
+Simulated invariant satisfaction does not certify safety of a physical humanoid. Tobii Eye Tracker 5 can provide screen-based gaze input only if a valid setup and usage rights are verified. Confounding from software versions, sensor conditions, scene selection and methodological overlap will be assessed explicitly. Claims about simulated behavior will not be generalized to physical safety or human behavior without matching evidence.
+
+\section{Results}
+Empirical results, tables and uncertainty intervals will be incorporated after execution of the documented evaluation protocol and independent verification of the input evidence.
+
+\section{Discussion}
+The planned comparison is intended to determine whether the proposed mechanism yields an identifiable gain over the stated controls. Interpretation must distinguish failure of a scientific hypothesis from an incomplete implementation, and should describe practical operating conditions under which conclusions remain valid.
+
+\section{Conclusion}
+This study defines a testable research problem, matched comparators and a primary evaluation target. A substantive empirical conclusion remains conditional on reproducible measurements and appropriate methodological review.
+
+\section{Data and code availability}
+The authoritative scientific source is maintained in the \texttt{MatPomGit/arc-affective} repository. Dataset permissions, input manifests, source commits, evaluation scripts and permitted public artifacts will be identified in the final version. No participant records or proprietary instrumentation details are included here.
+\end{document}
