@@ -163,7 +163,8 @@
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-RGBT-P01/main.tex",
       "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P01/protocol/README.md",
-      "area": "perception"
+      "area": "perception",
+      "source_blob_sha": "dc7ee8413077b31e89f5410282981b678da9a4b5"
     },
     {
       "id": "MSC-RGBT-P02",
@@ -175,7 +176,8 @@
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-RGBT-P02/main.tex",
       "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P02/protocol/README.md",
-      "area": "perception"
+      "area": "perception",
+      "source_blob_sha": "c69ddd6ebdc2aef3592cbf7f891246fe6bccc74c"
     },
     {
       "id": "MSC-RGBT-P03",
@@ -187,7 +189,8 @@
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-RGBT-P03/main.tex",
       "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P03/protocol/README.md",
-      "area": "perception"
+      "area": "perception",
+      "source_blob_sha": "1aa2818967eb64333ebd47a916bebc88a7ece5c5"
     },
     {
       "id": "MSC-RGBT-P04",
@@ -199,7 +202,8 @@
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-RGBT-P04/main.tex",
       "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P04/protocol/README.md",
-      "area": "perception"
+      "area": "perception",
+      "source_blob_sha": "d9db835b7a92c0f7dae8a373df122f8b8d2cb275"
     },
     {
       "id": "MSC-RGBT-P05",
@@ -211,7 +215,8 @@
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-RGBT-P05/main.tex",
       "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P05/protocol/README.md",
-      "area": "perception"
+      "area": "perception",
+      "source_blob_sha": "3f1eb0393c85b031ac61e23aa4c0106875a13b89"
     },
     {
       "id": "MSC-RGBT-P06",
@@ -223,7 +228,8 @@
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-RGBT-P06/main.tex",
       "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P06/protocol/README.md",
-      "area": "perception"
+      "area": "perception",
+      "source_blob_sha": "3fff42f157e351cac3279abde9146a8df83c73a4"
     },
     {
       "id": "MSC-RGBT-P07",
@@ -235,7 +241,8 @@
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-RGBT-P07/main.tex",
       "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P07/protocol/README.md",
-      "area": "perception"
+      "area": "perception",
+      "source_blob_sha": "6111a0622022a9ebf26b9e02bc4aa471c1c40cdd"
     },
     {
       "id": "MSC-RGBT-P08",
@@ -247,7 +254,8 @@
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-RGBT-P08/main.tex",
       "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P08/protocol/README.md",
-      "area": "perception"
+      "area": "perception",
+      "source_blob_sha": "16bb7b9e3fbff85455575d6f77446da5547532f3"
     },
     {
       "id": "MSC-RVI-P01",
@@ -259,7 +267,8 @@
       "source_role": "tex_placeholder",
       "local_plan_path": null,
       "source_reference_url": "https://github.com/MatPomGit/arc-rvi/blob/3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649/papers/paper01/manuscript.tex",
-      "area": "inspection"
+      "area": "inspection",
+      "source_blob_sha": "fe795f9e686befc8e0c44e4d9e0e9451fa9266fd"
     },
     {
       "id": "MSC-RVI-P02",
@@ -271,7 +280,8 @@
       "source_role": "tex_placeholder",
       "local_plan_path": null,
       "source_reference_url": "https://github.com/MatPomGit/arc-rvi/blob/3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649/papers/paper02/manuscript.tex",
-      "area": "inspection"
+      "area": "inspection",
+      "source_blob_sha": "a64125ad75c221067dac6671447ae761075442db"
     },
     {
       "id": "MSC-RVI-P03",
@@ -283,7 +293,8 @@
       "source_role": "tex_placeholder",
       "local_plan_path": null,
       "source_reference_url": "https://github.com/MatPomGit/arc-rvi/blob/3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649/papers/paper03/manuscript.tex",
-      "area": "inspection"
+      "area": "inspection",
+      "source_blob_sha": "e19227b7f3e82fc33d594f9abc73d8e251108ef9"
     },
     {
       "id": "MSC-RVI-P04",
