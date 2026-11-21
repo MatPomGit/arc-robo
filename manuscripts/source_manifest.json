@@ -20,7 +20,8 @@
       "migration_scope": "plan_only_no_robot_code_or_data",
       "source_issues": [
         "https://github.com/MatPomGit/arc-affective/issues/11"
-      ]
+      ],
+      "area": "teleoperation"
     },
     {
       "id": "MSC-HRI-P01",
@@ -31,7 +32,8 @@
       "source_commit_sha": "c2ccb287d6597d46b5117e03e6765bf46cedcefd",
       "source_role": "existing_manuscript_tex",
       "local_plan_path": null,
-      "source_reference_url": "https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/01_predictive_risk_fields/main.tex"
+      "source_reference_url": "https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/01_predictive_risk_fields/main.tex",
+      "area": "hri-safety"
     },
     {
       "id": "MSC-HRI-P02",
@@ -42,7 +44,8 @@
       "source_commit_sha": "c2ccb287d6597d46b5117e03e6765bf46cedcefd",
       "source_role": "existing_manuscript_tex",
       "local_plan_path": null,
-      "source_reference_url": "https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/02_multimodal_awareness_addressee/main.tex"
+      "source_reference_url": "https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/02_multimodal_awareness_addressee/main.tex",
+      "area": "hri-safety"
     },
     {
       "id": "MSC-HRI-P03",
@@ -53,7 +56,8 @@
       "source_commit_sha": "c2ccb287d6597d46b5117e03e6765bf46cedcefd",
       "source_role": "existing_manuscript_tex",
       "local_plan_path": null,
-      "source_reference_url": "https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/03_payload_aware_dynamic_risk/main.tex"
+      "source_reference_url": "https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/03_payload_aware_dynamic_risk/main.tex",
+      "area": "hri-safety"
     },
     {
       "id": "MSC-HRI-P04",
@@ -64,7 +68,8 @@
       "source_commit_sha": "c2ccb287d6597d46b5117e03e6765bf46cedcefd",
       "source_role": "existing_manuscript_tex",
       "local_plan_path": null,
-      "source_reference_url": "https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/04_online_uncertainty_calibration/main.tex"
+      "source_reference_url": "https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/04_online_uncertainty_calibration/main.tex",
+      "area": "hri-safety"
     },
     {
       "id": "MSC-HRI-P05",
@@ -75,7 +80,8 @@
       "source_commit_sha": "c2ccb287d6597d46b5117e03e6765bf46cedcefd",
       "source_role": "existing_manuscript_tex",
       "local_plan_path": null,
-      "source_reference_url": "https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/05_multimodal_safety_benchmark/main.tex"
+      "source_reference_url": "https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/05_multimodal_safety_benchmark/main.tex",
+      "area": "hri-safety"
     },
     {
       "id": "MSC-HRI-P06",
@@ -86,7 +92,8 @@
       "source_commit_sha": "c2ccb287d6597d46b5117e03e6765bf46cedcefd",
       "source_role": "existing_manuscript_tex",
       "local_plan_path": null,
-      "source_reference_url": "https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/06_real_to_sim_digital_twin/main.tex"
+      "source_reference_url": "https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/06_real_to_sim_digital_twin/main.tex",
+      "area": "hri-safety"
     },
     {
       "id": "MSC-HRI-P07",
@@ -97,7 +104,8 @@
       "source_commit_sha": "c2ccb287d6597d46b5117e03e6765bf46cedcefd",
       "source_role": "existing_manuscript_tex",
       "local_plan_path": null,
-      "source_reference_url": "https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/07_runtime_assurance/main.tex"
+      "source_reference_url": "https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/07_runtime_assurance/main.tex",
+      "area": "hri-safety"
     },
     {
       "id": "MSC-HRI-P08",
@@ -108,7 +116,8 @@
       "source_commit_sha": "c2ccb287d6597d46b5117e03e6765bf46cedcefd",
       "source_role": "existing_manuscript_tex",
       "local_plan_path": null,
-      "source_reference_url": "https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/08_objective_perceived_safety/main.tex"
+      "source_reference_url": "https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/08_objective_perceived_safety/main.tex",
+      "area": "hri-safety"
     },
     {
       "id": "MSC-HRI-P09",
@@ -119,7 +128,8 @@
       "source_commit_sha": "c2ccb287d6597d46b5117e03e6765bf46cedcefd",
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-HRI-P09/main.tex",
-      "source_reference_url": "https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/FUTURE_RESEARCH_PROPOSALS.md"
+      "source_reference_url": "https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/FUTURE_RESEARCH_PROPOSALS.md",
+      "area": "hri-safety"
     },
     {
       "id": "MSC-HRI-P10",
@@ -130,7 +140,8 @@
       "source_commit_sha": "c2ccb287d6597d46b5117e03e6765bf46cedcefd",
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-HRI-P10/main.tex",
-      "source_reference_url": "https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/FUTURE_RESEARCH_PROPOSALS.md"
+      "source_reference_url": "https://github.com/MatPomGit/arc-hri-safety/blob/c2ccb287d6597d46b5117e03e6765bf46cedcefd/manuscripts/FUTURE_RESEARCH_PROPOSALS.md",
+      "area": "hri-safety"
     },
     {
       "id": "MSC-RGBT-P01",
@@ -141,7 +152,8 @@
       "source_commit_sha": "caafa30c7c7421a2e4b14d70871015d7f6bd273e",
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-RGBT-P01/main.tex",
-      "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P01/protocol/README.md"
+      "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P01/protocol/README.md",
+      "area": "perception"
     },
     {
       "id": "MSC-RGBT-P02",
@@ -152,7 +164,8 @@
       "source_commit_sha": "caafa30c7c7421a2e4b14d70871015d7f6bd273e",
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-RGBT-P02/main.tex",
-      "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P02/protocol/README.md"
+      "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P02/protocol/README.md",
+      "area": "perception"
     },
     {
       "id": "MSC-RGBT-P03",
@@ -163,7 +176,8 @@
       "source_commit_sha": "caafa30c7c7421a2e4b14d70871015d7f6bd273e",
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-RGBT-P03/main.tex",
-      "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P03/protocol/README.md"
+      "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P03/protocol/README.md",
+      "area": "perception"
     },
     {
       "id": "MSC-RGBT-P04",
@@ -174,7 +188,8 @@
       "source_commit_sha": "caafa30c7c7421a2e4b14d70871015d7f6bd273e",
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-RGBT-P04/main.tex",
-      "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P04/protocol/README.md"
+      "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P04/protocol/README.md",
+      "area": "perception"
     },
     {
       "id": "MSC-RGBT-P05",
@@ -185,7 +200,8 @@
       "source_commit_sha": "caafa30c7c7421a2e4b14d70871015d7f6bd273e",
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-RGBT-P05/main.tex",
-      "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P05/protocol/README.md"
+      "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P05/protocol/README.md",
+      "area": "perception"
     },
     {
       "id": "MSC-RGBT-P06",
@@ -196,7 +212,8 @@
       "source_commit_sha": "caafa30c7c7421a2e4b14d70871015d7f6bd273e",
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-RGBT-P06/main.tex",
-      "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P06/protocol/README.md"
+      "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P06/protocol/README.md",
+      "area": "perception"
     },
     {
       "id": "MSC-RGBT-P07",
@@ -207,7 +224,8 @@
       "source_commit_sha": "caafa30c7c7421a2e4b14d70871015d7f6bd273e",
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-RGBT-P07/main.tex",
-      "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P07/protocol/README.md"
+      "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P07/protocol/README.md",
+      "area": "perception"
     },
     {
       "id": "MSC-RGBT-P08",
@@ -218,7 +236,8 @@
       "source_commit_sha": "caafa30c7c7421a2e4b14d70871015d7f6bd273e",
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-RGBT-P08/main.tex",
-      "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P08/protocol/README.md"
+      "source_reference_url": "https://github.com/MatPomGit/arc-rgbt/blob/caafa30c7c7421a2e4b14d70871015d7f6bd273e/publications/P08/protocol/README.md",
+      "area": "perception"
     },
     {
       "id": "MSC-RVI-P01",
@@ -229,7 +248,8 @@
       "source_commit_sha": "3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649",
       "source_role": "tex_placeholder",
       "local_plan_path": null,
-      "source_reference_url": "https://github.com/MatPomGit/arc-rvi/blob/3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649/papers/paper01/manuscript.tex"
+      "source_reference_url": "https://github.com/MatPomGit/arc-rvi/blob/3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649/papers/paper01/manuscript.tex",
+      "area": "inspection"
     },
     {
       "id": "MSC-RVI-P02",
@@ -240,7 +260,8 @@
       "source_commit_sha": "3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649",
       "source_role": "tex_placeholder",
       "local_plan_path": null,
-      "source_reference_url": "https://github.com/MatPomGit/arc-rvi/blob/3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649/papers/paper02/manuscript.tex"
+      "source_reference_url": "https://github.com/MatPomGit/arc-rvi/blob/3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649/papers/paper02/manuscript.tex",
+      "area": "inspection"
     },
     {
       "id": "MSC-RVI-P03",
@@ -251,7 +272,8 @@
       "source_commit_sha": "3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649",
       "source_role": "tex_placeholder",
       "local_plan_path": null,
-      "source_reference_url": "https://github.com/MatPomGit/arc-rvi/blob/3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649/papers/paper03/manuscript.tex"
+      "source_reference_url": "https://github.com/MatPomGit/arc-rvi/blob/3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649/papers/paper03/manuscript.tex",
+      "area": "inspection"
     },
     {
       "id": "MSC-RVI-P04",
@@ -262,7 +284,8 @@
       "source_commit_sha": "3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649",
       "source_role": "tex_placeholder",
       "local_plan_path": null,
-      "source_reference_url": "https://github.com/MatPomGit/arc-rvi/blob/3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649/papers/paper04/manuscript.tex"
+      "source_reference_url": "https://github.com/MatPomGit/arc-rvi/blob/3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649/papers/paper04/manuscript.tex",
+      "area": "inspection"
     },
     {
       "id": "MSC-RVI-P05",
@@ -273,7 +296,8 @@
       "source_commit_sha": "3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649",
       "source_role": "tex_placeholder",
       "local_plan_path": null,
-      "source_reference_url": "https://github.com/MatPomGit/arc-rvi/blob/3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649/papers/paper05/manuscript.tex"
+      "source_reference_url": "https://github.com/MatPomGit/arc-rvi/blob/3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649/papers/paper05/manuscript.tex",
+      "area": "inspection"
     },
     {
       "id": "MSC-RVI-P06",
@@ -284,7 +308,8 @@
       "source_commit_sha": "3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649",
       "source_role": "tex_placeholder",
       "local_plan_path": null,
-      "source_reference_url": "https://github.com/MatPomGit/arc-rvi/blob/3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649/papers/paper06/manuscript.tex"
+      "source_reference_url": "https://github.com/MatPomGit/arc-rvi/blob/3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649/papers/paper06/manuscript.tex",
+      "area": "inspection"
     },
     {
       "id": "MSC-RVI-P07",
@@ -295,7 +320,8 @@
       "source_commit_sha": "3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649",
       "source_role": "tex_placeholder",
       "local_plan_path": null,
-      "source_reference_url": "https://github.com/MatPomGit/arc-rvi/blob/3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649/papers/paper07/manuscript.tex"
+      "source_reference_url": "https://github.com/MatPomGit/arc-rvi/blob/3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649/papers/paper07/manuscript.tex",
+      "area": "inspection"
     },
     {
       "id": "MSC-RVI-P08",
@@ -306,7 +332,8 @@
       "source_commit_sha": "3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649",
       "source_role": "tex_placeholder",
       "local_plan_path": null,
-      "source_reference_url": "https://github.com/MatPomGit/arc-rvi/blob/3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649/papers/paper08/manuscript.tex"
+      "source_reference_url": "https://github.com/MatPomGit/arc-rvi/blob/3fa18a0e6e40883fd4fe0837c64ec8cc1bbf0649/papers/paper08/manuscript.tex",
+      "area": "inspection"
     },
     {
       "id": "MSC-RVI-P09",
@@ -317,7 +344,8 @@
       "source_commit_sha": "3b08eeb3ed72dbf5c23a5be19c61eeb5dd0cff5f",
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-RVI-P09/main.tex",
-      "source_reference_url": "https://github.com/MatPomGit/arc-robo/blob/3b08eeb3ed72dbf5c23a5be19c61eeb5dd0cff5f/docs/research-proposals-2026.md"
+      "source_reference_url": "https://github.com/MatPomGit/arc-robo/blob/3b08eeb3ed72dbf5c23a5be19c61eeb5dd0cff5f/docs/research-proposals-2026.md",
+      "area": "inspection"
     },
     {
       "id": "MSC-S4D-P01",
@@ -328,7 +356,8 @@
       "source_commit_sha": "1d73cfa958d625602821bb7aea83850a790342ba",
       "source_role": "existing_manuscript_tex",
       "local_plan_path": null,
-      "source_reference_url": "https://github.com/MatPomGit/arc-s4d-tam/blob/1d73cfa958d625602821bb7aea83850a790342ba/manuscript/main.tex"
+      "source_reference_url": "https://github.com/MatPomGit/arc-s4d-tam/blob/1d73cfa958d625602821bb7aea83850a790342ba/manuscript/main.tex",
+      "area": "navigation"
     },
     {
       "id": "MSC-S4D-P02",
@@ -339,7 +368,8 @@
       "source_commit_sha": "1d73cfa958d625602821bb7aea83850a790342ba",
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-S4D-P02/main.tex",
-      "source_reference_url": "https://github.com/MatPomGit/arc-s4d-tam/blob/1d73cfa958d625602821bb7aea83850a790342ba/manuscripts/FUTURE_RESEARCH_PROPOSALS.md"
+      "source_reference_url": "https://github.com/MatPomGit/arc-s4d-tam/blob/1d73cfa958d625602821bb7aea83850a790342ba/manuscripts/FUTURE_RESEARCH_PROPOSALS.md",
+      "area": "navigation"
     },
     {
       "id": "MSC-S4D-P03",
@@ -350,7 +380,8 @@
       "source_commit_sha": "1d73cfa958d625602821bb7aea83850a790342ba",
       "source_role": "research_protocol_or_proposal",
       "local_plan_path": "manuscripts/MSC-S4D-P03/main.tex",
-      "source_reference_url": "https://github.com/MatPomGit/arc-s4d-tam/blob/1d73cfa958d625602821bb7aea83850a790342ba/manuscripts/FUTURE_RESEARCH_PROPOSALS.md"
+      "source_reference_url": "https://github.com/MatPomGit/arc-s4d-tam/blob/1d73cfa958d625602821bb7aea83850a790342ba/manuscripts/FUTURE_RESEARCH_PROPOSALS.md",
+      "area": "navigation"
     }
   ]
 }
