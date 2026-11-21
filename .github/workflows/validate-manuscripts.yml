@@ -28,7 +28,7 @@ jobs:
       - name: Install minimal LaTeX build dependencies
         run: |
           sudo apt-get update -qq
-          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends latexmk texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends latexmk lmodern texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
       - name: Compile every new prospective manuscript
         run: |
           set -euo pipefail
