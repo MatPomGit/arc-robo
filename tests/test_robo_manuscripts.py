@@ -57,6 +57,7 @@ class RoboManuscriptCatalogTest(unittest.TestCase):
                 local_plan = (FOLDER / ident / "main.tex").read_text(encoding="utf-8")
                 self.assertIn("Prospektywny szkic", local_plan)
                 self.assertIn("Kanoniczny manuskrypt/protokół pozostaje", local_plan)
+                self.assertNotIn("github.com/MatPomGit/arc-hri-safety", local_plan)
                 self.assertTrue((FOLDER / ident / "study.md").is_file())
                 doc = (FOLDER / ident / "README.md").read_text(encoding="utf-8")
                 self.assertIn("https://github.com/MatPomGit/", doc)
