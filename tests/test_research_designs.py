@@ -61,12 +61,21 @@ class ResearchDesignTests(unittest.TestCase):
         ]
         for ident in originals:
             with self.subTest(ident=ident):
-                self.assertFalse((MANUSCRIPTS / ident / "main.tex").exists())
+                local = (MANUSCRIPTS / ident / "main.tex")
+                self.assertTrue(local.is_file())
+                text = local.read_text(encoding="utf-8")
+                self.assertIn("Prospektywny szkic", text)
+                self.assertIn("Kanoniczny manuskrypt/protokół pozostaje", text)
 
     def test_exact_draft_count(self):
         self.assertEqual(len(IDS), 14)
+        originals = {
+            *(f"MSC-HRI-P{j:02d}" for j in range(1, 9)),
+            *(f"MSC-RVI-P{j:02d}" for j in range(1, 9)),
+            "MSC-S4D-P01",
+        }
         tex = {p.parent.name for p in MANUSCRIPTS.glob("*/main.tex")}
-        self.assertEqual(tex, set(IDS) | {"MSC-ZAH-P05"})
+        self.assertEqual(tex, set(IDS) | {"MSC-ZAH-P05"} | set(originals))
         # MSC-ZAH-P05 is a separate early concept and is not part of the 14\n        # historical four-stage designs covered by IDS.
 
 

@@ -53,7 +53,12 @@ class RoboManuscriptCatalogTest(unittest.TestCase):
     def test_existing_tex_remains_canonical_in_source_repositories(self):
         for ident in TEX_EXTERNAL:
             with self.subTest(ident=ident):
-                self.assertFalse((FOLDER / ident / "main.tex").exists())
+                self.assertTrue((FOLDER / ident / "main.tex").is_file())
+                local_plan = (FOLDER / ident / "main.tex").read_text(encoding="utf-8")
+                self.assertIn("Prospektywny szkic", local_plan)
+                self.assertIn("Kanoniczny manuskrypt/protokół pozostaje", local_plan)
+                self.assertNotIn("github.com/MatPomGit/arc-hri-safety", local_plan)
+                self.assertTrue((FOLDER / ident / "study.md").is_file())
                 doc = (FOLDER / ident / "README.md").read_text(encoding="utf-8")
                 self.assertIn("https://github.com/MatPomGit/", doc)
                 self.assertIn(".tex", doc)

@@ -41,7 +41,7 @@ jobs:
       - name: Install minimal LaTeX build dependencies
         run: |
           sudo apt-get update -qq
-          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends latexmk lmodern texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends latexmk lmodern texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-lang-polish
       - name: Compile every new prospective manuscript
         run: |
           set -euo pipefail
@@ -50,7 +50,7 @@ jobs:
             latexmk -pdf -cd -interaction=nonstopmode -halt-on-error "$f"
             count=$((count + 1))
           done
-          test "$count" -eq 15
+          test "$count" -eq 32
           echo "Compiled $count manuscript plans."
 
   pages-check:

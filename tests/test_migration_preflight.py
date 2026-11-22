@@ -18,8 +18,8 @@ class MigrationPreflightTests(unittest.TestCase):
         self.assertEqual(result["migration_status"], "BLOCKED")
         self.assertFalse(result["migration_ready"])
         self.assertEqual(result["record_count"], 31)
-        self.assertEqual(result["local_plan_count"], 14)
-        self.assertEqual(result["external_reference_count"], 17)
+        self.assertEqual(result["local_plan_count"], 31)
+        self.assertEqual(result["external_reference_count"], 0)
         self.assertEqual(sum(result["research_lines"].values()), 31)
         self.assertIn("canonical_owner_for_each_msc", result["unresolved_decisions"])
 
