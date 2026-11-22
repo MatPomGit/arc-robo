@@ -1,39 +1,30 @@
-# MSC-RGBT-P01 — plan badania i relacje
+# MSC-RGBT-P01 — Rozdzielczość źródłowa i fizyczne granice detekcji RGB/LWIR
 
-**Temat:** Rozdzielczość źródłowa i fizyczne granice detekcji RGB/LWIR
+**Program:** `arc-robo` · **obszar:** `robot-perception` · **rodzaj:** `MANUSCRIPT` · **etap źródłowy:** `PLANNED`.
 
-**Właściciel programu:** `arc-robo`. **Obszar:** `robot-perception`. **Rodzaj:** `MANUSCRIPT` (MANUSCRIPT). **Etap w źródle:** `PLANNED`. **Integracja:** `LINK_ONLY`.
+## Projekt badania
 
-## Zakres naukowy i operacjonalizacja
+**Przedmiot:** Rozdzielczość źródłowa i fizyczne granice detekcji RGB/LWIR.
 
-Temat badania: Rozdzielczość źródłowa i fizyczne granice detekcji RGB/LWIR. Jest to roboczy wpis publikacyjny, a nie potwierdzenie ukończenia badania.
-
-- **Proponowany wynik główny:** Nieokreślony w centralnej macierzy. Wymaga prerejestracji definicji, estymandu i kryteriów oceny.
-- **Granica odrębności:** Wymaga porównania zakresu z powiązanymi pracami i źródłowym protokołem, zanim rozpocznie się pomiar.
-- **Uwagi klasyfikacyjne:** Klasyfikacja wg pytania badawczego: Metrologia ograniczeń percepcji robota RGB/LWIR przy zmianach rozdzielczości, nie walidowany termometr. Status źródła: PLANNED. Nie oznacza zatwierdzonych danych ani gotowości publikacji.
-- **Powiązane prace:** Nie wskazano formalnych powiązań w macierzy.
+- **Proponowany wynik główny:** Wymaga określenia estymandu, głównej miary i jednostki analizy przed rozpoczęciem zbierania danych.
+- **Odrębność i ograniczenia:** Przed zatwierdzeniem wymagany przegląd źródłowego protokołu i pokrewnych publikacji.
+- **Plan metodologii:** należy ustalić hipotezy, próbę lub scenariusze, procedurę, metryki, plan weryfikacji i analizę wrażliwości; samo istnienie pliku nie oznacza ukończenia badania.
+- **Powiązane MSC:** nie wskazano jawnej relacji.
 
 ## Stanowisko badawcze
 
-**Proponowane stanowisko:** `ST-05`. To wstępne powiązanie tematyczne z rejestrem wspólnych stanowisk, **nie** potwierdzenie dostępności sprzętu ani zgody na badanie.
+**`ST-05`**: status `PROPOSED_BY_SCOPE`, kwalifikacja aparatury `NOT_VERIFIED`. Jest to mapa planistyczna, nie raport uruchomionego stanowiska.
 
-[Rejestr stanowisk](https://github.com/MatPomGit/research-autopilot/blob/main/docs/portfolio/reorganizacja-systemu-badan/shared_research_platforms.md) • [Katalog urządzeń (prywatny, kontrola dostępu)](https://github.com/MatPomGit/devices)
+## Aplikacje
 
-## Powiązane aplikacje APP
+Brak przypisanej aplikacji w mapie APP–MSC. Nie oznacza to braku możliwych narzędzi, ale ich integracja wymaga kwalifikacji.
 
-Brak przypisanej aplikacji w centralnej tabeli. Nie utożsamiać tego z brakiem potrzeb programowych.
+## Biblioteki
 
-## Powiązane biblioteki LIB
+Brak udokumentowanego powiązania z biblioteką w znormalizowanej macierzy. Nie przypisywać fikcyjnego kodu.
 
-Brak zadeklarowanych powiązań LIB wynikających z aplikacji w centralnej tabeli.
+## Proweniencja i bramki
 
-Powiązania APP/LIB pochodzą z planistycznych tabel `app_publication_links.csv` i `component_dependencies.csv`. Nie oznaczają gotowych repozytoriów, integracji ani działających pomiarów. Historyczne nazwy bibliotek nie są migrowane domyślnie.
+Źródło opisuje publiczny projekt [`arc-rgbt`](https://github.com/MatPomGit/arc-rgbt); pierwotny identyfikator `P01`.
 
-## Pochodzenie i kontrola badań
-
-- **Repozytorium źródłowe:** `MatPomGit/arc-rgbt`, rekord `P01`, UID `arc-rgbt:P01`.
-- **Oryginalna ścieżka:** `publications/P01/protocol/README.md`.
-- **Materiał źródłowy:** [otwórz źródło](https://github.com/MatPomGit/arc-rgbt/blob/main/publications/P01/protocol/README.md).
-- **Macierz rejestru:** [publication_matrix.csv](https://github.com/MatPomGit/research-autopilot/blob/main/docs/portfolio/reorganizacja-systemu-badan/publication_matrix.csv).
-
-Przed nowym eksperymentem należy sprawdzić prawa do danych i sprzętu, zgodę etyczną, niezależny wynik główny, plan analizy, próbę, metryki, podziały danych i ryzyka powielania publikacji. Brak rezultatów w karcie nie jest wynikiem zerowym.
+Weryfikacja badania wymaga oceny praw do danych, niezależności wyniku, sposobu doboru próby, etyki i bezpieczeństwa stanowiska, o ile dotyczą tematu. Wszystkie zależności oprogramowania są **kandydaturami**, nie zatwierdzonymi wdrożeniami. Nie przedstawiono nieistniejących pomiarów ani statystyk.

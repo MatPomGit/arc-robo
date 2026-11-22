@@ -1,45 +1,36 @@
-# MSC-RVI-P09 — plan badania i relacje
+# MSC-RVI-P09 — Czy operator rozpozna fałszywie zakończoną misję inspekcji robota dzięki ujawnieniu dowodów?
 
-**Temat:** Czy operator rozpozna fałszywie zakończoną misję inspekcji robota dzięki ujawnieniu dowodów?
+**Program:** `arc-robo` · **obszar:** `operator-inspection-evidence-judgment` · **rodzaj:** `IDEA` · **etap źródłowy:** `NEW_CROSS_PROGRAM_IDEA_HOLD`.
 
-**Właściciel programu:** `arc-robo`. **Obszar:** `operator-inspection-evidence-judgment`. **Rodzaj:** `IDEA` (CANDIDATE). **Etap w źródle:** `NEW_CROSS_PROGRAM_IDEA_HOLD`. **Integracja:** `INDEX_ONLY_NO_NEW_FOLDER`.
+## Projekt badania
 
-## Zakres naukowy i operacjonalizacja
+**Przedmiot:** Czy operator rozpozna fałszywie zakończoną misję inspekcji robota dzięki ujawnieniu dowodów?.
 
-Temat badania: Czy operator rozpozna fałszywie zakończoną misję inspekcji robota dzięki ujawnieniu dowodów?. Jest to kandydatura do oceny nowości i niezależności, a nie zatwierdzony projekt empiryczny.
-
-- **Proponowany wynik główny:** Nieokreślony w centralnej macierzy. Wymaga prerejestracji definicji, estymandu i kryteriów oceny.
-- **Granica odrębności:** Wymaga porównania zakresu z powiązanymi pracami i źródłowym protokołem, zanim rozpocznie się pomiar.
-- **Uwagi klasyfikacyjne:** [Nowa propozycja burzy mózgów 2026-11-20, priorytet B] Badanie false acceptance na już istniejących symulowanych fixture RVI z niezależną prawdą i trzema wariantami raportu. Główny wynik to błąd decyzji operatora, nie obiektywna skuteczność robota P08, jakość zdjęć P06 ani poczucie safety M08. Bez ruchu G1; etyka przed badaniem ludzi. Wkład i nowość niezatwierdzone; nie tworzyć manuskryptu przed audytem. Propozycja znajduje się w dokumentacji programu, w otwartym PR, bez wpisu do katalogu zatwierdzonych publikacji.
-- **Powiązane prace:** `MSC-RVI-P08 (źródłowo arc-rvi:P08)`, `MSC-RVI-P06 (źródłowo arc-rvi:P06)`, `MSC-HRI-P08 (źródłowo arc-hri-safety:M08)`
+- **Proponowany wynik główny:** Wymaga określenia estymandu, głównej miary i jednostki analizy przed rozpoczęciem zbierania danych.
+- **Odrębność i ograniczenia:** Przed zatwierdzeniem wymagany przegląd źródłowego protokołu i pokrewnych publikacji.
+- **Plan metodologii:** należy ustalić hipotezy, próbę lub scenariusze, procedurę, metryki, plan weryfikacji i analizę wrażliwości; samo istnienie pliku nie oznacza ukończenia badania.
+- **Powiązane MSC:** `MSC-RVI-P08`, `MSC-RVI-P06`, `MSC-HRI-P08`.
 
 ## Stanowisko badawcze
 
-**Proponowane stanowisko:** `ST-04`, `ST-05`. To wstępne powiązanie tematyczne z rejestrem wspólnych stanowisk, **nie** potwierdzenie dostępności sprzętu ani zgody na badanie.
+**`ST-04`**: status `PROPOSED_BY_SCOPE`, kwalifikacja aparatury `NOT_VERIFIED`. Jest to mapa planistyczna, nie raport uruchomionego stanowiska.
 
-[Rejestr stanowisk](https://github.com/MatPomGit/research-autopilot/blob/main/docs/portfolio/reorganizacja-systemu-badan/shared_research_platforms.md) • [Katalog urządzeń (prywatny, kontrola dostępu)](https://github.com/MatPomGit/devices)
+## Aplikacje
 
-## Powiązane aplikacje APP
+- **`app-hri-console`** (`APP-ARC-08`): rola `PRIMARY`, bramka `MVP`, status repozytorium `PLANNED_NOT_CREATED`.
 
-- `app-hri-console` (`APP-ARC-08`), rola `PRIMARY`, profil `ros2-replay`, bramka `MVP`.
+## Biblioteki
 
-## Powiązane biblioteki LIB
+- **`lib-audio`**: `SCOPE_CONSOLIDATED_PLAN`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
+- **`lib-events`**: `PLANNED_NOT_CREATED`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
+- **`lib-ros`**: `SCAFFOLD_EXISTS`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
+- **`lib-sim`**: `PLANNED_NOT_CREATED`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
+- **`lib-track`**: `NEW_SCAFFOLD_EXISTS`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
+- **`lib-vis`**: `RENAMED_ARCHITECTURE_ONLY`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
+- **`lib-vlm`**: `SCAFFOLD_EXISTS`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
 
-- `lib-asr`: kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
-- `lib-audio`: kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
-- `lib-events`: kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
-- `lib-image` (bieżąca nazwa repozytorium do uzgodnienia: `lib-vis`): kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
-- `lib-ros`: kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
-- `lib-sim`: kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
-- `lib-vlm`: kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
+## Proweniencja i bramki
 
-Powiązania APP/LIB pochodzą z planistycznych tabel `app_publication_links.csv` i `component_dependencies.csv`. Nie oznaczają gotowych repozytoriów, integracji ani działających pomiarów. Historyczne nazwy bibliotek nie są migrowane domyślnie.
+Źródło opisuje publiczny projekt [`arc-robo`](https://github.com/MatPomGit/arc-robo); pierwotny identyfikator `ROBO-IDEA-01`.
 
-## Pochodzenie i kontrola badań
-
-- **Repozytorium źródłowe:** `MatPomGit/arc-robo`, rekord `ROBO-IDEA-01`, UID `arc-robo:ROBO-IDEA-01`.
-- **Oryginalna ścieżka:** `docs/research-proposals-2026.md`.
-- **Materiał źródłowy:** [otwórz źródło](https://github.com/MatPomGit/arc-robo/blob/c8a8d59e735def4d0912dd5c81431766b0535d14/docs/research-proposals-2026.md).
-- **Macierz rejestru:** [publication_matrix.csv](https://github.com/MatPomGit/research-autopilot/blob/main/docs/portfolio/reorganizacja-systemu-badan/publication_matrix.csv).
-
-Przed nowym eksperymentem należy sprawdzić prawa do danych i sprzętu, zgodę etyczną, niezależny wynik główny, plan analizy, próbę, metryki, podziały danych i ryzyka powielania publikacji. Brak rezultatów w karcie nie jest wynikiem zerowym.
+Weryfikacja badania wymaga oceny praw do danych, niezależności wyniku, sposobu doboru próby, etyki i bezpieczeństwa stanowiska, o ile dotyczą tematu. Wszystkie zależności oprogramowania są **kandydaturami**, nie zatwierdzonymi wdrożeniami. Nie przedstawiono nieistniejących pomiarów ani statystyk.

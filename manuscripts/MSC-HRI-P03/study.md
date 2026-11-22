@@ -1,45 +1,36 @@
-# MSC-HRI-P03 — plan badania i relacje
+# MSC-HRI-P03 — Dynamika ładunku i omiatana geometria manipulatora w ocenie kolizji humanoida
 
-**Temat:** Dynamika ładunku i omiatana geometria manipulatora w ocenie kolizji humanoida
+**Program:** `arc-robo` · **obszar:** `safety-hri` · **rodzaj:** `MANUSCRIPT` · **etap źródłowy:** `PLANNED`.
 
-**Właściciel programu:** `arc-robo`. **Obszar:** `safety-hri`. **Rodzaj:** `MANUSCRIPT` (MANUSCRIPT). **Etap w źródle:** `PLANNED`. **Integracja:** `LINK_ONLY`.
+## Projekt badania
 
-## Zakres naukowy i operacjonalizacja
-
-Temat badania: Dynamika ładunku i omiatana geometria manipulatora w ocenie kolizji humanoida. Jest to roboczy wpis publikacyjny, a nie potwierdzenie ukończenia badania.
+**Przedmiot:** Dynamika ładunku i omiatana geometria manipulatora w ocenie kolizji humanoida.
 
 - **Proponowany wynik główny:** Błąd oszacowania ryzyka ładunku względem referencji geometrycznej i dynamicznej
-- **Granica odrębności:** Odrębny model geometrii ładunku i przenoszonej masy, nie scenowy model wielu osób M01.
-- **Uwagi klasyfikacyjne:** Klasyfikacja wg pytania badawczego: Modelowanie ryzyka robotycznego zależnego od ładunku, ruchu i odległości. Status źródła: PLANNED. Nie oznacza zatwierdzonych danych ani gotowości publikacji. AUDYT DUPLIKACJI: nie powielać modelu pól ryzyka M01, wymagane niezależne geometryczne/dynamiczne wyniki. | Proponowane doprecyzowanie zakresu portfolio 2026-11-20, wymaga zatwierdzenia naukowego: Odrębny model geometrii ładunku i przenoszonej masy, nie scenowy model wielu osób M01. Główny wynik do prerejestracji: Błąd oszacowania ryzyka ładunku względem referencji geometrycznej i dynamicznej. Tytuł źródłowy zachowano w original_title_pl. Nie zmienia to zatwierdzonego tytułu manuskryptu źródłowego ani
-- **Powiązane prace:** `MSC-HRI-P01 (źródłowo arc-hri-safety:M01)`
+- **Odrębność i ograniczenia:** Odrębny model geometrii ładunku i przenoszonej masy, nie scenowy model wielu osób M01.
+- **Plan metodologii:** należy ustalić hipotezy, próbę lub scenariusze, procedurę, metryki, plan weryfikacji i analizę wrażliwości; samo istnienie pliku nie oznacza ukończenia badania.
+- **Powiązane MSC:** `MSC-HRI-P01`.
 
 ## Stanowisko badawcze
 
-**Proponowane stanowisko:** `ST-04`. To wstępne powiązanie tematyczne z rejestrem wspólnych stanowisk, **nie** potwierdzenie dostępności sprzętu ani zgody na badanie.
+**`ST-04`**: status `PROPOSED_BY_SCOPE`, kwalifikacja aparatury `NOT_VERIFIED`. Jest to mapa planistyczna, nie raport uruchomionego stanowiska.
 
-[Rejestr stanowisk](https://github.com/MatPomGit/research-autopilot/blob/main/docs/portfolio/reorganizacja-systemu-badan/shared_research_platforms.md) • [Katalog urządzeń (prywatny, kontrola dostępu)](https://github.com/MatPomGit/devices)
+## Aplikacje
 
-## Powiązane aplikacje APP
+- **`app-hri-console`** (`APP-ARC-08`): rola `OPTIONAL`, bramka `RESEARCH_GO`, status repozytorium `PLANNED_NOT_CREATED`.
 
-- `app-hri-console` (`APP-ARC-08`), rola `OPTIONAL`, profil `ros2-replay`, bramka `RESEARCH_GO`.
+## Biblioteki
 
-## Powiązane biblioteki LIB
+- **`lib-audio`**: `SCOPE_CONSOLIDATED_PLAN`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
+- **`lib-events`**: `PLANNED_NOT_CREATED`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
+- **`lib-ros`**: `SCAFFOLD_EXISTS`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
+- **`lib-sim`**: `PLANNED_NOT_CREATED`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
+- **`lib-track`**: `NEW_SCAFFOLD_EXISTS`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
+- **`lib-vis`**: `RENAMED_ARCHITECTURE_ONLY`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
+- **`lib-vlm`**: `SCAFFOLD_EXISTS`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
 
-- `lib-asr`: kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
-- `lib-audio`: kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
-- `lib-events`: kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
-- `lib-image` (bieżąca nazwa repozytorium do uzgodnienia: `lib-vis`): kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
-- `lib-ros`: kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
-- `lib-sim`: kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
-- `lib-vlm`: kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
+## Proweniencja i bramki
 
-Powiązania APP/LIB pochodzą z planistycznych tabel `app_publication_links.csv` i `component_dependencies.csv`. Nie oznaczają gotowych repozytoriów, integracji ani działających pomiarów. Historyczne nazwy bibliotek nie są migrowane domyślnie.
+Dane o niepublicznych repozytoriach i pełnej historii pochodzenia znajdują się poza dokumentacją publiczną.
 
-## Pochodzenie i kontrola badań
-
-- **Repozytorium źródłowe:** `MatPomGit/arc-hri-safety`, rekord `M03`, UID `arc-hri-safety:M03`.
-- **Oryginalna ścieżka:** `manuscripts/03_payload_aware_dynamic_risk/article_plan.md`.
-- **Materiał źródłowy:** [otwórz źródło](https://github.com/MatPomGit/arc-hri-safety/blob/main/manuscripts/03_payload_aware_dynamic_risk/article_plan.md).
-- **Macierz rejestru:** [publication_matrix.csv](https://github.com/MatPomGit/research-autopilot/blob/main/docs/portfolio/reorganizacja-systemu-badan/publication_matrix.csv).
-
-Przed nowym eksperymentem należy sprawdzić prawa do danych i sprzętu, zgodę etyczną, niezależny wynik główny, plan analizy, próbę, metryki, podziały danych i ryzyka powielania publikacji. Brak rezultatów w karcie nie jest wynikiem zerowym.
+Weryfikacja badania wymaga oceny praw do danych, niezależności wyniku, sposobu doboru próby, etyki i bezpieczeństwa stanowiska, o ile dotyczą tematu. Wszystkie zależności oprogramowania są **kandydaturami**, nie zatwierdzonymi wdrożeniami. Nie przedstawiono nieistniejących pomiarów ani statystyk.

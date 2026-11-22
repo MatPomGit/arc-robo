@@ -1,45 +1,36 @@
-# MSC-RVI-P05 — plan badania i relacje
+# MSC-RVI-P05 — Powtarzalność akwizycji i pozy robota
 
-**Temat:** Powtarzalność akwizycji i pozy robota
+**Program:** `arc-robo` · **obszar:** `robot-inspection` · **rodzaj:** `MANUSCRIPT` · **etap źródłowy:** `PLANNED`.
 
-**Właściciel programu:** `arc-robo`. **Obszar:** `robot-inspection`. **Rodzaj:** `MANUSCRIPT` (MANUSCRIPT). **Etap w źródle:** `PLANNED`. **Integracja:** `LINK_ONLY`.
+## Projekt badania
 
-## Zakres naukowy i operacjonalizacja
+**Przedmiot:** Powtarzalność akwizycji i pozy robota.
 
-Temat badania: Powtarzalność akwizycji i pozy robota. Jest to roboczy wpis publikacyjny, a nie potwierdzenie ukończenia badania.
-
-- **Proponowany wynik główny:** Nieokreślony w centralnej macierzy. Wymaga prerejestracji definicji, estymandu i kryteriów oceny.
-- **Granica odrębności:** Wymaga porównania zakresu z powiązanymi pracami i źródłowym protokołem, zanim rozpocznie się pomiar.
-- **Uwagi klasyfikacyjne:** Klasyfikacja wg pytania badawczego: Powtarzalność robotycznej akwizycji i geometrii obserwacji. Status źródła: PLANNED. Nie oznacza zatwierdzonych danych ani gotowości publikacji.
-- **Powiązane prace:** Nie wskazano formalnych powiązań w macierzy.
+- **Proponowany wynik główny:** Wymaga określenia estymandu, głównej miary i jednostki analizy przed rozpoczęciem zbierania danych.
+- **Odrębność i ograniczenia:** Przed zatwierdzeniem wymagany przegląd źródłowego protokołu i pokrewnych publikacji.
+- **Plan metodologii:** należy ustalić hipotezy, próbę lub scenariusze, procedurę, metryki, plan weryfikacji i analizę wrażliwości; samo istnienie pliku nie oznacza ukończenia badania.
+- **Powiązane MSC:** nie wskazano jawnej relacji.
 
 ## Stanowisko badawcze
 
-**Proponowane stanowisko:** `ST-04`, `ST-05`. To wstępne powiązanie tematyczne z rejestrem wspólnych stanowisk, **nie** potwierdzenie dostępności sprzętu ani zgody na badanie.
+**`ST-04`**: status `PROPOSED_BY_SCOPE`, kwalifikacja aparatury `NOT_VERIFIED`. Jest to mapa planistyczna, nie raport uruchomionego stanowiska.
 
-[Rejestr stanowisk](https://github.com/MatPomGit/research-autopilot/blob/main/docs/portfolio/reorganizacja-systemu-badan/shared_research_platforms.md) • [Katalog urządzeń (prywatny, kontrola dostępu)](https://github.com/MatPomGit/devices)
+## Aplikacje
 
-## Powiązane aplikacje APP
+- **`app-hri-console`** (`APP-ARC-08`): rola `OPTIONAL`, bramka `RESEARCH_GO`, status repozytorium `PLANNED_NOT_CREATED`.
 
-- `app-hri-console` (`APP-ARC-08`), rola `OPTIONAL`, profil `ros2-replay`, bramka `RESEARCH_GO`.
+## Biblioteki
 
-## Powiązane biblioteki LIB
+- **`lib-audio`**: `SCOPE_CONSOLIDATED_PLAN`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
+- **`lib-events`**: `PLANNED_NOT_CREATED`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
+- **`lib-ros`**: `SCAFFOLD_EXISTS`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
+- **`lib-sim`**: `PLANNED_NOT_CREATED`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
+- **`lib-track`**: `NEW_SCAFFOLD_EXISTS`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
+- **`lib-vis`**: `RENAMED_ARCHITECTURE_ONLY`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
+- **`lib-vlm`**: `SCAFFOLD_EXISTS`, powiązanie planowane przez `app-hri-console`; wykonanie integracji niezweryfikowane.
 
-- `lib-asr`: kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
-- `lib-audio`: kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
-- `lib-events`: kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
-- `lib-image` (bieżąca nazwa repozytorium do uzgodnienia: `lib-vis`): kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
-- `lib-ros`: kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
-- `lib-sim`: kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
-- `lib-vlm`: kandydatura zależności pośredniej przez `app-hri-console`. Brak dowodu implementacji w tym artykule.
+## Proweniencja i bramki
 
-Powiązania APP/LIB pochodzą z planistycznych tabel `app_publication_links.csv` i `component_dependencies.csv`. Nie oznaczają gotowych repozytoriów, integracji ani działających pomiarów. Historyczne nazwy bibliotek nie są migrowane domyślnie.
+Źródło opisuje publiczny projekt [`arc-rvi`](https://github.com/MatPomGit/arc-rvi); pierwotny identyfikator `P05`.
 
-## Pochodzenie i kontrola badań
-
-- **Repozytorium źródłowe:** `MatPomGit/arc-rvi`, rekord `P05`, UID `arc-rvi:P05`.
-- **Oryginalna ścieżka:** `papers/paper05/README.md`.
-- **Materiał źródłowy:** [otwórz źródło](https://github.com/MatPomGit/arc-rvi/blob/main/papers/paper05/README.md).
-- **Macierz rejestru:** [publication_matrix.csv](https://github.com/MatPomGit/research-autopilot/blob/main/docs/portfolio/reorganizacja-systemu-badan/publication_matrix.csv).
-
-Przed nowym eksperymentem należy sprawdzić prawa do danych i sprzętu, zgodę etyczną, niezależny wynik główny, plan analizy, próbę, metryki, podziały danych i ryzyka powielania publikacji. Brak rezultatów w karcie nie jest wynikiem zerowym.
+Weryfikacja badania wymaga oceny praw do danych, niezależności wyniku, sposobu doboru próby, etyki i bezpieczeństwa stanowiska, o ile dotyczą tematu. Wszystkie zależności oprogramowania są **kandydaturami**, nie zatwierdzonymi wdrożeniami. Nie przedstawiono nieistniejących pomiarów ani statystyk.

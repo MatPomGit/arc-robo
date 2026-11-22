@@ -1,39 +1,30 @@
-# MSC-ZAH-P05 — plan badania i relacje
+# MSC-ZAH-P05 — Czy ludzkie zachowanie mechanicznego robota zwiększa akceptację czy poczucie niesamowitości?
 
-**Temat:** Czy ludzkie zachowanie mechanicznego robota zwiększa akceptację czy poczucie niesamowitości?
+**Program:** `arc-robo` · **obszar:** `robot-social-motion-transfer` · **rodzaj:** `IDEA` · **etap źródłowy:** `NEW_RESEARCH_PROGRAM_IDEA_HOLD`.
 
-**Właściciel programu:** `arc-robo`. **Obszar:** `robot-social-motion-transfer`. **Rodzaj:** `IDEA` (CANDIDATE). **Etap w źródle:** `NEW_RESEARCH_PROGRAM_IDEA_HOLD`. **Integracja:** `LOCAL_TEX_CONCEPT_SOURCE_CREATED`.
+## Projekt badania
 
-## Zakres naukowy i operacjonalizacja
-
-Temat badania: Czy ludzkie zachowanie mechanicznego robota zwiększa akceptację czy poczucie niesamowitości?. Jest to kandydatura do oceny nowości i niezależności, a nie zatwierdzony projekt empiryczny.
+**Przedmiot:** Czy ludzkie zachowanie mechanicznego robota zwiększa akceptację czy poczucie niesamowitości?.
 
 - **Proponowany wynik główny:** Interakcja naturalności zachowania i fizycznego versus wirtualnego ucieleśnienia robota
-- **Granica odrębności:** Trafność zewnętrzna HRI; badanie fizycznego robota warunkowe
-- **Uwagi klasyfikacyjne:** Utworzono w programowym repozytorium prospektywny manuskrypt LaTeX i dokumentację stanowiska ST-08. Status naukowy pozostaje IDEA_HOLD / CANDIDATE; brak wyników empirycznych, zamrożonego protokołu, potwierdzonych licencji na wszystkie dane oraz automatycznej publikacji w Pages. Początkowy zakres i hipotezy zachowano w origin_source_url oraz manuscript_plan_url.
-- **Powiązane prace:** Nie wskazano formalnych powiązań w macierzy.
+- **Odrębność i ograniczenia:** Trafność zewnętrzna HRI; badanie fizycznego robota warunkowe
+- **Plan metodologii:** należy ustalić hipotezy, próbę lub scenariusze, procedurę, metryki, plan weryfikacji i analizę wrażliwości; samo istnienie pliku nie oznacza ukończenia badania.
+- **Powiązane MSC:** nie wskazano jawnej relacji.
 
 ## Stanowisko badawcze
 
-**Proponowane stanowisko:** `ST-08`. To wstępne powiązanie tematyczne z rejestrem wspólnych stanowisk, **nie** potwierdzenie dostępności sprzętu ani zgody na badanie.
+**`ST-08`**: status `DIRECT_PLAN`, kwalifikacja aparatury `NOT_VERIFIED`. Jest to mapa planistyczna, nie raport uruchomionego stanowiska.
 
-[Rejestr stanowisk](https://github.com/MatPomGit/research-autopilot/blob/main/docs/portfolio/reorganizacja-systemu-badan/shared_research_platforms.md) • [Katalog urządzeń (prywatny, kontrola dostępu)](https://github.com/MatPomGit/devices)
+## Aplikacje
 
-## Powiązane aplikacje APP
+Brak przypisanej aplikacji w mapie APP–MSC. Nie oznacza to braku możliwych narzędzi, ale ich integracja wymaga kwalifikacji.
 
-Brak przypisanej aplikacji w centralnej tabeli. Nie utożsamiać tego z brakiem potrzeb programowych.
+## Biblioteki
 
-## Powiązane biblioteki LIB
+Brak udokumentowanego powiązania z biblioteką w znormalizowanej macierzy. Nie przypisywać fikcyjnego kodu.
 
-Brak zadeklarowanych powiązań LIB wynikających z aplikacji w centralnej tabeli.
+## Proweniencja i bramki
 
-Powiązania APP/LIB pochodzą z planistycznych tabel `app_publication_links.csv` i `component_dependencies.csv`. Nie oznaczają gotowych repozytoriów, integracji ani działających pomiarów. Historyczne nazwy bibliotek nie są migrowane domyślnie.
+Źródło opisuje publiczny projekt [`arc-robo`](https://github.com/MatPomGit/arc-robo); pierwotny identyfikator `MSC-ZAH-P05`.
 
-## Pochodzenie i kontrola badań
-
-- **Repozytorium źródłowe:** `MatPomGit/arc-robo`, rekord `MSC-ZAH-P05`, UID `portfolio:MSC-ZAH-P05`.
-- **Oryginalna ścieżka:** `manuscripts/MSC-ZAH-P05/main.tex`.
-- **Materiał źródłowy:** [otwórz źródło](https://github.com/MatPomGit/arc-robo/blob/main/manuscripts/MSC-ZAH-P05/main.tex).
-- **Macierz rejestru:** [publication_matrix.csv](https://github.com/MatPomGit/research-autopilot/blob/main/docs/portfolio/reorganizacja-systemu-badan/publication_matrix.csv).
-
-Przed nowym eksperymentem należy sprawdzić prawa do danych i sprzętu, zgodę etyczną, niezależny wynik główny, plan analizy, próbę, metryki, podziały danych i ryzyka powielania publikacji. Brak rezultatów w karcie nie jest wynikiem zerowym.
+Weryfikacja badania wymaga oceny praw do danych, niezależności wyniku, sposobu doboru próby, etyki i bezpieczeństwa stanowiska, o ile dotyczą tematu. Wszystkie zależności oprogramowania są **kandydaturami**, nie zatwierdzonymi wdrożeniami. Nie przedstawiono nieistniejących pomiarów ani statystyk.
