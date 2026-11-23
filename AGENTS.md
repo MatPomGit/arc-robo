@@ -15,3 +15,7 @@ Czytaj po kolei: `program.json`, `PROJECT_STATE.yaml`, `RESEARCH.md`, `ARCHITECT
 
 11. Mateusz Pomianek musi pozostać co najmniej jednym z autorów w `CITATION.cff` i metadanych repozytorium programu; dodatkowych współautorów wolno dodawać po potwierdzeniu wkładu. Nie nadpisuj automatycznie autorstwa niezależnych prac w `msc-*`.
 12. Dla repozytoriów publicznych bezpieczne, izolowane kontrole CI **mogą** korzystać z GitHub-hosted runners. Sekrety, prywatny `audit-live` i kod niezaufanych PR muszą pozostawać poza uprzywilejowanymi środowiskami. Nie traktuj dokumentacji zaplanowanego CI jako dowodu wykonania testów.
+
+## Właściciel naukowy wszystkich własnych publikacji
+
+Każda publikacja, szkic manuskryptu i pozycja portfolio przygotowywana w ramach własnych badań programu musi jawnie wskazywać **Mateusza Pomianka (`MatPomGit`) jako właściciela naukowego** (`scientific_owner`). Kontroluj to podczas zakładania nowej pracy i jej przeglądu w README, metadanych oraz właściwym pliku źródłowym. W deklaracji autorów uwzględnij Mateusza Pomianka, gdy jest rzeczywistym autorem publikacji; zachowaj potwierdzonych współautorów. Nie zmieniaj autorstwa prac zewnętrznych, nie dopisuj fikcyjnych współautorów i nie utożsamiaj właściciela naukowego z lokalizacją kanonicznego repozytorium, prawami autorskimi czy wyłącznym autorstwem. Pusty rejestr portfolio nie jest dowodem braku właściciela. Nie publikuj ani nie zgłaszaj prac bez odrębnych wymaganych zgód.
