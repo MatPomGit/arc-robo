@@ -1,6 +1,6 @@
 # Manuskrypty i koncepcje badawcze ARC Robo
 
-Program obejmuje **32 pozycje** z centralnego rejestru portfolio. **9 pozycji** wskazuje istniejące manuskrypty LaTeX (8 HRI i 1 S4D), **8 pozycji RVI** wskazuje jedynie szablony, a **14 pozostałych** zawiera prospektywne plany badań `main.tex`, nie manuskrypty wynikowe. Wersja robocza LaTeX 0.3.0 każdej z 14 nowych pozycji określa trzy hipotezy, cztery etapy badań, definicje jednostki analizy, punkty końcowe, wymaganą walidację i bramki dowodowe. Podstawowym miejscem utrzymania protokołów i wyników pozostają repozytoria projektów. Wpis katalogowy ani szkic nie zmieniają decyzji o zatwierdzeniu publikacji.
+Program obejmuje **32 pozycje** z centralnego rejestru portfolio. **9 pozycji** wskazuje istniejące manuskrypty LaTeX (8 HRI i 1 S4D), **8 pozycji RVI** wskazuje jedynie szablony, a **15 pozostałych** zawiera prospektywne plany badań `main.tex`, nie manuskrypty wynikowe. Wersja robocza LaTeX 0.3.0 każdej z 14 nowych pozycji określa trzy hipotezy, cztery etapy badań, definicje jednostki analizy, punkty końcowe, wymaganą walidację i bramki dowodowe. Podstawowym miejscem utrzymania protokołów i wyników pozostają repozytoria projektów. Wpis katalogowy ani szkic nie zmieniają decyzji o zatwierdzeniu publikacji.
 
 | Identyfikator | Temat | Status | LaTeX |
 | --- | --- | --- | --- |
