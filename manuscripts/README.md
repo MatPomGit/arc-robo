@@ -1,6 +1,6 @@
 # Manuskrypty i koncepcje badawcze ARC Robo
 
-Program obejmuje **32 pozycje** z centralnego rejestru portfolio. **9 pozycji** wskazuje istniejące manuskrypty LaTeX (8 HRI i 1 S4D), **8 pozycji RVI** wskazuje jedynie szablony, a **15 pozostałych** zawiera prospektywne plany badań `main.tex`, nie manuskrypty wynikowe. Wersja robocza LaTeX 0.3.0 każdej z 15 nowych pozycji określa trzy hipotezy, cztery etapy badań, definicje jednostki analizy, punkty końcowe, wymaganą walidację i bramki dowodowe. Podstawowym miejscem utrzymania protokołów i wyników pozostają repozytoria projektów. Wpis katalogowy ani szkic nie zmieniają decyzji o zatwierdzeniu publikacji.
+Katalog zawiera **32 lokalne plany LaTeX** (`main.tex`): 31 pozycji z przypiętymi źródłami w manifeście oraz lokalną koncepcję `MSC-ZAH-P05` bez przypisanego zewnętrznego źródła. Wśród 31 źródeł jest 9 istniejących manuskryptów (8 HRI i 1 S4D), 8 szablonów RVI oraz 14 propozycji lub protokołów. Role źródeł nie wykluczają istnienia lokalnych prospektywnych szkiców; nie są one kopiami manuskryptów wynikowych. Manifest `source_manifest.json` rozróżnia przypięte źródła (`papers`) i lokalne koncepcje (`local_only_plans`). Rejestry zatwierdzonego portfolio pozostają odrębne. Wpis katalogowy ani szkic nie zmieniają decyzji o zatwierdzeniu publikacji.
 
 | Identyfikator | Temat | Status | LaTeX |
 | --- | --- | --- | --- |
