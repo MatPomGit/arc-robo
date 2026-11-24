@@ -45,13 +45,15 @@ jobs:
       - name: Compile every new prospective manuscript
         run: |
           set -euo pipefail
-          count=0
-          for f in manuscripts/MSC-*/main.tex; do
+          # Only locally maintained prospective plans are compiled here.
+          # The other portfolio entries point to separately owned sources.
+          shopt -s nullglob
+          plans=(manuscripts/MSC-*/main.tex)
+          test "${#plans[@]}" -eq 15
+          for f in "${plans[@]}"; do
             latexmk -pdf -cd -interaction=nonstopmode -halt-on-error "$f"
-            count=$((count + 1))
           done
-          test "$count" -eq 32
-          echo "Compiled $count manuscript plans."
+          echo "Compiled ${#plans[@]} local manuscript plans."
 
   pages-check:
     runs-on: ubuntu-latest
