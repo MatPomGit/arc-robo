@@ -2,7 +2,7 @@
   "schema_version": 1,
   "program": "arc-robo",
   "date": "2026-11-21",
-  "notes": "Versioned references to research sources. Local main.tex files are prospective programme study plans; original project repositories retain scientific source ownership. Does not constitute publication approval.",
+  "notes": "Versioned references to research sources. Local main.tex files are prospective programme study plans; original project repositories retain scientific source ownership. Does not constitute publication approval. Local-only concepts are listed separately in local_only_plans, without invented pinned external sources or ownership assignments.",
   "papers": [
     {
       "id": "MSC-AFFECT-P07",
@@ -412,6 +412,13 @@
       "source_reference_url": "https://github.com/MatPomGit/arc-s4d-tam/blob/1d73cfa958d625602821bb7aea83850a790342ba/manuscripts/FUTURE_RESEARCH_PROPOSALS.md",
       "area": "navigation",
       "source_blob_sha": "29a8db4af0c74d5383133f956eb3b955baee5d62"
+    }
+  ],
+  "local_only_plans": [
+    {
+      "id": "MSC-ZAH-P05",
+      "local_plan_path": "manuscripts/MSC-ZAH-P05/main.tex",
+      "status": "IDEA_HOLD"
     }
   ]
 }

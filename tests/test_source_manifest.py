@@ -8,11 +8,15 @@ BASE = ROOT / "manuscripts"
 
 class SourceManifestContract(unittest.TestCase):
     def test_31_unique_sources_and_local_paths(self):
-        records = json.loads((BASE / "source_manifest.json").read_text(encoding="utf-8"))["papers"]
+        manifest = json.loads((BASE / "source_manifest.json").read_text(encoding="utf-8"))
+        records = manifest["papers"]
+        local_only = manifest["local_only_plans"]
         self.assertEqual(len(records), 31)
         self.assertEqual(len({p["id"] for p in records}), 31)
         self.assertEqual({p["id"] for p in records},
-                         {p.name for p in BASE.iterdir() if p.is_dir() and p.name.startswith("MSC-")} - {"MSC-ZAH-P05"})
+                         {p.name for p in BASE.iterdir() if p.is_dir() and p.name.startswith("MSC-")} - {p["id"] for p in local_only})
+        self.assertEqual({p["id"] for p in local_only}, {"MSC-ZAH-P05"})
+        self.assertEqual({p["local_plan_path"] for p in local_only}, {"manuscripts/MSC-ZAH-P05/main.tex"})
         # The version-pinned source manifest covers 31 original records only.
         roles = {}
         for p in records:

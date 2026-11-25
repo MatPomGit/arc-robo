@@ -14,7 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
       - name: Check ARC repository contract
         run: python3 scripts/validate_repository.py --phase scaffold
       - name: Run Python unit tests
@@ -37,7 +39,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Verify exact local plan inventory
+        run: python3 -B scripts/migration_preflight.py
       - name: Install minimal LaTeX build dependencies
         run: |
           sudo apt-get update -qq
@@ -45,19 +51,23 @@ jobs:
       - name: Compile every new prospective manuscript
         run: |
           set -euo pipefail
-          count=0
-          for f in manuscripts/MSC-*/main.tex; do
+          # Only locally maintained prospective plans are compiled here.
+          # The other portfolio entries point to separately owned sources.
+          shopt -s nullglob
+          plans=(manuscripts/MSC-*/main.tex)
+          # The preceding preflight compares the exact registered and actual sets.
+          echo "Compiling ${#plans[@]} registered local plans."
+          printf '%s\n' "${plans[@]}"
+          for f in "${plans[@]}"; do
             latexmk -pdf -cd -interaction=nonstopmode -halt-on-error "$f"
-            count=$((count + 1))
           done
-          test "$count" -eq 32
-          echo "Compiled $count manuscript plans."
+          echo "Compiled ${#plans[@]} local manuscript plans."
 
   pages-check:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           persist-credentials: false
           submodules: false

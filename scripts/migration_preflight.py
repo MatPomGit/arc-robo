@@ -25,6 +25,53 @@ def safe_source_path(value: object) -> bool:
             bool(parts) and all(part not in {".", "..", ""} for part in parts))
 
 
+def local_plan_inventory(root: Path, source: dict) -> tuple[list[str], list[str]]:
+    """Validate the exact set of local plans, independent of source roles."""
+    expected: set[str] = set()
+    seen: set[str] = set()
+    problems: list[str] = []
+    local_only = source.get("local_only_plans")
+    if not isinstance(local_only, list):
+        return [], ["invalid_local_only_plans"]
+    for rows, required in ((source["papers"], False), (local_only, True)):
+        for row in rows:
+            if not isinstance(row, dict):
+                problems.append("invalid_local_plan_record")
+                continue
+            ident = row.get("id")
+            if not isinstance(ident, str) or not MSC.fullmatch(ident):
+                problems.append("invalid_local_plan_id:" + str(ident))
+                continue
+            if ident in seen:
+                problems.append("duplicate_local_plan_id:" + ident)
+            seen.add(ident)
+            path = row.get("local_plan_path")
+            if path is None and not required:
+                continue
+            canonical = "manuscripts/" + ident + "/main.tex"
+            if path != canonical:
+                problems.append("invalid_local_plan_path:" + ident)
+                continue
+            expected.add(canonical)
+    actual = {
+        path.relative_to(root).as_posix()
+        for path in (root / "manuscripts").glob("MSC-*/main.tex")
+    }
+    if not expected:
+        problems.append("no_registered_local_plans")
+    if (root / "manuscripts").is_symlink():
+        problems.append("symlink_manuscripts_directory")
+    for path in sorted(expected - actual):
+        problems.append("missing_local_plan:" + path)
+    for path in sorted(actual - expected):
+        problems.append("unregistered_local_plan:" + path)
+    for path in sorted(expected & actual):
+        candidate = root / path
+        if not candidate.is_file() or candidate.is_symlink() or candidate.parent.is_symlink():
+            problems.append("invalid_local_plan_file:" + path)
+    return sorted(expected), sorted(set(problems))
+
+
 def audit(root: Path = ROOT) -> dict:
     root = Path(root)
     source = json.loads((root / "manuscripts/source_manifest.json").read_text(encoding="utf-8"))
@@ -74,6 +121,9 @@ def audit(root: Path = ROOT) -> dict:
         if row.get("source_reference_url") != url:
             problems.append("unpinned_reference:" + ident)
 
+    plans, plan_problems = local_plan_inventory(root, source)
+    problems.extend(plan_problems)
+
     if len(records) != 31 or len(seen) != 31:
         problems.append("expected_31_unique_msc")
     if program.get("schema_version") != 1 or canonical.get("schema_version") != 1:
@@ -89,7 +139,10 @@ def audit(root: Path = ROOT) -> dict:
         "migration_ready": False,
         "schema_version": program.get("schema_version"),
         "record_count": len(records),
-        "local_plan_count": sum(bool(x.get("local_plan_path")) for x in records),
+        "local_plan_count": len(plans),
+        "local_only_plan_count": len(source["local_only_plans"]) if isinstance(source.get("local_only_plans"), list) else 0,
+        "pinned_source_count": len(records),
+        "local_plan_paths": plans,
         "external_reference_count": sum(not x.get("local_plan_path") for x in records),
         "research_lines": dict(sorted(counts.items())),
         "unresolved_decisions": [
