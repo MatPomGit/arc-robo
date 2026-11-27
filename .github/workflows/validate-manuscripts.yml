@@ -21,7 +21,7 @@ jobs:
         run: python3 scripts/validate_repository.py --phase scaffold
       - name: Validate v3 programme and manuscript metadata
         run: |
-          python3 -m venv "$RUNNER_TEMP/arc-v3-schema"
+          python3.12 -m venv "$RUNNER_TEMP/arc-v3-schema"
           "$RUNNER_TEMP/arc-v3-schema/bin/python" -m pip install -r config/schema-requirements.txt
           "$RUNNER_TEMP/arc-v3-schema/bin/python" scripts/validate_v3_metadata.py
       - name: Run Python unit tests
