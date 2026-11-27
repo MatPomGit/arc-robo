@@ -1,0 +1,30 @@
+{
+  "schema_version": 3,
+  "id": "MSC-RGBT-P08",
+  "title": "Propagacja niepewności kalibracji i czasu do ryzyka detekcji",
+  "area": "perception",
+  "research_state": "deferred",
+  "publication_stage": "concept",
+  "relation": "related",
+  "owner": {
+    "mode": "external",
+    "repository": "MatPomGit/arc-rgbt",
+    "project_id": "publications/P08/protocol/README.md"
+  },
+  "manuscript": {
+    "path": "manuscripts/MSC-RGBT-P08/main.tex",
+    "format": "latex"
+  },
+  "study_plan": "manuscripts/MSC-RGBT-P08/study.md",
+  "public_listing": false,
+  "doi": null,
+  "preprint_url": null,
+  "preregistration_url": null,
+  "publication_url": null,
+  "stage_evidence": null,
+  "dependencies": {
+    "tools": [],
+    "equipment": [],
+    "datasets": []
+  }
+}

@@ -90,7 +90,7 @@ def validate(root: Path, phase: str = "scaffold") -> list[str]:
     projects = load_json(root, "config/public-projects.json", issues)
     papers = load_json(root, "config/legacy-papers.json", issues)
     dependencies = load_json(root, "config/legacy-dependencies.json", issues)
-    if meta.get("schema_version") != 1 or meta.get("type") != "arc-program":
+    if meta.get("schema_version") != 3 or meta.get("type") != "arc-program":
         issues.append("Invalid program.json schema_version/type")
     if meta.get("template_version") != "1.0.0":
         issues.append("Unexpected program template version")

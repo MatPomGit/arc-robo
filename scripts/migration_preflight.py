@@ -126,7 +126,7 @@ def audit(root: Path = ROOT) -> dict:
 
     if len(records) != 31 or len(seen) != 31:
         problems.append("expected_31_unique_msc")
-    if program.get("schema_version") != 1 or canonical.get("schema_version") != 1:
+    if program.get("schema_version") != 3 or canonical.get("schema_version") != 1:
         problems.append("unexpected_legacy_schema")
     if canonical.get("papers") != []:
         problems.append("legacy_portfolio_is_not_empty")

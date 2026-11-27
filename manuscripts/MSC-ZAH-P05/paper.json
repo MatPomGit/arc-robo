@@ -1,0 +1,30 @@
+{
+  "schema_version": 3,
+  "id": "MSC-ZAH-P05",
+  "title": "Czy ludzkie zachowanie mechanicznego robota zwiększa akceptację czy poczucie niesamowitości?",
+  "area": "hri-safety",
+  "research_state": "deferred",
+  "publication_stage": "concept",
+  "relation": "primary",
+  "owner": {
+    "mode": "local",
+    "repository": "MatPomGit/arc-robo",
+    "project_id": null
+  },
+  "manuscript": {
+    "path": "manuscripts/MSC-ZAH-P05/main.tex",
+    "format": "latex"
+  },
+  "study_plan": "manuscripts/MSC-ZAH-P05/study.md",
+  "public_listing": false,
+  "doi": null,
+  "preprint_url": null,
+  "preregistration_url": null,
+  "publication_url": null,
+  "stage_evidence": null,
+  "dependencies": {
+    "tools": [],
+    "equipment": [],
+    "datasets": []
+  }
+}

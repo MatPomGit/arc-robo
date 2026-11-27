@@ -1,0 +1,30 @@
+{
+  "schema_version": 3,
+  "id": "MSC-S4D-P02",
+  "title": "Kalibracja niepewności lokalizacji drona przy degradacji GNSS i zmianie środowiska",
+  "area": "navigation",
+  "research_state": "deferred",
+  "publication_stage": "concept",
+  "relation": "related",
+  "owner": {
+    "mode": "external",
+    "repository": "MatPomGit/arc-s4d-tam",
+    "project_id": "manuscripts/FUTURE_RESEARCH_PROPOSALS.md"
+  },
+  "manuscript": {
+    "path": "manuscripts/MSC-S4D-P02/main.tex",
+    "format": "latex"
+  },
+  "study_plan": "manuscripts/MSC-S4D-P02/study.md",
+  "public_listing": false,
+  "doi": null,
+  "preprint_url": null,
+  "preregistration_url": null,
+  "publication_url": null,
+  "stage_evidence": null,
+  "dependencies": {
+    "tools": [],
+    "equipment": [],
+    "datasets": []
+  }
+}
