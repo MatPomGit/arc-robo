@@ -35,7 +35,7 @@ class SourceManifestContract(unittest.TestCase):
         self.assertEqual(roles,{"research_protocol_or_proposal":14,"existing_manuscript_tex":9,"tex_placeholder":8})
     def test_all_msc_have_grounded_research_areas(self):
         manifest = json.loads((BASE / "source_manifest.json").read_text(encoding="utf-8"))
-        lines = json.loads((ROOT / "areas/index.json").read_text(encoding="utf-8"))
+        lines = json.loads((ROOT / "config/research-lines.json").read_text(encoding="utf-8"))
         allowed = {line["id"] for line in lines["lines"]}
         records = manifest["papers"]
         self.assertEqual(len(records), 31)

@@ -19,11 +19,11 @@ ARC Robo obejmuje badania percepcji multimodalnej robotów, autonomicznej inspek
 
 [Katalog 31 planowanych artykułów](manuscripts/README.md) zawiera zakres, identyfikatory MSC i informacje o źródłach. Część pozycji jest rozwijana lokalnie, a część pozostaje powiązana z projektami zewnętrznymi. Główny wykaz źródeł przedstawia [manifest manuskryptów](manuscripts/source_manifest.json). Materiały mają charakter prospektywny i nie stanowią potwierdzonych wyników empirycznych.
 
-[Rejestr projektów](portfolio/projects.json), [rejestr artykułów](portfolio/papers.json) i [rejestr zależności](portfolio/dependencies.json) opisują związki pomiędzy programem i jego projektami. Program ARC nie gromadzi surowych danych uczestników.
+[Rejestr projektów](config/public-projects.json), [rejestr artykułów](config/legacy-papers.json) i [rejestr zależności](config/legacy-dependencies.json) opisują związki pomiędzy programem i jego projektami. Program ARC nie gromadzi surowych danych uczestników.
 
 ## Publiczna witryna
 
-[Publiczny opis programu](pages/index.md) oraz [katalog projektów](pages/projects.md) powstają z wyodrębnionego katalogu `pages/`. Portal może wykorzystywać logo ARC Robo w nagłówku i odrębne logo konkretnego projektu, jeżeli odpowiednie grafiki zostały zatwierdzone. Samo repozytorium nie uruchamia automatycznej publikacji Pages.
+[Publiczny opis programu](site/index.md) oraz [katalog projektów](site/projects.md) powstają z wyodrębnionego katalogu `site/`. Portal może wykorzystywać logo ARC Robo w nagłówku i odrębne logo konkretnego projektu, jeżeli odpowiednie grafiki zostały zatwierdzone. Samo repozytorium nie uruchamia automatycznej publikacji Pages.
 
 ## Odtwarzalność i dostępność badań
 

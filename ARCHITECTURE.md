@@ -4,10 +4,10 @@
 
 ```text
 ARC (strategia, rejestry, publiczny katalog)
-  |-- areas/index.json                dziedziny/linie naukowe
-  |-- portfolio/projects.json         kanoniczne badania i ich SHA
-  |-- portfolio/papers.json           artykuły i jeden właściciel
-  |-- portfolio/dependencies.json     aparatura, dane, app/lib
+  |-- config/research-lines.json                dziedziny/linie naukowe
+  |-- config/public-projects.json         kanoniczne badania i ich SHA
+  |-- config/legacy-papers.json           artykuły i jeden właściciel
+  |-- config/legacy-dependencies.json     aparatura, dane, app/lib
   |-- docs/projects.md                tylko publicznie zatwierdzone wpisy
   +-- [opcjonalne git submodules]     źródła projektów, nie kopie
           |-- msc-*                  nauka i strony badań
