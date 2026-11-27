@@ -19,9 +19,13 @@ jobs:
           persist-credentials: false
       - name: Check ARC repository contract
         run: python3 scripts/validate_repository.py --phase scaffold
+      - name: Provision compatible Python for schema validation
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
       - name: Validate v3 programme and manuscript metadata
         run: |
-          python3 -m venv "$RUNNER_TEMP/arc-v3-schema"
+          python -m venv "$RUNNER_TEMP/arc-v3-schema"
           "$RUNNER_TEMP/arc-v3-schema/bin/python" -m pip install -r config/schema-requirements.txt
           "$RUNNER_TEMP/arc-v3-schema/bin/python" scripts/validate_v3_metadata.py
       - name: Run Python unit tests
