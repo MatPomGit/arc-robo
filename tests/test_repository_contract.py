@@ -41,8 +41,8 @@ class ARCContractTests(unittest.TestCase):
     def test_private_project_never_in_public_pages(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d)
-            (root/"portfolio").mkdir()
-            (root/"portfolio/projects.json").write_text(json.dumps({"projects":[{
+            (root/"config").mkdir(exist_ok=True)
+            (root/"config/public-projects.json").write_text(json.dumps({"projects":[{
                 **candidate(),"public_listing":True,"pages_url":"https://internal.example/private"
             }]}),encoding="utf-8")
             result=render(root)
@@ -62,8 +62,8 @@ class ARCContractTests(unittest.TestCase):
             meta=json.loads((dst/"program.json").read_text(encoding="utf-8"))
             meta["programme"]="arc-neuro"
             (dst/"program.json").write_text(json.dumps(meta),encoding="utf-8")
-            (dst/"areas/index.json").write_text(json.dumps({"lines":[{"id":"ndd","title":"NDD"}]}),encoding="utf-8")
-            (dst/"portfolio/projects.json").write_text(json.dumps({"projects":[candidate(),candidate()]}),encoding="utf-8")
+            (dst/"config/research-lines.json").write_text(json.dumps({"lines":[{"id":"ndd","title":"NDD"}]}),encoding="utf-8")
+            (dst/"config/public-projects.json").write_text(json.dumps({"projects":[candidate(),candidate()]}),encoding="utf-8")
             self.assertTrue(any("duplicate project" in x.lower() for x in validate(dst,"scaffold")))
 
     def test_public_pages_urls_reject_markup_injection(self):

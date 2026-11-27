@@ -30,8 +30,8 @@ class MigrationPreflightTests(unittest.TestCase):
         original["papers"][0]["source_commit_sha"] = "unverified"
         with patch("migration_preflight.json.loads", side_effect=[
             original,
-            json.loads((ROOT / "areas/index.json").read_text()),
-            json.loads((ROOT / "portfolio/papers.json").read_text()),
+            json.loads((ROOT / "config/research-lines.json").read_text()),
+            json.loads((ROOT / "config/legacy-papers.json").read_text()),
             json.loads((ROOT / "program.json").read_text()),
         ]):
             result = audit(ROOT)
@@ -40,8 +40,8 @@ class MigrationPreflightTests(unittest.TestCase):
 
     def test_unsafe_source_paths_fail_closed(self):
         base = json.loads((ROOT / "manuscripts/source_manifest.json").read_text())
-        areas = json.loads((ROOT / "areas/index.json").read_text())
-        registry = json.loads((ROOT / "portfolio/papers.json").read_text())
+        areas = json.loads((ROOT / "config/research-lines.json").read_text())
+        registry = json.loads((ROOT / "config/legacy-papers.json").read_text())
         program = json.loads((ROOT / "program.json").read_text())
         for path in ("../private.md", "/tmp/secrets", r"private\\file.tex",
                      "folder//file.tex", "file\\x00.tex"):
@@ -58,8 +58,8 @@ class MigrationPreflightTests(unittest.TestCase):
         source = json.loads((ROOT / "manuscripts/source_manifest.json").read_text())
         source["papers"][0]["source_repository"] = "other.invalid/repository"
         other = [
-            json.loads((ROOT / "areas/index.json").read_text()),
-            json.loads((ROOT / "portfolio/papers.json").read_text()),
+            json.loads((ROOT / "config/research-lines.json").read_text()),
+            json.loads((ROOT / "config/legacy-papers.json").read_text()),
             json.loads((ROOT / "program.json").read_text()),
         ]
         with patch("migration_preflight.json.loads", side_effect=[source, *other]):

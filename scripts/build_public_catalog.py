@@ -14,7 +14,7 @@ def safe_text(text:str)->str:
 
 
 def render(root:Path)->str:
-    projects=json.loads((root/"portfolio/projects.json").read_text(encoding="utf-8")).get("projects",[])
+    projects=json.loads((root/"config/public-projects.json").read_text(encoding="utf-8")).get("projects",[])
     policy_file=root/"config/pages-policy.json"
     policy=(json.loads(policy_file.read_text(encoding="utf-8")) if policy_file.is_file()
             else {"public_files": [], "approved_image_sha256": {}})
@@ -50,7 +50,7 @@ def render(root:Path)->str:
 def write_catalog(root:Path)->Path:
     """Write only the explicitly allowlisted public project catalog."""
     root=Path(root).resolve()
-    path=root/"pages/projects.md"
+    path=root/"site/projects.md"
     if path.is_symlink() or not path.parent.is_dir() or path.parent.is_symlink():
         raise SystemExit("UNAVAILABLE: public pages directory unsafe or missing")
     policy=json.loads((root/"config/pages-policy.json").read_text(encoding="utf-8"))

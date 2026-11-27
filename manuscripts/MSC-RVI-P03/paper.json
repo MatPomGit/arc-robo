@@ -1,0 +1,87 @@
+{
+  "schema_version": 3,
+  "id": "MSC-RVI-P03",
+  "title": "Kinematyczne ograniczenia całego ciała humanoida w planowaniu punktów obserwacji",
+  "area": "inspection",
+  "research_state": "planned",
+  "publication_stage": "protocol",
+  "relation": "related",
+  "owner": {
+    "mode": "external",
+    "repository": "MatPomGit/arc-rvi",
+    "project_id": "papers/paper03/manuscript.tex"
+  },
+  "manuscript": {
+    "path": "manuscripts/MSC-RVI-P03/main.tex",
+    "format": "latex"
+  },
+  "study_plan": "manuscripts/MSC-RVI-P03/study.md",
+  "public_listing": false,
+  "doi": null,
+  "preprint_url": null,
+  "preregistration_url": null,
+  "publication_url": null,
+  "stage_evidence": null,
+  "dependencies": {
+    "tools": [
+      {
+        "ref": "app-hri-console",
+        "role": "OPTIONAL",
+        "validation_status": "NOT_VERIFIED",
+        "contract_path": "manuscripts/MSC-RVI-P03/study.md",
+        "notes": "Source repository status: PLANNED_NOT_CREATED; proposed dependency only."
+      },
+      {
+        "ref": "lib-audio",
+        "role": "PROPOSED_LIBRARY",
+        "validation_status": "NOT_VERIFIED",
+        "contract_path": "manuscripts/MSC-RVI-P03/study.md",
+        "notes": "Source repository status: SCOPE_CONSOLIDATED_PLAN; proposed dependency only."
+      },
+      {
+        "ref": "lib-events",
+        "role": "PROPOSED_LIBRARY",
+        "validation_status": "NOT_VERIFIED",
+        "contract_path": "manuscripts/MSC-RVI-P03/study.md",
+        "notes": "Source repository status: PLANNED_NOT_CREATED; proposed dependency only."
+      },
+      {
+        "ref": "lib-ros",
+        "role": "PROPOSED_LIBRARY",
+        "validation_status": "NOT_VERIFIED",
+        "contract_path": "manuscripts/MSC-RVI-P03/study.md",
+        "notes": "Source repository status: SCAFFOLD_EXISTS; proposed dependency only."
+      },
+      {
+        "ref": "lib-sim",
+        "role": "PROPOSED_LIBRARY",
+        "validation_status": "NOT_VERIFIED",
+        "contract_path": "manuscripts/MSC-RVI-P03/study.md",
+        "notes": "Source repository status: PLANNED_NOT_CREATED; proposed dependency only."
+      },
+      {
+        "ref": "lib-track",
+        "role": "PROPOSED_LIBRARY",
+        "validation_status": "NOT_VERIFIED",
+        "contract_path": "manuscripts/MSC-RVI-P03/study.md",
+        "notes": "Source repository status: NEW_SCAFFOLD_EXISTS; proposed dependency only."
+      },
+      {
+        "ref": "lib-vis",
+        "role": "PROPOSED_LIBRARY",
+        "validation_status": "NOT_VERIFIED",
+        "contract_path": "manuscripts/MSC-RVI-P03/study.md",
+        "notes": "Source repository status: RENAMED_ARCHITECTURE_ONLY; proposed dependency only."
+      },
+      {
+        "ref": "lib-vlm",
+        "role": "PROPOSED_LIBRARY",
+        "validation_status": "NOT_VERIFIED",
+        "contract_path": "manuscripts/MSC-RVI-P03/study.md",
+        "notes": "Source repository status: SCAFFOLD_EXISTS; proposed dependency only."
+      }
+    ],
+    "equipment": [],
+    "datasets": []
+  }
+}

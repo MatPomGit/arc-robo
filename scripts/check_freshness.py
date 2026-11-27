@@ -52,7 +52,7 @@ def inspect_project(project: dict, timeout: int = 15) -> dict:
 
 
 def run(root:Path,require_current:bool=False,timeout:int=15) -> int:
-    manifest=json.loads((root/"portfolio/projects.json").read_text(encoding="utf-8"))
+    manifest=json.loads((root/"config/public-projects.json").read_text(encoding="utf-8"))
     items=manifest.get("projects",[])
     if not items:
         print("NO_PROJECTS: registry contains no projects; this is not a complete live audit")

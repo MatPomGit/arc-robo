@@ -75,8 +75,8 @@ def local_plan_inventory(root: Path, source: dict) -> tuple[list[str], list[str]
 def audit(root: Path = ROOT) -> dict:
     root = Path(root)
     source = json.loads((root / "manuscripts/source_manifest.json").read_text(encoding="utf-8"))
-    areas = json.loads((root / "areas/index.json").read_text(encoding="utf-8"))
-    canonical = json.loads((root / "portfolio/papers.json").read_text(encoding="utf-8"))
+    areas = json.loads((root / "config/research-lines.json").read_text(encoding="utf-8"))
+    canonical = json.loads((root / "config/legacy-papers.json").read_text(encoding="utf-8"))
     program = json.loads((root / "program.json").read_text(encoding="utf-8"))
     records = source["papers"]
     valid_areas = {x["id"] for x in areas["lines"]}
@@ -126,7 +126,7 @@ def audit(root: Path = ROOT) -> dict:
 
     if len(records) != 31 or len(seen) != 31:
         problems.append("expected_31_unique_msc")
-    if program.get("schema_version") != 1 or canonical.get("schema_version") != 1:
+    if program.get("schema_version") != 3 or canonical.get("schema_version") != 1:
         problems.append("unexpected_legacy_schema")
     if canonical.get("papers") != []:
         problems.append("legacy_portfolio_is_not_empty")

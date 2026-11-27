@@ -1,0 +1,30 @@
+{
+  "schema_version": 3,
+  "id": "MSC-RGBT-P02",
+  "title": "Rejestracja ekspozycji i synchronizacja fuzji RGB/IR",
+  "area": "perception",
+  "research_state": "planned",
+  "publication_stage": "protocol",
+  "relation": "related",
+  "owner": {
+    "mode": "external",
+    "repository": "MatPomGit/arc-rgbt",
+    "project_id": "publications/P02/protocol/README.md"
+  },
+  "manuscript": {
+    "path": "manuscripts/MSC-RGBT-P02/main.tex",
+    "format": "latex"
+  },
+  "study_plan": "manuscripts/MSC-RGBT-P02/study.md",
+  "public_listing": false,
+  "doi": null,
+  "preprint_url": null,
+  "preregistration_url": null,
+  "publication_url": null,
+  "stage_evidence": null,
+  "dependencies": {
+    "tools": [],
+    "equipment": [],
+    "datasets": []
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 3,
   "template_version": "1.0.0",
   "type": "arc-program",
   "programme": "arc-robo",
@@ -12,5 +12,10 @@
   "pages_url": null,
   "public_catalog_policy": "explicit_opt_in",
   "scientific_state": "scaffold",
-  "owner_of_raw_data": false
+  "owner_of_raw_data": false,
+  "repository_visibility": "public",
+  "repository_full_name": "MatPomGit/arc-robo",
+  "manuscript_root": "manuscripts",
+  "site_root": "site",
+  "site_output": "build/site"
 }

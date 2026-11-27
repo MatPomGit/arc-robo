@@ -19,6 +19,11 @@ jobs:
           persist-credentials: false
       - name: Check ARC repository contract
         run: python3 scripts/validate_repository.py --phase scaffold
+      - name: Validate v3 programme and manuscript metadata
+        run: |
+          python3 -m venv "$RUNNER_TEMP/arc-v3-schema"
+          "$RUNNER_TEMP/arc-v3-schema/bin/python" -m pip install -r config/schema-requirements.txt
+          "$RUNNER_TEMP/arc-v3-schema/bin/python" scripts/validate_v3_metadata.py
       - name: Run Python unit tests
         run: python3 -m unittest discover -s tests -v
       - name: Audit v2 migration inventory without modifying registries
@@ -29,7 +34,7 @@ jobs:
           python3 scripts/site_branding.py
           python3 scripts/validate_pages.py
           python3 scripts/build_public_catalog.py
-          git diff --exit-code -- pages/projects.md
+          git diff --exit-code -- site/projects.md
       - name: Build isolated public MkDocs site
         run: |
           python3 -m pip install --disable-pip-version-check mkdocs==1.6.1
@@ -80,5 +85,5 @@ jobs:
           python3 -m venv "$RUNNER_TEMP/arc-robo-pages"
           "$RUNNER_TEMP/arc-robo-pages/bin/python" -m pip install --disable-pip-version-check mkdocs==1.6.1
           "$RUNNER_TEMP/arc-robo-pages/bin/python" -m mkdocs build --strict --clean
-          test -f site/index.html
-          test -f site/projects/index.html
+          test -f build/site/index.html
+          test -f build/site/projects/index.html

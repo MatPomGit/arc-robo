@@ -1,6 +1,6 @@
 # Obowiązujące zasady agentów dla programu ARC
 
-Czytaj po kolei: `program.json`, `PROJECT_STATE.yaml`, `RESEARCH.md`, `ARCHITECTURE.md`, `portfolio/projects.json`, `portfolio/papers.json`, `portfolio/dependencies.json`, `docs/governance.md`.
+Czytaj po kolei: `program.json`, `PROJECT_STATE.yaml`, `RESEARCH.md`, `ARCHITECTURE.md`, `config/public-projects.json`, `config/legacy-papers.json`, `config/legacy-dependencies.json`, `docs/governance.md`.
 
 1. To repozytorium **indeksuje** badania; może przechowywać oznaczone, prospektywne szkice planów naukowych w `manuscripts/`, lecz nie kopiuje źródłowych manuskryptów, wyników pomiarów, kodu `app-*` ani `lib-*`. Kanoniczny właściciel protokołu pozostaje w repozytorium źródłowym.
 2. Każdy manuskrypt ma jedno repozytorium kanoniczne i jedno `project_id`; odnośniki między programami są `related`, nie drugą kopią.

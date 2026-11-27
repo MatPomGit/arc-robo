@@ -19,7 +19,7 @@ class BrandingTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.root = Path(self.tmp.name) / "robo"
         shutil.copytree(ROOT, self.root, ignore=shutil.ignore_patterns(
-            ".git", ".venv", "__pycache__", "site"))
+            ".git", ".venv", "__pycache__", "build"))
 
     def tearDown(self):
         self.tmp.cleanup()
@@ -32,7 +32,7 @@ class BrandingTests(unittest.TestCase):
         self.assertEqual([], check_pages(self.root))
 
     def test_hash_approved_logo_activates_mkdocs_header(self):
-        image = self.root / "pages/assets/brand/logo.png"
+        image = self.root / "site/assets/brand/logo.png"
         image.parent.mkdir(parents=True)
         image.write_bytes(b"\x89PNG\r\n\x1a\n" + b"reviewed-test-logo")
         policy = self.root / "config/pages-policy.json"
@@ -48,7 +48,7 @@ class BrandingTests(unittest.TestCase):
 
     def test_public_site_isolated_from_internal_docs(self):
         mkdocs = (self.root / "mkdocs.yml").read_text()
-        self.assertIn("docs_dir: pages", mkdocs)
+        self.assertIn("docs_dir: site", mkdocs)
         self.assertNotIn("docs_dir: docs", mkdocs)
 
     def test_readme_contains_no_editorial_instructions(self):
@@ -58,7 +58,7 @@ class BrandingTests(unittest.TestCase):
         self.assertNotIn("NOT_CONFIGURED", readme)
 
     def test_unapproved_logo_is_rejected(self):
-        image = self.root / "pages/assets/brand/logo.png"
+        image = self.root / "site/assets/brand/logo.png"
         image.parent.mkdir(parents=True)
         image.write_bytes(b"not-reviewed")
         with self.assertRaisesRegex(ValueError, "Unapproved"):
