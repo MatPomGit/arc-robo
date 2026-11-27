@@ -5,11 +5,11 @@
   "area": "teleoperation",
   "research_state": "planned",
   "publication_stage": "protocol",
-  "relation": "related",
+  "relation": "primary",
   "owner": {
-    "mode": "external",
-    "repository": "MatPomGit/arc-affective",
-    "project_id": "manuscripts/P07/plan.md"
+    "mode": "local",
+    "repository": "MatPomGit/arc-robo",
+    "project_id": null
   },
   "manuscript": {
     "path": "manuscripts/MSC-AFFECT-P07/main.tex",

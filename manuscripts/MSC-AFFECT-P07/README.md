@@ -10,3 +10,5 @@ Przypisanie do katalogu programu nie zmienia statusu zatwierdzenia ani nie stano
 
 
 **Licencja:** przeniesiony plan pochodzi z `arc-affective` i zachowuje oryginalne warunki Apache-2.0, dostępne w [ORIGINAL_LICENSE](ORIGINAL_LICENSE). Fakt migracji nie udziela licencji na kod lub aparaturę robota i nie zmienia repozytoryjnej polityki publikacji.
+
+**Repozytorium kanoniczne:** `MatPomGit/arc-robo`. Właściciel naukowy: Mateusz Pomianek (`MatPomGit`). [Aktywny epik i etapy M0–M6](https://github.com/MatPomGit/arc-robo/issues/24).
