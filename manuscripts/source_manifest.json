@@ -2,7 +2,7 @@
   "schema_version": 1,
   "program": "arc-robo",
   "date": "2026-11-21",
-  "notes": "Versioned references to research sources. Local main.tex files are prospective programme study plans; original project repositories retain scientific source ownership. Does not constitute publication approval. Local-only concepts are listed separately in local_only_plans, without invented pinned external sources or ownership assignments.",
+  "notes": "Versioned references to research sources. Local main.tex files are prospective programme study plans; original project repositories retain scientific source ownership. Does not constitute publication approval. Local-only concepts are listed separately in local_only_plans, without invented pinned external sources or ownership assignments. Exception: MSC-AFFECT-P07 is now canonically maintained in ARC Robo after source retirement; its source fields remain historical provenance.",
   "papers": [
     {
       "id": "MSC-AFFECT-P07",

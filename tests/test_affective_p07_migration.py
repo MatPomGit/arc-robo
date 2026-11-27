@@ -4,6 +4,11 @@ from pathlib import Path
 import unittest
 ROOT=Path(__file__).resolve().parents[1]
 class AffectiveP07MigrationTest(unittest.TestCase):
+    def test_canonical_owner_after_source_retirement(self):
+        data=json.loads((ROOT/"manuscripts/MSC-AFFECT-P07/paper.json").read_text(encoding="utf-8"))
+        self.assertEqual(data["relation"],"primary")
+        self.assertEqual(data["owner"],{"mode":"local","repository":"MatPomGit/arc-robo","project_id":None})
+
     def test_migrated_plan_and_source_manifest(self):
         d=ROOT/"manuscripts/MSC-AFFECT-P07"
         p=json.loads((d/"migration.json").read_text(encoding="utf-8"))

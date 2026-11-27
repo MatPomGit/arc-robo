@@ -31,6 +31,6 @@
 
 ## Proweniencja i bramki
 
-Źródło opisuje publiczny projekt [`arc-affective`](https://github.com/MatPomGit/arc-affective); pierwotny identyfikator `P07`.
+Kanoniczny protokół jest utrzymywany w ARC Robo. Zarchiwizowany projekt [`arc-affective`](https://github.com/MatPomGit/arc-affective) stanowi źródło historyczne; pierwotny identyfikator `P07`. Aktywne zadania: [epik P07](https://github.com/MatPomGit/arc-robo/issues/24).
 
 Weryfikacja badania wymaga oceny praw do danych, niezależności wyniku, sposobu doboru próby, etyki i bezpieczeństwa stanowiska, o ile dotyczą tematu. Wszystkie zależności oprogramowania są **kandydaturami**, nie zatwierdzonymi wdrożeniami. Nie przedstawiono nieistniejących pomiarów ani statystyk.
